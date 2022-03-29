@@ -5,24 +5,25 @@ const appendBaby= (data) =>{
     document.getElementById("B_main").innerHTML="";
     data.forEach((elem) => {
         let frame = document.createElement("div");
-        frame.addEventListener("click",()=>{
-            item(elem)
-        });
-        
+
+        let frame1 = document.createElement("div")
+        frame1.addEventListener("click",()=>{
+          item(elem)
+      });
         let Title = document.createElement("p")
+        Title.setAttribute("id","B_title")
         Title.innerText = elem.title
 
         let image = document.createElement("img")
         image.src = elem.imageurl
 
         let Price = document.createElement("p")
-        Price.innerText=elem.price
-
-        let Strikeprice = document.createElement("p")
-        Strikeprice.innerText = elem.strikeprice
+        Price.setAttribute("id","B_price")
+        Price.innerText="₹"+elem.price
 
         let Rating = document.createElement("p")
-        Rating.innerText= elem.rating;
+        Rating.setAttribute("class", "B_rating")
+        Rating.innerText= elem.rating+"★";
 
         let btn = document.createElement("button");
         btn.innerText = "ADD TO CART"
@@ -31,8 +32,9 @@ const appendBaby= (data) =>{
             addTocart(elem)
         })
 
-        frame.append(image,Title,Rating,Price,Strikeprice,btn)
-        document.getElementById("B_main").append(frame)
+        frame.append(image,Title,Rating,Price)
+        frame1.append(frame,btn)
+        document.getElementById("B_main").append(frame1)
     });
 };
 
@@ -70,3 +72,28 @@ setInterval(function () {
   B_slide.append(Dimage);
   i++;
 }, 3000);
+
+// sort function is written from here----------------------
+const sortItems=()=>{
+  let sorting=document.getElementById("B_sorter").value;
+ 
+  if(sorting=="h2l"){
+    baby_data.sort((a,b)=>{
+          return b.price - a.price;
+      });
+      // console.log(baby_data)
+      appendBaby(baby_data);
+  }
+  else if(sorting=="l2h"){
+    baby_data.sort((a,b)=>{
+          return a.price-b.price;
+      });
+      appendBaby(baby_data);
+  }
+  else if(sorting=="rating"){
+    baby_data.sort((a,b)=>{
+          return b.rating-a.rating;
+      });
+      appendBaby(baby_data);
+  }
+ }

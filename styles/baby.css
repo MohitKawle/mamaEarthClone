@@ -11,15 +11,14 @@
     height: fit-content;
     text-align: center;
 }
-#B_bestsellers,#B_products{
-    /* border: solid 1px red; */
-    height: fit-content;
-    margin: 0 5%;
+#B_products{
+    margin: 2% 5%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
 }
-#B_bs_slide{
-    border: solid 1px red;
-    height: 400px;
-    margin: 0 5%;
+#B_products h2{
+    margin: 0;
 }
 
 #B_main{
@@ -49,5 +48,28 @@
     height: 40px;
     margin-bottom: 20px;
     background-color: white;
+    color: #21b9f1;
     border: #e4e4e4 solid 1px;
+}
+
+.B_rating{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(109, 165, 35);
+    color: rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.8rem;
+    width: 10%;
+    height: 20px;
+    margin:auto;
+    margin-top: 10px;
+}
+#B_price{
+     font-weight: bold;
+     margin: 20px 3px;
+}
+#B_title{
+    height: 50px;
 }

@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Born Baby products</title>
+    <title>New Born Baby products- Toxin-free | MamaEarth</title>
     <link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png">
     <link rel="stylesheet" href="./styles/baby.css" />
+    <style>
+     
+    </style>
     
     <script src="./data/baby_data.js"></script>
   </head>
   <body>
     <div id="B_slide"></div>
     <div id="B_heading"><h1>Baby Care Products</h1></div>
-    <div id="B_bestsellers"><h2>BestSellers</h2></div>
-    <div id="B_bs_slide"></div>
-    <div id="B_products"><h2>Our Products</h2></div>
+    <div id="B_products">
+      <h2>Our Products</h2>
+      <select name="Sort" onchange="sortItems()" id="B_sorter">
+        <option value="">Sort By</option>
+        <option value="h2l">High To Low</option>
+        <option value="l2h">Low To High</option>
+        <option value="rating">Ratings</option> 
+      </select>
+    </div>
     <div id="B_main"></div>
   </body>
 </html>
