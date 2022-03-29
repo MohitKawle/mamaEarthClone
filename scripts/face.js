@@ -256,7 +256,7 @@ const showdata=(data)=>{
 
     let add=document.createElement("button");
     add.innerText="ADD TO CART";
-
+    
     div.append(image,title,rating,price,add);
 
     container.append(div);
@@ -267,4 +267,5 @@ const showdata=(data)=>{
 showdata(data);
 
 localStorage.setItem("face_data",JSON.stringify(face_products));
+
 
