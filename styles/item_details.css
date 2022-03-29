@@ -1,0 +1,39 @@
+#productDetails{
+    border: solid black 1px;
+    width: 70%;
+}
+#productDetails>div:first-child{
+        display: flex;
+        /* border: solid red 1px; */
+        padding: 10px;
+        /* width: fit-content; */
+
+}
+#productDetails>div h3{
+    /* width: 70%; */
+    color: #59a30e;
+}
+#Main_div{
+    display: flex;
+    justify-content: space-between;
+    border:  solid blue 1px;
+    margin: auto 10%;
+}
+
+#Price_details{
+    margin-top: 200px;
+    border-radius: 5px;
+    width: 25%;
+    height: fit-content;
+    border: solid #cdcdcd 1px;
+    padding: 10px;
+
+}
+#Price_details h3{
+    color: #59a30e;
+    margin: 0%;
+}
+#img_div{
+    border: solid #cdcdcd 1px;
+    border-radius:5px ;
+}
