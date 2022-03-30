@@ -93,6 +93,7 @@ img{
     font-weight: bold;
     padding: 0.7rem 1rem;
     font-family: Lato;
+    width: 90%;
 }
 #best_prod>div>div{
     justify-content: center;
@@ -233,6 +234,7 @@ img{
     color: rgb(0, 175, 239);
     font-weight: bold;
     padding: 0.7rem 1rem;
+    width: 90%;
 }
 #products>div>div{
     justify-content: center;
