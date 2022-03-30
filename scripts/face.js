@@ -299,7 +299,7 @@ const sortItems=()=>{
         //console.log("Hello")
         localStorage.setItem("cart",JSON.stringify(elem));
         alert("added to cart");
-        window.location.href="reload";
+        window.location.href="face.html";
        }
 
      div.onclick= function detail(){
@@ -342,19 +342,23 @@ const showdata=(data)=>{
 
     let add=document.createElement("button");
     add.innerText="ADD TO CART";
+    add.setAttribute("class","adda")
     
     div.append(image,title,rating,price,add);
     container.append(div);
 
+    add.onclick=()=>{
+        //console.log("Hello")
+        localStorage.setItem("cart",JSON.stringify(elem));
+        alert("Added to Cart")
+        window.location.href="face.html";
+       }
+
      div.onclick= function detail(){
        //  console.log("Hello");
        localStorage.setItem("title",JSON.stringify(elem));
+       window.location.href="item_details.html";
      }
-     
-    add.onclick=()=>{
-     //console.log("Hello")
-     localStorage.setItem("cart",JSON.stringify(elem));
-    }
  
      });
 }

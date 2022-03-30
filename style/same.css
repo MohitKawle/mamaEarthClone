@@ -116,7 +116,7 @@ padding: 0.7rem 1rem;
 /* font-family: Lato; */
 background-color: transparent;
 }
-#cont > div:hover > .adda {
+#cont > div:hover >.adda {
   background-color: #21b9f1;
   color: white;
 }

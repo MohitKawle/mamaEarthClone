@@ -1,5 +1,5 @@
 const append=(data,parent)=>{
-    console.log("hello")
+   // console.log("hello")
     parent.innerHTML=null;
     data.map((elem)=>{
     // console.log("Hello");
@@ -41,4 +41,5 @@ const append=(data,parent)=>{
  
      });
 }
+
 export default append;
