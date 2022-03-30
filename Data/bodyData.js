@@ -195,8 +195,8 @@ var bodyProducts=[
 ];
 
 localStorage.setItem("bodyProducts",JSON.stringify(bodyProducts));
-let body_data = JSON.parse(localStorage.getItem("bodyProducts"))
-console.log("body_data:",body_data);
+let data = JSON.parse(localStorage.getItem("bodyProducts"))
+console.log("body_data:",data);
 // var bodyProducts=JSON.parse(localStorage.getItem("bodyProducts"));
 
 
@@ -234,25 +234,25 @@ console.log("body_data:",body_data);
 
 // sort function
 const sortItems=()=>{
-    let sorting=document.getElementById("B_sorter").value;
+    let sorting=document.getElementById("sorter").value;
    
-    if(sorting=="HighToLow"){
-      body_data.sort((a,b)=>{
+    if(sorting=="h2l"){
+        data.sort((a,b)=>{
             return b.price - a.price;
         });
-        // console.log(baby_data)
-        appendBaby(body_data,B_main,1);
+        showdata(data);
     }
-    else if(sorting=="LowToHigh"){
-      body_data.sort((a,b)=>{
+    else if(sorting=="l2h"){
+        data.sort((a,b)=>{
             return a.price-b.price;
         });
-        appendBaby(body_data,B_main,1);
+        showdata(data);
     }
-    else if(sorting=="Rating"){
-      body_data.sort((a,b)=>{
+    else if(sorting=="rating"){
+        data.sort((a,b)=>{
             return b.rating-a.rating;
         });
-        appendBaby(body_data,B_main,1);
+        showdata(data);
     }
+   
    }
