@@ -203,9 +203,40 @@ let face_products = [
         rating:4.8,
     },
 ]
+let best_products=[ {
+    title:"Charcoal Facewash for oil control, 100ml",
+    imageurl:"https://honasa-mamaearth-production.imgix.net/c/h/charcoal-face-wash-1.jpg?auto=compress&fit=scale&w=200&h=200",
+    strikeprice:"",
+    price:249,
+    rating:4.8,
+},
+{
+    title:"Tea Tree Facewash for acne and pimples, 100ml",
+    imageurl:"https://honasa-mamaearth-production.imgix.net/t/e/tea-tree-face-wash-1.jpg?auto=compress&fit=scale&w=200&h=200",
+    strikeprice:"",
+    price:249,
+    rating:4.7,
+},
+{
+    title:"Ubtan Face Wash with Turmeric & Saffron for Tan Removal-100ml",
+    imageurl:"https://honasa-mamaearth-production.imgix.net/u/b/ubtan-face-wash_1_1_1.jpg?auto=compress&fit=scale&w=200&h=200",
+    strikeprice:"",
+    price:249,
+    rating:4.8,
+},
+{
+    title:"Aloe Vera Face Wash with Aloe Vera & Ashwagandha for a Youthful Glow-100 ml",
+    imageurl:"https://honasa-mamaearth-production.imgix.net/a/l/aloevera-fw-1.jpg?auto=compress&fit=scale&w=200&h=200",
+    strikeprice:"",
+    price:259,
+    rating:4.8,
+},];
+
 
 let data=JSON.parse(localStorage.getItem("face_data"))||[];
+let data1=JSON.parse(localStorage.getItem("best"))||[];
 let container=document.getElementById("cont");
+let container1=document.getElementById("bestes");
 
 const sortItems=()=>{
     let sorting=document.getElementById("sorter").value;
@@ -230,6 +261,58 @@ const sortItems=()=>{
     }
    
    }
+ localStorage.setItem("best",JSON.stringify(best_products));
+ const display=(data1)=>{
+  container1.innerHTML=null;
+  data1.forEach((elem)=>{
+    //  console.log("hel");
+      let div=document.createElement("div");
+    div.setAttribute("class","small");
+    
+  let seller=document.createElement("p");
+  seller.innerText="Best Seller";
+   seller.setAttribute("class","tag");
+
+
+    let title=document.createElement("h5");
+    title.innerText=elem.title;
+    title.setAttribute("class","title")
+    // console.log(title);
+    
+    let image=document.createElement('img');
+    image.src=elem.imageurl;
+    
+    let price=document.createElement("h3");
+    price.setAttribute("class","price")
+    price.innerText="₹"+elem.price;
+    
+    let rating=document.createElement("h4");
+    rating.setAttribute("class","rating")
+    rating.innerText=elem.rating+"★";
+
+    let add=document.createElement("button");
+    add.innerText="ADD TO CART";
+    
+    div.append(seller,image,title,rating,price,add);
+    container1.append(div);
+
+     div.onclick= function detail(){
+       //  console.log("Hello");
+       localStorage.setItem("title",JSON.stringify(elem));
+     }
+     
+    add.onclick=()=>{
+     //console.log("Hello")
+     localStorage.setItem("cart",JSON.stringify(elem));
+    }
+  })
+ }
+ 
+
+
+
+
+ display(data1);
 
 const showdata=(data)=>{
     container.innerHTML=null;
@@ -258,8 +341,17 @@ const showdata=(data)=>{
     add.innerText="ADD TO CART";
     
     div.append(image,title,rating,price,add);
-
     container.append(div);
+
+     div.onclick= function detail(){
+       //  console.log("Hello");
+       localStorage.setItem("title",JSON.stringify(elem));
+     }
+     
+    add.onclick=()=>{
+     //console.log("Hello")
+     localStorage.setItem("cart",JSON.stringify(elem));
+    }
  
      });
 }
