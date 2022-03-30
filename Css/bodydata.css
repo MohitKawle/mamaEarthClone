@@ -2,6 +2,33 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+#Div1{
+    display: flex;
+    gap:10px;
+}
+#Div1>p:nth-child(1){
+    color: rgb(63, 195, 243);
+    transition: all 0.1s ease 0s;
+    text-transform: capitalize;
+}
+#Div1>p:nth-child(2){
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(138, 140, 139);
+}
+#Div1>p:nth-child(3){
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(138, 140, 139);
+}
+#title{
+    text-align: center;
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    margin: 0.5rem 0px;
+}
 #tit{
     display: flex;
      justify-content: space-between;
@@ -87,6 +114,27 @@ img{
     padding: 0.1rem 0.3rem;
     font-size: 0.8rem;
 }
+#products>div>button{
+    flex: 1 1 0%;
+    background-color: white;
+    border: 0.12rem solid rgba(0, 0, 0, 0.15);
+    margin: 0rem 0.5rem 0.5rem;
+    color: rgb(0, 175, 239);
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+}
 #products>div>div{
+    display: flex;
+    text-align: center;
+    gap: 1px;
+}
+#products>div>div>p{
+    margin: auto;
+}
+#products>div>div>s{
     
+}
+#products>div:hover > button{
+    background-color: rgb(0, 175, 239);
+    color: white;
 }
