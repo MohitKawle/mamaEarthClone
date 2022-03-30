@@ -1,8 +1,9 @@
 let baby_data = JSON.parse(localStorage.getItem("baby_products"));
 // console.log(baby_data)
+let B_main = document.getElementById("B_main");
 
-const appendBaby= (data) =>{
-    document.getElementById("B_main").innerHTML="";
+const appendBaby= (data,where,value) =>{
+    where.innerHTML="";
     data.forEach((elem) => {
         let frame = document.createElement("div");
         frame.addEventListener("click",()=>{
@@ -33,13 +34,22 @@ const appendBaby= (data) =>{
             addTocart(elem)
         })
 
-        frame.append(image,Title,Rating,Price)
+        if(value===2){
+          let tag = document.createElement("div");
+          tag.setAttribute("id","tag")
+          tag.innerHTML = "BESTSELLER"
+          frame.append(tag,image,Title,Rating,Price)
+        }else{
+          frame.append(image,Title,Rating,Price)
+        }
+
+        // frame.append(image,Title,Rating,Price)
         frame1.append(frame,btn)
-        document.getElementById("B_main").append(frame1)
+        where.append(frame1)
     });
 };
 
-appendBaby(baby_data)
+appendBaby(baby_data,B_main,1)
 
 //To see the detailes of the product function----------------
 const item=(elem)=>{
@@ -83,18 +93,26 @@ const sortItems=()=>{
           return b.price - a.price;
       });
       // console.log(baby_data)
-      appendBaby(baby_data);
+      appendBaby(baby_data,B_main,1);
   }
   else if(sorting=="l2h"){
     baby_data.sort((a,b)=>{
           return a.price-b.price;
       });
-      appendBaby(baby_data);
+      appendBaby(baby_data,B_main,1);
   }
   else if(sorting=="rating"){
     baby_data.sort((a,b)=>{
           return b.rating-a.rating;
       });
-      appendBaby(baby_data);
+      appendBaby(baby_data,B_main,1);
   }
  }
+
+
+
+//  **********************************************************
+let bs_data = JSON.parse(localStorage.getItem("best_selling_baby"));
+let best_sellert_div=document.getElementById("BS_slider");
+
+appendBaby(bs_data,best_sellert_div,2);

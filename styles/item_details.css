@@ -10,13 +10,11 @@
 
 }
 #productDetails>div h3{
-    /* width: 70%; */
     color: #59a30e;
 }
 #Main_div{
     display: flex;
     justify-content: space-between;
-    border:  solid blue 1px;
     margin: auto 10%;
 }
 
@@ -31,9 +29,86 @@
 }
 #Price_details h3{
     color: #59a30e;
-    margin: 0%;
+    margin: 0;
+    margin-bottom: 15px;
+}
+#title_div{
+    width: 50%;
+    margin-left: 10px;
 }
 #img_div{
     border: solid #cdcdcd 1px;
     border-radius:5px ;
+    height: 400px;
+    width: 300px;
 }
+#img_div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.price{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+#addTocart {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #21b9f1;;
+    color: white;
+    border: none;
+  }
+
+  #logo{
+      height: 60px;
+      margin-top: 10px;
+  }
+
+  #quantity_div{
+      display: flex;
+      margin: 5% 0;
+      font-weight:bold;
+      border: solid #e4e4e4 1px;
+      width: fit-content;
+      border-radius: 5px;
+  }
+  #quantity_div button{
+      border: none;
+      font-size: 25px;
+      background-color: transparent;
+      width: 30px;
+  }
+  #quantity_div p{
+      margin: 0 10px;
+      font-size: 25px;
+  }
+
+  #RR>div{
+      display: flex;
+      justify-content: space-between;
+  }
+  #RR>div h2{
+      margin: 0;
+  }
+  #rate{
+      padding: 10px;
+      border: #21b9f1 solid 1px;
+      color: #21b9f1;
+  }
+  #rating_show{
+      display: flex;
+
+  }
+  #r1{
+    width: 100px;
+    border: #21b9f1 solid 1px;
+    padding: 10px;
+  }
+  #r2{
+      border: #21b9f1 solid 1px;
+      height: 100px;
+      margin-left: 10px;
+  }
