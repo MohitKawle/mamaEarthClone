@@ -9,6 +9,27 @@
     margin-top:3px;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
+#cont{
+  display: grid;
+  width:90%;
+  margin: auto;
+  margin-top: 10px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;   
+}
+#cont>div{
+   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+   border: 0.12rem dotted rgba(135, 190, 73, 0.5);
+   box-shadow: rgb(0 155 0 / 4%) 0px 0px 12px;
+   width:280px;
+   height: 450px;
+   margin: auto;
+   text-align: center;
+   line-height: 14px;
+ }
+#cont>div>img{
+   height:247px;
+}
 #link{
     display: flex;
     width:80%;

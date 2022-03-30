@@ -295,17 +295,21 @@ const sortItems=()=>{
     
     div.append(seller,image,title,rating,price,add);
     container1.append(div);
+    
+    add.onclick=()=>{
+        //console.log("Hello")
+        localStorage.setItem("cart",JSON.stringify(elem));
+        alert("added to cart");
+        window.location.href="reload";
+       }
 
      div.onclick= function detail(){
        //  console.log("Hello");
        localStorage.setItem("title",JSON.stringify(elem));
+       window.location.href="item_details.html";
      }
-     
-    add.onclick=()=>{
-     //console.log("Hello")
-     localStorage.setItem("cart",JSON.stringify(elem));
-    }
-  })
+     })
+ 
  }
  
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Mamaearth's Natural & Toxin Free Skin Care Products Online. Online Mamaearth.in</title>
+    <link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png">
+    <link rel="stylesheet" href="./style/same.css">    
+</head>
+   <style>
+       #chang{
+           display:flex;
+           width:90%;
+           margin:auto;
+           height: 40px;
+           justify-content: space-between;
+       }
+       #bttn{
+           display: flex;
+           width:19%;
+       }
+       .gPzJRJ  {
+        display: inline;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(204, 204, 221);
+    border-radius: 2px;
+    margin: auto;
+    background-color: white;
+       }
+       .gPzJRJ:hover {
+    display: inline;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgb(204, 204, 221);
+    border-radius: 2px;
+    margin: auto;
+    /* GAP:-4px; */
+    background-color: rgba(219, 232, 232, 0.72);
+   }
+#sot{
+    position: relative;
+    box-sizing: border-box;
+}
+#setsel{
+    width: 350px;
+    height:100%;
+    color: rgb(128, 128, 128);
+    /* margin-left: 2px;
+    margin-right: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+    box-sizing: border-box;
+}
+   </style>
+<body>
+      <!-- for Nav -->
+      <div id="nav"></div>
+      <!-- for sliding -->
+      <div id="face_slider"></div>
+      <!-- for link -->
+      <div id="link">
+          <a href="#" id="home">Home</a>
+          <a id="p">/</a>
+          <a href="" id="best">Shop</a>
+      </div>
+      <div id="chang">
+          <div id="bttn">
+              <button class="gPzJRJ">ALL</button>
+              <button class="gPzJRJ" id="hairi">HAIR</button>
+              <button class="gPzJRJ" id="facei">FACE</button>
+              <button class="gPzJRJ" id="bodyi">BODY</button>
+              <button class="gPzJRJ" id="babyi">BABY</button>
+          </div>
+          <div id="sot">
+              <select name="" id="setsel" >
+                <option value="" class="st">Sort By</option>
+                  <option value="rating" class="st">Rating</option>
+                  <option value="h2l" class="st">Price-High to Low</option>
+                  <option value="l2h" class="st">Price-Low to High</option>
+
+              </select>
+          </div>
+      </div>
+
+      <div id="cont"></div>
+</body>
+</html>
+<script type="module" src="./scripts/all.js"></script>
+<script type="module">
+    let slideshow=document.getElementById("face_slider");
+    let slidearr=[];
+    const img1="https://images.ctfassets.net/66mrrren2unf/5kaAcTPfa6WK3WrRtpZoQc/d7fbc3cdede555135dab5c1c0187bdaf/Desktop.jpg?q=40";
+    const img2="https://images.ctfassets.net/66mrrren2unf/2gTR8xcf8Rxp4zvfzcRZl3/9a24954ff7b7f2066d69535d3f3ca7bb/Desktop.jpg?q=40";
+    const img3="https://images.ctfassets.net/66mrrren2unf/7HvyA24fZoupMV6HeOZmBV/b8b1fe1de6b1f9a5f08273f0bf0d850a/Banner_Website.jpg?q=40";
+    const img4="https://images.ctfassets.net/66mrrren2unf/3PnUXonZQ0tDY8e7siuCA7/48451c727f3e60ee71b3a628eda928cd/Desktop_Without_CTA.jpg?q=40";
+    const img5="https://images.ctfassets.net/66mrrren2unf/6nc4ahNcZm8FqgU4vU3vKl/cdfcd3ba0f2db050759fc68ee82a4313/Desktop_Bye-Bye-Face-Creams-with-CTA.jpg?q=40";
+    slidearr.push(img1);
+    slidearr.push(img2);
+    slidearr.push(img3);
+    slidearr.push(img4);
+    slidearr.push(img5);
+    let i=1;
+    let img=document.createElement("img");
+    img.src=slidearr[0];
+    slideshow.append(img);
+    setInterval(()=>{
+        if(i==slidearr.length){
+            i=0;
+        }
+        slideshow.innerHTML=null;
+        let img=document.createElement("img");
+       
+        img.src=slidearr[i];
+        i++;
+        slideshow.append(img);
+    },5000);
+</script>
