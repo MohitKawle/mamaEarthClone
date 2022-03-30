@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/navbar.css">
+    <link rel="stylesheet" href="/style/index.css">
+<script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="navbar">
+       
+    </div>
+    <div id="gaping"></div>
+    <div id="slideimg">
+       
+    </div>
+    <div id="but1">
+        <div class="slick-arrow slick-prev SlickPrevArrowCustom"
+            style="display: block; position: absolute; left: 0px; z-index: 9; height: 355px; width: 10vw; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0)); right: auto;">
+            <i fill="currentColor"
+                style="display: inline-block; color: white; inset: 0px; position: absolute; margin: auto; height: 60px; width: 60px;"><svg
+                    fill="none" height="3.5rem" width="3.5rem" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg></i></div>
+    </div>
+    <div id="but2">
+        <div class="slick-arrow slick-next SlickPrevArrowCustom"
+            style="display: block; position: absolute; left: auto; right: 0px; z-index: 9; margin-right:8px; height: 355px; width: 10vw; background-image: linear-gradient(to left, rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0));">
+            <i fill="currentColor" class="chevronRight"
+                style="display: inline-block; color: white; inset: 0px; position: absolute; margin: auto; height: 60px; width: 60px;"><svg
+                    fill="none" height="3.5rem" width="3.5rem" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></i>
+        </div>
+    </div>
+   
+    <div id="parent">
+        <div id="append1"></div>
+        <div id="leftarrow"></div>
+        <div id="rightarrow"></div>
+
+        <div id="append2"></div>
+        <div id="leftarrow1"></div>
+        <div id="rightarrow1"></div>
+
+        <div id="append3"></div>
+        <div id="leftarrow2"></div>
+        <div id="rightarrow2"></div>
+
+        <div id="append4"></div>
+        <div id="leftarrow3"></div>
+        <div id="rightarrow3"></div>
+
+        <div id="append5"></div>
+        <div id="leftarrow4"></div>
+        <div id="rightarrow4"></div>
+          
+        <div id="append6"></div>
+        <div id="leftarrow5"></div>
+        <div id="rightarrow5"></div>
+
+    </div>
+   
+    <div id="sidediv"></div>
+
+
+</body>
+</html>
+<script src="/scripts/index.js"></script>
+<script src="/scripts/data.js"></script>
+<script type="module">
+
+       import {navbar,leftarrow,rightarrow} from './components/navbar.js';
+     
+       let bar = document.querySelector("#navbar");
+
+       let left = document.querySelector("#leftarrow");
+       let right = document.querySelector("#rightarrow");
+
+        let left1 = document.querySelector("#leftarrow1");
+        let right1 = document.querySelector("#rightarrow1");
+
+        let left2 = document.querySelector("#leftarrow2");
+        let right2 = document.querySelector("#rightarrow2");
+
+        let left3 = document.querySelector("#leftarrow3");
+        let right3 = document.querySelector("#rightarrow3");
+
+        
+        let left4 = document.querySelector("#leftarrow4");
+        let right4 = document.querySelector("#rightarrow4");
+
+        let left5 = document.querySelector("#leftarrow5");
+        let right5 = document.querySelector("#rightarrow5");
+
+       bar.innerHTML = navbar()
+
+       left.innerHTML = leftarrow()
+       left1.innerHTML = leftarrow()
+       left2.innerHTML = leftarrow()
+       left3.innerHTML = leftarrow()
+       left4.innerHTML = leftarrow()
+       left5.innerHTML = leftarrow()
+
+
+       right.innerHTML = rightarrow()
+       right1.innerHTML = rightarrow()
+       right2.innerHTML = rightarrow()
+       right3.innerHTML = rightarrow()
+       right4.innerHTML = rightarrow()
+       right5.innerHTML = rightarrow()
+</script>
