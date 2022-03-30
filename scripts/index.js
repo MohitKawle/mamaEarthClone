@@ -7,6 +7,7 @@ let slide = [
 
 ]
 
+
 let i = 0;
 
     let images = slide
@@ -73,9 +74,12 @@ let i = 0;
        
         i++;
 
-    },3000);
+    },2000);
 
-     
+
+
+
+    //  ************************************************
 
    const append1 = (data,parent) =>{
      
@@ -254,3 +258,59 @@ let i = 0;
            app.append(div);
 
    });
+
+   let super1 =  JSON.parse(localStorage.getItem("superstanderd"));;
+   let app2 = document.querySelector("#super")
+    super1.map(({img,title,para})=>{
+       
+       let div =  document.createElement("div");
+           div.id = "s1"
+
+       let div1 =  document.createElement("div");
+           div1.id = "s2"
+
+       let div2 =  document.createElement("div");
+           div2.id="s3"
+          
+       let t =  document.createElement("h3")
+           t.innerText = title
+       
+       let p = document.createElement("p");
+           p.innerText = para
+
+       let img1 = document.createElement("img");
+           img1.src = img
+
+           div1.append(img1)
+           div2.prepend(t,p)
+      
+          div.append(div1,div2)
+           app2.append(div);
+
+   });
+
+   let ii = 0;
+
+   let sldata = ["/photo/2.png","/photo/3.png","/photo/4.png","/photo/5.png" ];
+   let coinapp = document.querySelector("#sliderreview")
+     let im13 = document.createElement("img")
+       coinapp.innerHTML=null
+         im13.src = sldata[0]
+      coinapp.append(im13)
+    setInterval(function (){
+
+        if(ii===sldata.length){
+            ii=0;
+        }
+
+        let ima = sldata[ii];
+
+        coinapp.innerHTML=null;
+        let img12 = document.createElement("img");
+
+       img12.src = ima;
+       coinapp.append(img12);
+       
+        ii++;
+
+    },3000)

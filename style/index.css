@@ -23,7 +23,7 @@
  }
  #parent{
      width:68%;
-     height:2500px;
+     height:auto;
      margin-top: 450px;
      margin-left: 400px;
      /* border: 0.5px solid rgb(182, 179, 179); */
@@ -40,9 +40,9 @@
      /* position:absolute; */
  }
  #append1>div{
-       height:450px;
+       height:470px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -77,13 +77,14 @@
     margin-top: 4px;
  }
  #addcart{
-      border: 0.5px solid rgb(182, 179, 179);
+     border: 0.5px dotted rgb(182, 179, 179);
       outline: none;
       width:235px;
       height:40px;
       color:#00afef;
       background-color:white;
       font-weight: 600;
+      margin-bottom: 20px;
  }
  #addcart:hover{
      background-color:#00afef;
@@ -102,6 +103,7 @@
      color:white;
      box-sizing: border-box;
      padding-top: 2px;
+     margin-bottom: 10px;
  }
  #leftarrow{
      margin-top: -200px;
@@ -124,7 +126,7 @@
  #append2>div{
        height:450px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -156,7 +158,7 @@
  #append3>div{
        height:450px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -192,7 +194,7 @@
  #append4>div{
        height:450px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -227,7 +229,7 @@
  #append5>div{
        height:450px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -253,7 +255,7 @@
  #sidediv{
     height:2800px;
     width:28%;
-    margin-top: -2498px;
+    margin-top: -2900px;
     margin-left: 0px;
      /* border: 0.5px solid rgb(182, 179, 179); */
  }
@@ -303,7 +305,7 @@
  #append6>div{
        height:450px;
        width:32%;
-      border: 0.5px solid rgb(182, 179, 179);
+      border: 0.5px dotted rgb(182, 179, 179);
       box-sizing: border-box;
       padding: 1.50%;
       text-align: center;
@@ -325,3 +327,100 @@
      width:250px;
      height:250px
  }
+ #youtube{
+     width:100%;
+      /* border: 0.5px solid rgb(182, 179, 179); */
+      height:400px;
+      margin-top:350px;
+      /* margin:auto */
+      display: flex;
+ }
+ #youtube>div{
+     width:40%;
+     margin:auto;
+     text-align: center;
+         /* border: 0.5px solid rgb(182, 179, 179); */
+ }
+ #youtube>div>iframe{
+     border-radius: 20px;
+ }
+  #youtube>div>button{
+      height:35px;
+      width:130px;
+      border-radius: 7px;
+      outline: none;
+      border: 0.5px solid  #00afef;
+      font-weight: bold;
+  }
+  #b1{
+       background-color: #00afef;
+       color: white;
+   }
+   #b2{
+       color: #00afef;
+   }
+   #pp1{
+        color: #333333;
+        font-weight: 300;
+   }
+   #imgtree{
+       width:98%;
+       height:364px;
+        margin: auto;
+        margin-top: 30px;
+   }
+   #imgtree>img{
+       width:100%;
+       height: 100%;
+       /* position: relative; */
+   }
+  #notree{
+      /* position: absolute; */
+      margin-left: 700px;
+      margin-top: -300px;
+      text-align: center;
+  }
+#but33{
+    background-image: url(https://mamaearthp.imgix.net/wysiwyg/desktop_cta2x.png?auto=format);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 177px;
+    min-height: 40px;
+    margin-top: 0px;
+    outline: none;
+    border: 0px;
+    margin-left: -100px;
+}
+#super{
+    width:90%;
+    height:160px;
+         /* border: 0.5px solid  #00afef; */
+         margin: auto;
+         display: flex;
+         margin-top:100px
+}
+#s1{
+    display: flex;
+    
+}
+#s2{
+    margin-top: 20px;
+}
+#s3{
+    width:280px;
+     /* border: 0.5px solid  #141414; */
+     text-align: center;
+     margin-left: 10px;
+     margin-right: 15px;
+     color:#333333
+}
+#sliderreview{
+      margin: auto;
+    margin-top: 20px;
+  
+    width:98%
+}
+#sliderreview>img{
+    width:100%;
+    height:500px
+}

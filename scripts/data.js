@@ -171,4 +171,23 @@ let baby = [
      }
  ]
 
-localStorage.setItem("description",JSON.stringify(description))
+localStorage.setItem("description",JSON.stringify(description));
+
+let superstanderd = [
+    {
+        img:"https://mamaearthp.imgix.net/wysiwyg/dermatology-tested-100x100.png?auto=format&fit=100%2C100&ssl=1",
+        title:"Dermatologically Tested",
+        para:"We ensure each product is tested clinically on the sensitive human skin to ensure that it is not allergic."
+    },
+    {
+        img:"https://mamaearthp.imgix.net/wysiwyg/fda-100x100.jpg?auto=format&fit=100%2C100&ssl=1",
+        title:"FDA Approved",
+        para:"MamaEarth is FDA approved, which means we are 100% safe to be used for babies as well as mamas.",
+    },
+      {
+        img:"https://mamaearthp.imgix.net/wysiwyg/msafe-100x100.jpg?auto=format&fit=100%2C100&ssl=1",
+        title:"Made Safe Certified",
+        para:"The MADE SAFE (Made with Safe Ingredients™) seal means that a product is literally made with safe ingredients.",
+    }
+]
+localStorage.setItem("superstanderd",JSON.stringify(superstanderd));

@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/navbar.css">
     <link rel="stylesheet" href="/style/index.css">
-<script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
-<!-- <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="/style/navbar.css">
+    
 </head>
 <body>
 
     <div id="navbar">
        
     </div>
-     <div id="gaping"></div>
+    <div id="gaping"></div>
     <div id="slideimg">
        
     </div>
@@ -69,18 +68,58 @@
     </div>
    
     <div id="sidediv"></div>
-    
+    <div id="youtube">
+        <div>
+                <iframe width="544" height="400" src="https://www.youtube.com/embed/YROZybuYGUE" title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+        </div>
+        <div>
+            <h1 style="color: #00afef">Our Goodness Promise</h1>
+            <p id="pp1">At Mamaearth, we live to spread a little love and goodness every day. We believe that goodness isn’t a superpower, nor a
+            special gift, it’s inside all of us and it shows in the little choices we make. Our mission is to bring you the best of
+            nature through our purest and most nurturing products that are made without any toxins or harmful chemicals. For us
+            goodness also means being good to the earth. Which is why we recycle more plastic than we use and we're PETA Certified -
+            which means we never test on animals. This is our #GoodnessInside.</p>
+            <button id="b1">SHOP N0W</button>
+            <button id="b2">OUR PLEDGES</button>
+        </div>
+    </div>
+
+     <diV id="imgtree">
+        <img  src="https://mamaearthp.imgix.net/wysiwyg/desktop_home_img.png?auto=format"
+            alt="Planted Trees Banner">
+     </diV>
+     <div id="notree">
+      <h1 style="color:#2c2c2c">WE  PLANT  GOODNESS</h1>
+      <h1 style="color:#82c341">297989</h1>
+      <h2 style="color:#1d1d1d">Trees have got life already...
+          <br>
+        Everytime you buy from us, we plant more trees!
+       
+       </h2>
+    <button id="but33"></button>
+     </div>
+
+     <div id="super"></div>
+     <div id="sliderreview"></div>
 
 
+     <div id="footer">
+           </div>
+       
 </body>
 </html>
+<script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
 <script src="/scripts/index.js"></script>
 <script src="/scripts/data.js"></script>
 <script type="module">
 
-       import {navbar,leftarrow,rightarrow} from './components/navbar.js';
+       import {navbar,leftarrow,rightarrow,footer} from './components/navbar.js';
      
        let bar = document.querySelector("#navbar");
+
+       let foot = document.querySelector("#footer");
 
        let left = document.querySelector("#leftarrow");
        let right = document.querySelector("#rightarrow");
@@ -101,7 +140,8 @@
         let left5 = document.querySelector("#leftarrow5");
         let right5 = document.querySelector("#rightarrow5");
 
-       bar.innerHTML = navbar()
+       bar.innerHTML = navbar();
+       foot.innerHTML = footer()
 
        left.innerHTML = leftarrow()
        left1.innerHTML = leftarrow()
