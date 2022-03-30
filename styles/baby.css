@@ -21,7 +21,8 @@
   margin: 0;
 }
 
-#B_main,#BS_slider {
+#B_main,
+#BS_slider {
   margin: 0 5%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,7 +33,7 @@
   border: solid #e4e4e4 1px;
   text-align: center;
 }
-#BS_slider> div {
+#BS_slider > div {
   border: solid #e4e4e4 1px;
   text-align: center;
 }
@@ -86,11 +87,11 @@
   height: 50px;
 }
 
-#bnn{
+#bnn {
   margin: 1% 5%;
 }
 
-.rest{
+.rest {
   display: inline;
   font-size: 0.8rem;
   padding: 0.4rem 0.8rem;
@@ -99,19 +100,19 @@
   background-color: white;
   border-radius: 10rem;
 }
-#B_sorter{
+#B_sorter {
   width: 150px;
 }
 
-#B_BS_div h2{
+#B_BS_div h2 {
   margin: 2% 5%;
 }
-#B_BS_div > div{
+#B_BS_div > div {
   /* border: solid blue 1px; */
-  height: fit-content
+  height: fit-content;
 }
 
-#tag{
+#tag {
   position: absolute;
   padding: 5px;
   background-color: #ff5b6f;

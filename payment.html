@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place order | MamaEarth</title>
+    <link
+      rel="shortcut icon"
+      href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
+    />
+    <link rel="stylesheet" href="./styles/payment.css" />
+  </head>
+  <body>
+    <div id="parentdiv">
+      <div id="adressDiv">
+        <h2>New Delevery address</h2>
+        <form id="addressForm">
+          <div id="line1">
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="Enter first name"
+            />
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Enter last name"
+            />
+          </div>
+          <div id="line2">
+            <input type="email" name="email" id="email" placeholder="Email" />
+            <input
+              type="number"
+              name="number"
+              placeholder="number"
+              id="number"
+            />
+          </div>
+          <div id="line3">
+            <input type="number" name="pin" id="pin" placeholder="Pin" />
+            <input type="city" name="city" id="city" placeholder="city" />
+            <input type="text" name="state" id="state" placeholder="state" />
+          </div>
+          <div id="line4">
+            <textarea
+              id="Address"
+              name="Address"
+              id="Address"
+              rows="3"
+              cols="87"
+              placeholder="Address (Room No, Building, steet, area)"
+            >
+            </textarea>
+          </div>
+          <p>Select the type of Address</p>
+          <div id="address_type">
+            <button id="home">Home</button>
+            <button id="Work">Work</button>
+            <button id="Other">Other</button>
+          </div>
+          <input type="checkbox" id="" /><span
+            >Make this as my default address</span
+          >
+
+          <h3>choose payment method</h3>
+          <div id="payment">
+            <div id="payment_method">
+              <div><input type="checkbox" id="" /><span>UPI</span></div>
+              <div>
+                <input type="checkbox" id="" /><span>Credit/Debit Card</span>
+              </div>
+              <div><input type="checkbox" id="" /><span>Wallet</span></div>
+              <div>
+                <input type="checkbox" id="" /><span>Cash on delevery</span>
+              </div>
+            </div>
+            <div id="payment_Form"></div>
+          </div>
+        </form>
+      </div>
+      <div id="orderDetailsDiv">
+        <h3 id="heading"></h3>
+        <div id="items"></div>
+        <div id="price_summary">
+          <h3>Price Summary</h3>
+          <h3 id="total_price">0</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./scripts/payment.js"></script>

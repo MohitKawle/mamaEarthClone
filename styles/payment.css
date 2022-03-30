@@ -1,0 +1,100 @@
+#parentdiv {
+  /* border: solid red 1px; */
+  display: flex;
+  justify-content: space-between;
+  margin: auto 5%;
+}
+#adressDiv {
+  /* border: solid black 1px; */
+  width: 55%;
+}
+#addressForm div {
+  /* border:  solid black 1px; */
+  margin: 10px 0;
+}
+#line1 input,
+#line2 input {
+  width: 46%;
+}
+#line3 input {
+  width: 29%;
+}
+input {
+  padding: 10px;
+}
+#payment {
+  display: flex;
+  justify-content: space-between;
+}
+#payment_method {
+  width: 30%;
+  height: fit-content;
+  border: solid black 1px;
+  border-radius: 5px;
+}
+#payment_method div {
+  border-bottom: solid black 1px;
+  margin: 0;
+  padding: 15px;
+}
+#payment_Form {
+  border: solid black 1px;
+  border-radius: 5px;
+  width: 68%;
+}
+#orderDetailsDiv {
+  border: solid #e4e4e4 1px;
+  width: 44%;
+  padding: 2.5px;
+}
+
+#price_summary {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 3%;
+}
+#frame {
+  display: flex;
+  border-bottom: solid #e4e4e4 1px;
+}
+#frame > div:first-child {
+  width: 25%;
+  height: 120px;
+  padding: 5px;
+  margin-right: 10px;
+}
+#frame div:first-child img {
+  width: 100%;
+  height: 100%;
+  border: solid gray 1px;
+  border-radius: 5px;
+}
+
+#secondDiv {
+  width: 72%;
+  height: fit-content;
+}
+#secondDiv div {
+  display: flex;
+  justify-content: space-between;
+}
+#secondDiv > div:last-child > div:last-child {
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+#secondDiv div p {
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#secondDiv div button {
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  background-color: transparent;
+  width: 30px;
+}
+#secondDiv div button:hover {
+  background-color: #21b9f1;
+}
