@@ -95,7 +95,7 @@ img{
     font-family: Lato;
 }
 #best_prod>div>div{
-    margin: auto;
+    justify-content: center;
     display: flex;
     /* text-align: center; */
     margin-top: 10px;
@@ -153,6 +153,10 @@ img{
     font-weight: bold;
     color: rgb(0, 175, 239);
     font-family: Lato;
+}
+#sorter{
+    border:2px solid rgb(0, 175, 239); border-radius:7px; height: 25px; width: 100px;margin-top: 14px;
+    text-align:left;
 }
 #prod_button:hover{
     display: inline;
@@ -231,6 +235,7 @@ img{
     padding: 0.7rem 1rem;
 }
 #products>div>div{
+    justify-content: center;
     display: flex;
     text-align: center;
     margin-top: 10px;
