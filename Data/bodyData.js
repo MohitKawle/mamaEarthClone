@@ -195,7 +195,8 @@ var bodyProducts=[
 ];
 
 localStorage.setItem("bodyProducts",JSON.stringify(bodyProducts));
-
+let body_data = JSON.parse(localStorage.getItem("bodyProducts"))
+console.log("body_data:",body_data);
 // var bodyProducts=JSON.parse(localStorage.getItem("bodyProducts"));
 
 
@@ -230,3 +231,28 @@ localStorage.setItem("bodyProducts",JSON.stringify(bodyProducts));
         mainDiv.append(img,title,rating,div,btn);
         document.querySelector("#products").append(mainDiv);
     });
+
+// sort function
+const sortItems=()=>{
+    let sorting=document.getElementById("B_sorter").value;
+   
+    if(sorting=="HighToLow"){
+      body_data.sort((a,b)=>{
+            return b.price - a.price;
+        });
+        // console.log(baby_data)
+        appendBaby(body_data,B_main,1);
+    }
+    else if(sorting=="LowToHigh"){
+      body_data.sort((a,b)=>{
+            return a.price-b.price;
+        });
+        appendBaby(body_data,B_main,1);
+    }
+    else if(sorting=="Rating"){
+      body_data.sort((a,b)=>{
+            return b.rating-a.rating;
+        });
+        appendBaby(body_data,B_main,1);
+    }
+   }
