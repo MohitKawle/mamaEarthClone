@@ -232,12 +232,10 @@ let best_products=[ {
     rating:4.8,
 },];
 
-
 let data=JSON.parse(localStorage.getItem("face_data"))||[];
 let data1=JSON.parse(localStorage.getItem("best"))||[];
 let container=document.getElementById("cont");
 let container1=document.getElementById("bestes");
-
 const sortItems=()=>{
     let sorting=document.getElementById("sorter").value;
    
@@ -292,6 +290,7 @@ const sortItems=()=>{
 
     let add=document.createElement("button");
     add.innerText="ADD TO CART";
+    add.setAttribute("class","adda")
     
     div.append(seller,image,title,rating,price,add);
     container1.append(div);

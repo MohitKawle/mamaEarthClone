@@ -24,17 +24,18 @@ const append=(data,parent)=>{
 
     let add=document.createElement("button");
     add.innerText="ADD TO CART";
+    add.setAttribute("class","adda");
     
     div.append(image,title,rating,price,add);
     parent.append(div);
 
      div.onclick= function detail(){
-       //  console.log("Hello");
+         console.log("title");
        localStorage.setItem("title",JSON.stringify(elem));
      }
      
     add.onclick=()=>{
-     //console.log("Hello")
+     console.log("add")
      localStorage.setItem("cart",JSON.stringify(elem));
     }
  

@@ -103,7 +103,7 @@ margin:auto;
   /* margin: 0rem 0.03rem; font-size: 0.9rem; */
   margin-top: 10px;
 }
-.price+button{
+.adda{
 flex: 1 1 0%;
 background-color: white;
 border: 0.12rem solid rgba(0, 0, 0, 0.15);
@@ -116,7 +116,7 @@ padding: 0.7rem 1rem;
 /* font-family: Lato; */
 background-color: transparent;
 }
-.price+button:hover{
-background-color: rgb(0, 175, 239);
-color: white;
+#cont > div:hover > .adda {
+  background-color: #21b9f1;
+  color: white;
 }
