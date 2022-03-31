@@ -11,13 +11,14 @@
 </head>
 
 <body>
-    <button>Show Alert</button>
+    <button id="slidealert">Show Alert</button>
     <div class="alert hide">
-        <span class="fas fa-exclamation-circle"></span>
-        <span class="msg">added successfully</span>
+        <!-- <span class="fas fa-exclamation-circle">  </span> -->
+        <span class="msg">product has been to cart</span>
     </div>
     <script>
-        $('button').click(function () {
+        let but = document.querySelector("#slidealert")
+        $(but).click(function () {
             $('.alert').addClass("show");
             $('.alert').removeClass("hide");
             $('.alert').addClass("showAlert");

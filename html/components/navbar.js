@@ -218,5 +218,8 @@ const footer =() =>{
             <span>© 2022 Honasa Consumer Pvt. Ltd. All Rights Reserved</span>
           </div>`
 }
-export {navbar,leftarrow,rightarrow,footer };
+
+
+export {navbar,leftarrow,rightarrow,footer};
+
 

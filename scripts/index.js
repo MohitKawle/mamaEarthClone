@@ -123,6 +123,16 @@ let i = 0;
            cart.innerText= "ADD TO CART"
            cart.setAttribute("id","addcart")
            
+               $(cart).click(function () {
+                    $('.alert').addClass("show");
+                    $('.alert').removeClass("hide");
+                    $('.alert').addClass("showAlert");
+                    setTimeout(function () {
+                        $('.alert').removeClass("show");
+                        $('.alert').addClass("hide");
+                    }, 1000);
+                });
+           
            cart.addEventListener("click",()=>{
               
                 var obj={
@@ -134,6 +144,7 @@ let i = 0;
                 }
                 //  objarr.push(obj)
              addData(obj)
+             
            })
             div1.append(p,st)
 
@@ -144,7 +155,7 @@ let i = 0;
    });
 
 };
-    let objarr = []
+    let objarr = JSON.parse(localStorage.getItem("cart")) || []
     function addData(obj){
         objarr.push(obj);
        var count = document.querySelector("#circle")
@@ -161,6 +172,7 @@ let i = 0;
         let parent5 = document.querySelector("#append6")
    
        let baby1 = JSON.parse(localStorage.getItem("babydata"));
+       let body = JSON.parse(localStorage.getItem("bodyProducts"))
             // console.log(baby1.length)
        let right = document.querySelector("#rightarrow")
        let left = document.querySelector("#leftarrow")
@@ -216,7 +228,7 @@ let i = 0;
      }
 
      appendslide(baby1,parent,right,left)
-     appendslide(baby1,parent1,right1,left1);
+     appendslide(body,parent1,right1,left1);
      appendslide(baby1,parent2,right2,left2);
      appendslide(baby1,parent3,right3,left3);
      appendslide(baby1,parent4,right4,left4);
@@ -231,7 +243,7 @@ let i = 0;
          append1(newdata,mainparent)
      }
      defaultappend(baby1,parent)
-     defaultappend(baby1,parent1)
+     defaultappend(body,parent1)
      defaultappend(baby1,parent2)
      defaultappend(baby1,parent3)
      defaultappend(baby1,parent4)
@@ -314,3 +326,9 @@ let i = 0;
         ii++;
 
     },3000)
+
+    // // ******for popup
+
+    //   appending data to cart;
+
+    
