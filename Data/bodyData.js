@@ -202,25 +202,32 @@ let body_data = JSON.parse(localStorage.getItem("body_products"));
 // console.log(baby_data)
 let B_main = document.getElementById("B_main");
 
+const appendBody= (data,where,value) =>{
+    where.innerHTML="";
+    data.forEach((elem)=>{
+        let frame = document.createElement("div");
+        frame.addEventListener("click",()=>{
+          item(elem)
+        });
 
+        let frame1 = document.createElement("div")
+       
+        let Title = document.createElement("p")
+        Title.setAttribute("id","B_title")
+        Title.innerText = elem.title
 
-    bodyProducts.map(function (elem,index,array){
-        
-        var mainDiv=document.createElement("div");
-    
-        var img=document.createElement("img");
-        img.setAttribute("src",elem.imageurl);
+        let image = document.createElement("img")
+        image.src = elem.imageurl
 
-        var title=document.createElement("p");
-        title.innerText=elem.title;
-
-        var rating=document.createElement("p");
-        rating.innerText=elem.rating+"★";
+        let Rating = document.createElement("p")
+        Rating.setAttribute("class", "B_rating")
+        Rating.innerText= elem.rating+"★";
 
         var div=document.createElement("div");
 
-        var price=document.createElement("p");
-        price.innerText="₹"+elem.price;
+        let Price = document.createElement("p")
+        Price.setAttribute("id","B_price")
+        Price.innerText="₹"+elem.price
 
         var strike=document.createElement("s");
         strike.innerText=elem.strike_price;
@@ -228,13 +235,62 @@ let B_main = document.getElementById("B_main");
         var offer=document.createElement("p");
         offer.innerText=elem.offer;
 
-        var btn=document.createElement("button");
-        btn.innerText="ADD TO CART";
-        
+        let btn = document.createElement("button");
+        btn.innerText = "ADD TO CART"
+        btn.setAttribute("id","addTocart")
+        btn.addEventListener("click",()=>{
+            addTocart(elem)
+        })
         div.append(price,strike,offer);
-        mainDiv.append(img,title,rating,div,btn);
-        document.querySelector("#products").append(mainDiv);
+
+        if(value===2){
+          let tag = document.createElement("div");
+          tag.setAttribute("id","tag")
+          tag.innerHTML = "BESTSELLER"
+          frame.append(tag,image,Title,Rating,div)
+        }else{
+          frame.append(image,Title,Rating,div)
+        }
+
+        // frame.append(image,Title,Rating,Price)
+        frame1.append(frame,btn)
+        where.append(frame1)
     });
+};
+
+appendBody(body_data,B_main,1)
+
+    // bodyProducts.map(function (elem,index,array){
+        
+    //     var mainDiv=document.createElement("div");
+    
+    //     var img=document.createElement("img");
+    //     img.setAttribute("src",elem.imageurl);
+
+    //     var title=document.createElement("p");
+    //     title.innerText=elem.title;
+
+    //     var rating=document.createElement("p");
+    //     rating.innerText=elem.rating+"★";
+
+    //     var div=document.createElement("div");
+
+    //     var price=document.createElement("p");
+    //     price.innerText="₹"+elem.price;
+
+    //     var strike=document.createElement("s");
+    //     strike.innerText=elem.strike_price;
+
+    //     var offer=document.createElement("p");
+    //     offer.innerText=elem.offer;
+
+    //     var btn=document.createElement("button");
+    //     btn.innerText="ADD TO CART";
+        
+    //     div.append(price,strike,offer);
+    //     mainDiv.append(img,title,rating,div,btn);
+    //     document.querySelector("#products").append(mainDiv);
+    // });
 
 // sort function
 const sortItems=()=>{
