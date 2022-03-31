@@ -155,7 +155,7 @@ img{
     color: rgb(0, 175, 239);
     font-family: Lato;
 }
-#sorter{
+#B_sorter{
     border:2px solid rgb(0, 175, 239); border-radius:7px; height: 25px; width: 100px;margin-top: 14px;
     text-align:left;
 }

@@ -295,25 +295,25 @@ appendBody(body_data,B_main,1)
 
 // sort function
 const sortItems=()=>{
-    let sorting=document.getElementById("sorter").value;
+    let sorting=document.getElementById("B_sorter").value;
    
     if(sorting=="h2l"){
-        data.sort((a,b)=>{
+      baby_data.sort((a,b)=>{
             return b.price - a.price;
         });
-        showdata(data);
+        // console.log(baby_data)
+        appendBaby(baby_data,B_main,1);
     }
     else if(sorting=="l2h"){
-        data.sort((a,b)=>{
+      baby_data.sort((a,b)=>{
             return a.price-b.price;
         });
-        showdata(data);
+        appendBaby(baby_data,B_main,1);
     }
     else if(sorting=="rating"){
-        data.sort((a,b)=>{
+      baby_data.sort((a,b)=>{
             return b.rating-a.rating;
         });
-        showdata(data);
+        appendBaby(baby_data,B_main,1);
     }
-   
    }

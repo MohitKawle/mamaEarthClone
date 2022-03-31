@@ -75,15 +75,16 @@
         </div>
         <div id="tit">
             <p class="tit">Our Products</p>
-            <div id="sort">
-                <p class="sort">SortBy</p>
-                <select name="Sort" onchange="sortItems()" id="sorter" style="border:2px solid rgb(0, 175, 239); border-radius:7px; height: 25px; width: 100px;margin-top: 14px;">
-                    <!-- <option value=""></option> -->
-                    <option value="rating">Rating</option>
-                    <option value="h2l">Price-High to Low</option>
-                    <option value="l2h">Price-Low to High</option>
-                </select>
-            </div>
+            <select name="Sort" onchange="sortItems()" id="B_sorter">
+                <!-- <option value=""></option> -->
+                <option value="">Sort By</option>
+                <option value="h2l">High To Low</option>
+                <option value="l2h">Low To High</option>
+                <option value="rating">Ratings</option>
+            </select>
+            <!-- <div id="sort">
+            </div> -->
+            <!-- <p class="sort">SortBy</p> -->
         </div>
         <div>
             <button id="prod_buttonALL">ALL</button>
