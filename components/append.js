@@ -1,4 +1,5 @@
 const append=(data,parent)=>{
+  var a=1;
    // console.log("hello")
     parent.innerHTML=null;
     data.map((elem)=>{
@@ -28,16 +29,22 @@ const append=(data,parent)=>{
     
     div.append(image,title,rating,price,add);
     parent.append(div);
+    add.onclick=()=>{
+    //  console.log("add")
+    a=3;
+      localStorage.setItem("cart",JSON.stringify(elem));
+     }
 
      div.onclick= function detail(){
-         console.log("title");
-       localStorage.setItem("title",JSON.stringify(elem));
+         //console.log("title");
+       localStorage.setItem("item",JSON.stringify(elem));
+       if(a==3){
+         alert("Added to Cart");
+         window.location.reload();
+         return;
+       }
+       window.location.href="item_details.html";
      }
-     
-    add.onclick=()=>{
-     console.log("add")
-     localStorage.setItem("cart",JSON.stringify(elem));
-    }
  
      });
 }

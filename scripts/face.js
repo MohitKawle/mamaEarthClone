@@ -231,7 +231,7 @@ let best_products=[ {
     price:259,
     rating:4.8,
 },];
-
+var a=1;
 let data=JSON.parse(localStorage.getItem("face_data"))||[];
 let data1=JSON.parse(localStorage.getItem("best"))||[];
 let container=document.getElementById("cont");
@@ -296,15 +296,20 @@ const sortItems=()=>{
     container1.append(div);
     
     add.onclick=()=>{
+        a=3;
         //console.log("Hello")
         localStorage.setItem("cart",JSON.stringify(elem));
         alert("added to cart");
-        window.location.href="face.html";
+      //  window.location.href="face.html";
        }
 
      div.onclick= function detail(){
        //  console.log("Hello");
-       localStorage.setItem("title",JSON.stringify(elem));
+       localStorage.setItem("item",JSON.stringify(elem));
+       if(a==3){
+        window.location.reload();
+        return;
+      }
        window.location.href="item_details.html";
      }
      })
@@ -349,6 +354,7 @@ const showdata=(data)=>{
 
     add.onclick=()=>{
         //console.log("Hello")
+        a=3;
         localStorage.setItem("cart",JSON.stringify(elem));
         alert("Added to Cart")
         window.location.href="face.html";
@@ -357,7 +363,11 @@ const showdata=(data)=>{
      div.onclick= function detail(){
        //  console.log("Hello");
        localStorage.setItem("title",JSON.stringify(elem));
-       window.location.href="item_details.html";
+       if(a=3){
+           window.location.reload();
+           return;
+    }
+    window.location.href="item_details.html";
      }
  
      });
