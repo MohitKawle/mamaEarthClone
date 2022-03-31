@@ -26,7 +26,7 @@ let baby=document.getElementById("babyi").addEventListener("click",()=>{
 });
 let hair=document.getElementById("hairi").addEventListener("click",()=>{
     f=5;
-   append(data,container);
+   append(baby_data,container);
 });
 
 
@@ -122,22 +122,22 @@ let sortItems=document.getElementById("setsel");
        //hair         
                 if(f==5){
                     if(sorting=="h2l"){
-                     data.sort((a,b)=>{
+                     baby_data.sort((a,b)=>{
                          return b.price-a.price;
                      })
-                         append(data,container);
+                         append(baby_data,container);
                      }
                      else if(sorting=="l2h"){
-                         data.sort((a,b)=>{
+                         baby_data.sort((a,b)=>{
                              return a.price-b.price;
                          })
-                         append(data,container);
+                         append(baby_data,container);
                      }
                      else if(sorting=="rating"){
-                         data.sort((a,b)=>{
+                         baby_data.sort((a,b)=>{
                              return b.rating-a.rating;
                          })
-                         append(data,container);
+                         append(baby_data,container);
                      }
                     }
  })

@@ -357,18 +357,18 @@ const showdata=(data)=>{
         a=3;
         localStorage.setItem("cart",JSON.stringify(elem));
         alert("Added to Cart")
-        window.location.href="face.html";
+      //  window.location.href="face.html";
        }
 
-     div.onclick= function detail(){
-       //  console.log("Hello");
-       localStorage.setItem("title",JSON.stringify(elem));
-       if(a=3){
-           window.location.reload();
-           return;
-    }
-    window.location.href="item_details.html";
-     }
+       div.onclick= function detail(){
+        //  console.log("Hello");
+        localStorage.setItem("item",JSON.stringify(elem));
+        if(a==3){
+         window.location.reload();
+         return;
+       }
+        window.location.href="item_details.html";
+      }
  
      });
 }
