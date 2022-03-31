@@ -198,7 +198,7 @@ window.addEventListener("load",()=>{
     localStorage.setItem("bodyProducts",JSON.stringify(bodyProducts));
 });
 
-let body_data = JSON.parse(localStorage.getItem("body_products"));
+let body_data = JSON.parse(localStorage.getItem("bodyProducts"));
 // console.log(baby_data)
 let B_main = document.getElementById("B_main");
 
@@ -224,6 +224,7 @@ const appendBody= (data,where,value) =>{
         Rating.innerText= elem.rating+"★";
 
         var div=document.createElement("div");
+        div.setAttribute("id","PRICE")
 
         let Price = document.createElement("p")
         Price.setAttribute("id","B_price")
@@ -241,7 +242,7 @@ const appendBody= (data,where,value) =>{
         btn.addEventListener("click",()=>{
             addTocart(elem)
         })
-        div.append(price,strike,offer);
+        div.append(Price,strike,offer);
 
         if(value===2){
           let tag = document.createElement("div");
