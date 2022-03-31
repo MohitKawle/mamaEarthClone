@@ -293,6 +293,23 @@ appendBody(body_data,B_main,1)
     //     document.querySelector("#products").append(mainDiv);
     // });
 
+
+
+//To see the detailes of the product function----------------
+const item=(elem)=>{
+    let Item = elem;
+    localStorage.setItem("item",JSON.stringify(Item));
+    window.location.href="product_details.html"
+}
+
+// product adding to cart function----------------------------
+let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+const addTocart=(elem)=>{
+    let Add_item = elem
+    Cart.push(Add_item);
+    localStorage.setItem("cart",JSON.stringify(Cart))
+}
+
 // sort function
 const sortItems=()=>{
     let sorting=document.getElementById("B_sorter").value;
