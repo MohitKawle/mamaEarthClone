@@ -19,8 +19,9 @@
 #line3 input {
   width: 29%;
 }
-input {
+input,#selectbank {
   padding: 10px;
+  margin-top: 10px;
 }
 #payment {
   display: flex;
@@ -29,22 +30,98 @@ input {
 #payment_method {
   width: 30%;
   height: fit-content;
-  border: solid black 1px;
+  border: solid #e4e4e4 1px;
   border-radius: 5px;
 }
 #payment_method div {
-  border-bottom: solid black 1px;
+  border-bottom: solid #e4e4e4 1px;
   margin: 0;
   padding: 15px;
 }
 #payment_Form {
-  border: solid black 1px;
+  border: solid #e4e4e4 1px;
   border-radius: 5px;
-  width: 68%;
+  width: 65%;
+  padding: 10px;
+}
+#payment_Form_l1{
+  display: flex;
+  /* border: solid black 1px; */
+  justify-content: space-between;
+}
+#payment_Form_l1 > div{
+  border: solid 1px #59a30e;
+  font-size: 10px;
+  border-radius: 4px;
+  height: fit-content;
+  padding: 3px;
+  margin-top: 15px;
+  color: #59a30e;;
+}
+#payment_Form_l1 > div p{
+  margin: 0;
+}
+
+#upiF,#cardF,#selectbank{
+  border-radius: 5px;
+  border: solid 1px #e4e4e4;
+  width: 94%;
+  margin-top: -12px;
+}
+#bank,#wallets{
+  display: flex;
+  justify-content: space-between;
+}
+#bank div{
+  border: solid 1px #e4e4e4;
+  width: 40px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#wallets div{
+  border: solid 1px #e4e4e4;
+  width: 80px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#bank div:hover,#wallets div:ho{
+  background-color: #e4e4e4;
+}
+#bank div img, #wallets div img{
+width: 100%;
+height: 40px;
+}
+#bank div p{
+  margin: 0;
+  text-align: center;
+}
+#cod_disadvantage{
+  background-color: #ebf5e0;
+  border: solid #59a30e 1px;
+  width: 97%;
+  text-align: justify;
+  padding: 5px;
+  border-radius: 5px;
+  color: #59a30e;
+}
+#cod_disadvantage p{
+  margin: 0;
+  font-size: 12px;
+}
+#place_order{
+  width: 100%;
+  margin-top: 20px;
+  background-color: #21b9f1;
+  border: none;
+  border-radius: 5px;
 }
 #orderDetailsDiv {
   border: solid #e4e4e4 1px;
-  width: 44%;
+  border-radius: 5px;
+  width: 45%;
+  height: fit-content;
   padding: 2.5px;
 }
 
@@ -52,6 +129,9 @@ input {
   display: flex;
   justify-content: space-between;
   margin: auto 3%;
+}
+#price_summary h3:first-child{
+color: #21b9f1;
 }
 #frame {
   display: flex;

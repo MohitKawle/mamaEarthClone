@@ -54,6 +54,7 @@
   background-color: #21b9f1;
   color: white;
 }
+
 #addTocart {
   width: 90%;
   font-size: 15px;
@@ -63,6 +64,7 @@
   background-color: white;
   color: #21b9f1;
   border: #e4e4e4 solid 1px;
+  cursor: pointer;
 }
 
 .B_rating {
@@ -99,9 +101,20 @@
   border: 1px solid rgb(204, 204, 221);
   background-color: white;
   border-radius: 10rem;
+  cursor: pointer;
+}
+#all_p{
+  background-color: #f2fbfe;
+  border: #21b9f1 solid 1px;
 }
 #B_sorter {
-  width: 150px;
+  border: #21b9f1 solid 1px;
+  padding: 10px 20px;
+  font-size: 15px;
+  width: 200px;
+  /* font-weight: bolder; */
+  /* color: #21b9f1; */
+
 }
 
 #B_BS_div h2 {
@@ -120,3 +133,71 @@
   font-size: 15px;
   border-radius: 5px 0 5px 0;
 }
+
+/* massagepopup */
+
+.alert{
+  /* background: #e1e6e9; */
+  padding: 10px 20px;
+  min-width: 180px;
+  position: fixed;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 8px solid #71f577;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  pointer-events: none;
+  margin-top: 30px;
+  background-color: white;
+}
+.alert.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+   margin-right: 500px;
+}
+.alert.show{
+  animation: show_slide 1s ease forwards;
+  
+}
+@keyframes show_slide {
+  0%{
+    transform: translateY(0%);
+    
+  }
+  40%{
+    transform: translateY(100%);
+  }
+  80%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.alert.hide{
+  animation: hide_slide 0.5s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateX(0%);
+  }
+  40%{
+    transform: translateY(0%);
+  }
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translatey(-300%);
+  }
+}
+
+.alert .msg{
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2f2e30;
+}
+/* ************ */

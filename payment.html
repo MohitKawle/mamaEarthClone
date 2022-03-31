@@ -34,7 +34,7 @@
             <input type="email" name="email" id="email" placeholder="Email" />
             <input
               type="number"
-              name="number"
+              name="mobile"
               placeholder="number"
               id="number"
             />
@@ -50,7 +50,7 @@
               name="Address"
               id="Address"
               rows="3"
-              cols="87"
+              cols="50"
               placeholder="Address (Room No, Building, steet, area)"
             >
             </textarea>
@@ -68,28 +68,89 @@
           <h3>choose payment method</h3>
           <div id="payment">
             <div id="payment_method">
-              <div><input type="checkbox" id="" /><span>UPI</span></div>
-              <div>
-                <input type="checkbox" id="" /><span>Credit/Debit Card</span>
+              <div id="upi" onclick="upi_method()">
+                <span>UPI</span>
               </div>
-              <div><input type="checkbox" id="" /><span>Wallet</span></div>
-              <div>
-                <input type="checkbox" id="" /><span>Cash on delevery</span>
+              <div id="card" onclick="card_method()">
+                <span>Credit/Debit Card</span>
+              </div>
+              <div id="netbank" onclick="netbank_method()">
+                <span>Net Banking</span>
+              </div>
+              <div id="wallet" onclick="wallet_method()">
+                <span>Wallet</span>
+              </div>
+              <div id="cod" onclick="cod_method()">
+                <span>Cash on delevery</span>
               </div>
             </div>
-            <div id="payment_Form"></div>
+            <div id="payment_Form">
+              <div id="payment_append_div">
+                <div id="payment_Form_l1">
+                  <p>Pay Using UPI ID</p>
+                  <div><p>Applied : Extra 5% Off with Your Order</p></div>
+                </div>
+                <p>Enter UPI ID (Google Pay, BHIM, PhonePe & more)</p>
+                <input
+                  type="text"
+                  name="upi"
+                  id="upiF"
+                  placeholder="Enter your UPI ID"
+                />
+            </div>
+            <input type="submit" id="place_order"  value="PLACE ORDER" />
+              <div>
+                <img
+                  src="./data/card logo.JPG"
+                  style="width: 100%; height: 100px"
+                  alt="paymentlogo"
+                />
+              </div>
           </div>
         </form>
       </div>
-      <div id="orderDetailsDiv">
-        <h3 id="heading"></h3>
-        <div id="items"></div>
-        <div id="price_summary">
-          <h3>Price Summary</h3>
-          <h3 id="total_price">0</h3>
-        </div>
+    </div>
+    <div id="orderDetailsDiv">
+      <h3 id="heading"></h3>
+      <div id="items"></div>
+      <div id="price_summary">
+        <h3>Price Summary:</h3>
+        <h3 id="total_price">0</h3>
       </div>
     </div>
   </body>
 </html>
 <script src="./scripts/payment.js"></script>
+<script type="module">
+
+  import {upi, card,netBanking,wallet,cod} from "./scripts/payment_method.js"
+  let append_div = document.getElementById("payment_append_div");
+  
+  let upi_method = document.getElementById("upi")
+  let card_method = document.getElementById("card")
+  let wallet_method = document.getElementById("wallet")
+  let netbank_method = document.getElementById("netbank")
+  let cod_method = document.getElementById("cod")
+  
+  upi_method.addEventListener("click",()=>{
+    append_div.innerHTML=upi();
+    upi_method.style.backgroundColor="#f2fbfe"
+  });
+  card_method.addEventListener("click",()=>{
+    append_div.innerHTML=card();
+    card_method.style.backgroundColor="#f2fbfe"
+  });
+  wallet_method.addEventListener("click",()=>{
+    append_div.innerHTML=wallet();
+    wallet_method.style.backgroundColor="#f2fbfe"
+  });
+  netbank_method.addEventListener("click",()=>{
+    append_div.innerHTML=netBanking();
+    netbank_method.style.backgroundColor="#f2fbfe"
+  });
+  cod_method.addEventListener("click",()=>{
+    append_div.innerHTML=cod();
+    cod_method.style.backgroundColor="#f2fbfe"
+  });
+
+  </script>
