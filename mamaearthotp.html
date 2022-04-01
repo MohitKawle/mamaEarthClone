@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainotp{
+            height: 561.53px;
+            font-weight: bold;
+            width: 380px;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 150px;
+            /* font-size: 26px; */
+        }
+        #mainotp >img{    width: 78px;
+        height: 90px;
+             vertical-align: middle;
+             margin-left: 35%;
+             border-radius: 50%;
+        }
+        .arrow_for_otp_page{
+
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid green; */
+            display: flex;
+         }
+         .arrow_for_otp_page img{margin-top: 15px;}
+         .arrow_for_otp_page div{    font-size: 1.4rem;
+                    color: rgb(0, 175, 239);
+                  margin-top: 1.3rem;
+                 text-align: center;
+                 margin-left: 20%;
+                 /* font-size: 21px; */
+                }
+        .mid_of_otp{display: flex;
+                    margin-left: 25%;
+                    margin-top: 50px;
+                font-size: 25px;}
+                .mid_of_otp #sent_to{ color: rgb(0, 175, 239);}
+                .mid_of_otp img{width: 19px;height: 15px;}
+            .Enter_otp_Text{   
+                font-size: 25px;
+                margin-top: 50px;
+                -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+                 display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+             margin-bottom: 0.5rem;
+             color: rgb(29, 29, 29);;
+}
+.otp_input_div {width: 100%; border-color: green 1px solid; font-size: 25px;}
+#otp_value {width: 98%; border-color: blue 1px solid;height: 35px; font-size: 25px;}
+              #form button{font-size: 20px; font-weight: 600; padding-left: 2px;
+                text-align: center;}
+    </style>
+</head>
+<body>
+    
+    <div id="mainotp">
+            <div class="arrow_for_otp_page">
+
+                <img onclick="backtosignin()" src="	https://mamaearth.in/static/mamaearth/arrow_back.svg"
+                 height="34px" width="44px">
+                <div>Verify OTP</div>
+            </div>
+            <img src="	https://mamaearth.in/static/mamaearth/otp.svg" alt="mid img">
+            <div class="mid_of_otp">
+                <div>sent to:</div>
+                <div id="sent_to">21</div>
+                <div ><img src="https://mamaearth.in/static/mamaearth/pen.svg" alt="3"></div>
+
+            </div>
+            <div class="Enter_otp_Text" id="otp_recived">Enter Otp</div>
+
+        <form id="form">
+            <div id="otp_input_div"><input type="text" id="otp_value" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+                
+                <!-- <input autocomplete="off" type="number" name="otp" maxlength="1" value=""> -->
+             
+             
+            </div>
+
+
+
+            
+            <div style="height: 1rem; display: block; width: 100%;"></div>
+
+            <div style="font-size: 13px; text-align: center;">
+                <a style="color: rgb(0, 175, 239);font-size: 20px; font-weight: 600; padding-left: 2px;"onclick="Reload_mama_earth()">
+                     Resend OTP</a></div>
+            <div style="height: 2rem; display: block; width: 100%;"></div>
+            <button style="width: 80%; background-color:rgb(0, 174, 239);height: 40px;margin-left: 10%;color: white;" 
+                type="submit">VERIFY</button>
+        </form>
+        <h5 style="text-align: center;">DO NOT SHARE THIS OTP WITH ANYONE</h5>
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+    
+<script>
+    let Reload_mama_earth=()=>{location.href="mamaearthotp.html"}
+     let backtosignin=()=>{location.href="signin.html"}
+     var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
+     
+     let phone=JSON.parse(localStorage.getItem("phone"))
+    document.querySelector("#sent_to").innerHTML=phone
+     sent_to
+     console.log(phone)
+    document.querySelector("#form").addEventListener("submit", formfumction)
+    var User = [];
+    let flag = 0;
+   
+   
+   
+    function formfumction() {
+        event.preventDefault();
+        
+        var otp = document.querySelector("#otp_value").value;
+        if(otp>1000)
+        {
+            userDataBase.map(function (elem) {
+             if (phone  === elem.Phone) {
+                localStorage.setItem("User", JSON.stringify(elem))
+                User.push(elem);
+                localStorage.setItem("User", JSON.stringify(User))
+                   location.href = "index.html";
+                }
+            
+                    });
+             }
+        }
+     
+
+
+</script>
