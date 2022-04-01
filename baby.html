@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Born Baby products- Toxin-free | MamaEarth</title>
+    <!-- popup link  start-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- popup link  end-->
+
+    <!-- navbar css link start -->
+    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+    <!-- navbar css link end -->
+
+    <link
+      rel="shortcut icon"
+      href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
+    />
+    <link rel="stylesheet" href="./styles1/baby.css" />
+
+    <script src="./data1/baby_data.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div style="height: 130px;"></div>
+    <div id="B_slide"></div>
+    <div id="B_heading"><h1>Baby Care Products</h1></div>
+    <div id="navigatin"><span ><a href="index.html" style="color: #21b9f1; text-decoration: none;">Home</a> </span><Span> > Baby product</Span></div>
+    <div id="B_BS_div">
+      <h2>BestSeller</h2>
+      <div id="BS_slider"></div>
+    </div>
+    <div id="B_products">
+      <h2>Our Products</h2>
+      <select name="Sort" onchange="sortItems()" id="B_sorter">
+        <option value="">Sort By</option>
+        <option value="h2l">High To Low</option>
+        <option value="l2h">Low To High</option>
+        <option value="rating">Ratings</option>
+      </select>
+    </div>
+    <!-- all buttons -->
+    <div id="bnn">
+      <button id="all_p" class="rest">ALL</button>
+      <button class="rest">DIAPER</button>
+      <button class="rest">SAMPOO</button>
+      <button class="rest">LOTION</button>
+      <button class="rest">OIL</button>
+      <button class="rest">POWDER</button>
+    </div>
+    <div id="B_main" class=""></div>
+    <!-- ***alert messeage**** -->
+    <div class="alert hide">
+            
+      <span class="msg">product has been added to cart</span>
+  </div>
+  <!-- end -->
+
+  <!-- foother html start -->
+  <div id="footer"></div>
+  <!-- foother html end -->
+  <div class="bg-modal"> </div>
+  <div id="loginpop"></div>
+  <div class="mainlogin"></div>
+  </body>
+</html>
+
+<script src="./scripts1/baby.js"></script>
+<script type="module" src="module.js"></script>
