@@ -51,7 +51,9 @@
             background-color: #21b9f1;
            color: white;
         }
+
          #cont1555{
+
            display: grid;
            width:90%;
            margin: auto;
@@ -59,7 +61,9 @@
            grid-template-columns: repeat(4,1fr);
            gap: 10px;   
         }
+
          #cont1555>div{
+
             /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
             border: 0.12rem dotted rgba(135, 190, 73, 0.5);
             box-shadow: rgb(0 155 0 / 4%) 0px 0px 12px;
@@ -70,6 +74,7 @@
             line-height: 14px;
           }
          #cont1555>div>img{
+
             height:247px;
         }
     #our{

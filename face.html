@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style2/same.css">    
     <link rel="stylesheet" href="./style2/face.css">
     <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
@@ -58,16 +59,25 @@
         <button class="rest">FACE SHEET MASK</button>
         <button class="rest">FACE SCRUM</button>
     </div>
+
     <div id="cont1555" style="margin-left: 5%;"></div>
+
     <!-- alert -->
     <div class="alert hide">    
         <span class="msg">product has been added to cart</span>
     </div>
+   
+
 
     
     <!-- footer -->
     <div id="footer"></div>
 
+
+    <div class="bg-modal"> </div> 
+    <div id="loginpop"></div>     
+    <!-- ====== -->
+     <div class="mainlogin"></div>
 
     <!-- popup -->
     <!-- <div id="loginpop">
@@ -101,19 +111,82 @@
 </div>  -->
 
 
+
 </body>
 </html>
 <script src="./scripts2/face.js"></script>
 <script type="module">
-    import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+   import {navbar,leftarrow,rightarrow,footer, cartpopup, loginpop, mainlogin } from './html/components/navbar.js';
      
      let bar = document.querySelector("#navbar");
 
      let foot = document.querySelector("#footer");
 
-      bar.innerHTML = navbar();
-      foot.innerHTML = footer();
+     let cart = document.querySelector(".bg-modal");
 
+     let login1 = document.querySelector("#loginpop");
+
+     let logindummy = document.querySelector(".mainlogin");
+
+     
+
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer()
+      cart.innerHTML = cartpopup()
+      login1.innerHTML = loginpop()
+      logindummy.innerHTML = mainlogin()
+
+      const addeven1 = (idname, place) => {
+            idname.addEventListener("click", () => {
+                window.location.href = `${place}`
+            })
+
+        }
+           addeven1(document.querySelector("#home"),"index.html")
+        //   addeven(document.querySelector("#baby), "")
+        //   addeven(document.querySelector("#beauty), "")
+        //   addeven(document.querySelector("#hair), "")
+        addeven1(document.querySelector("#face"),"/face.html")
+        addeven1(document.querySelector("#body"), "/body.html")
+        addeven1(document.querySelector("#allproduct"), "/all_products.html")
+         
+
+      //    ************ the end code addeventlisner *****************     
+
+
+    //   ***************start code od the popup*******************
+      
+          document.getElementById('login').addEventListener("mouseup", function () {
+                document.querySelector('.modal').style.display = "flex";
+
+            });
+           
+
+           document.querySelector('.modal').addEventListener("dblclick", function () {
+                document.querySelector('.modal').style.display = "none";
+            });
+    // dblclick
+
+            //  end code *************
+
+
+           document.getElementById('cart').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "flex";
+        });
+
+        document.querySelector('.close').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "none";
+           
+        });
+            // ************ start code for alert meassage***************
+    
+             document.getElementById('loginone').addEventListener("click", function () {
+                    document.querySelector('.mainlogin').style.display = "flex";
+                });
+
+                document.querySelector('.closemain').addEventListener("click", function () {
+                    document.querySelector('.mainlogin').style.display = "none";
+                });
 
     //   document.getElementById('login').addEventListener("mouseup", function () {
     //             document.querySelector('.modal').style.display = "flex";
