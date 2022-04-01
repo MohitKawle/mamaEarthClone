@@ -218,8 +218,55 @@ const footer =() =>{
             <span>© 2022 Honasa Consumer Pvt. Ltd. All Rights Reserved</span>
           </div>`
 }
+const cartpopup=()=>{
+    return `
+     
+                <div class="modal-contents">
+                    <div class="close">+</div>
 
 
-export {navbar,leftarrow,rightarrow,footer};
+                      <div id="fixedtop">Congrats, Your Order is Eligible for FREE Shipping</div>
+                      <div id="abocenter">
+                   
+                      </div>
+                    <div id="fixedbottom">PROCEED TO PAY</div>
+                
+            
+                </div>
+                <div id="clear"></div>
+
+   
+    `
+}
+const loginpop = ()=>{
+    return `  <div class="modal">
+                     
+                        <div class="contents">
+                    
+                       
+                            <div>Your Profile</div>
+                            <div>Your Order</div>
+                            <div>Contact Us</div>
+                            <div>
+                              <button id="loginone"> Login In</button>
+                    </div>`
+}
+const mainlogin = ()=>{
+    return `<div class="modalmain">
+        
+                <div class="closemain">+</div>
+        
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <br>
+                    <input type="email" placeholder="E-Mail">
+                    <br>
+                    <a href="#" class="button">Submit</a>
+                </form>
+        
+            </div>`
+}
+
+export {navbar,leftarrow,rightarrow,footer,cartpopup, loginpop,mainlogin };
 
 
