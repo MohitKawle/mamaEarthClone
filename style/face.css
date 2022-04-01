@@ -1,4 +1,6 @@
-      
+*{
+    font-family: sans-serif;
+}      
   .tag{
     left: 0.5rem;
     background-color: rgb(255, 91, 111);

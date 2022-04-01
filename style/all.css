@@ -1,3 +1,6 @@
+*{
+ font-family: sans-serif;
+}
 #chang{
     display:flex;
     width:90%;
