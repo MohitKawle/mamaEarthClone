@@ -163,14 +163,14 @@ let i = 0;
    });
 
 };
- let objdata = JSON.parse(localStorage.getItem("item")) || []
-    function addData(obj1){
-        objdata.push(obj1);
+//  let objdata = JSON.parse(localStorage.getItem("item")) || []
+//     function addData(obj1){
+//         objdata.push(obj1);
     
-       localStorage.setItem("item",JSON.stringify(objdata))
-    //    window.location.href="blog.html";
-    console.log(ob)
-    }
+//        localStorage.setItem("item",JSON.stringify(objdata))
+//     //    window.location.href="blog.html";
+//     console.log(ob)
+//     }
 
     // ////////////
     let objarr = JSON.parse(localStorage.getItem("cart")) || []

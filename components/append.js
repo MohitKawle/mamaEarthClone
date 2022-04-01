@@ -1,3 +1,5 @@
+let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
+
 const append=(data,parent)=>{
   var a=1;
    // console.log("hello")
@@ -41,15 +43,15 @@ const append=(data,parent)=>{
     add.onclick=()=>{
     //  console.log("add")
     a=3;
-      localStorage.setItem("cart",JSON.stringify(elem));
+    cart_data.push(elem)
+      localStorage.setItem("cart",JSON.stringify(cart_data));
      }
 
      div.onclick= function detail(){
          //console.log("title");
        localStorage.setItem("item",JSON.stringify(elem));
+       
        if(a==3){
-       //  alert("Added to Cart");
-         window.location.reload();
          return;
        }
        window.location.href="item_details.html";

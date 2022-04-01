@@ -260,6 +260,7 @@ const sortItems=()=>{
    
    }
  localStorage.setItem("best",JSON.stringify(best_products));
+ let cart_data = JSON.parse(localStorage.getItem("cart"))||[];
  const display=(data1)=>{
   container1.innerHTML=null;
   data1.map((elem)=>{
@@ -306,8 +307,8 @@ const sortItems=()=>{
     
     add.onclick=()=>{
         a=3;
-        //console.log("Hello")
-        localStorage.setItem("cart",JSON.stringify(elem));
+        cart_data.push(elem)
+        localStorage.setItem("cart",JSON.stringify(cart_data));
       //  alert("added to cart");
       //  window.location.href="face.html";
        }
@@ -316,7 +317,7 @@ const sortItems=()=>{
        //  console.log("Hello");
        localStorage.setItem("item",JSON.stringify(elem));
        if(a==3){
-        window.location.reload();
+        // window.location.reload();
         return;
       }
        window.location.href="item_details.html";
@@ -373,7 +374,8 @@ const showdata=(data)=>{
     add.onclick=()=>{
         //console.log("Hello")
         a=3;
-        localStorage.setItem("cart",JSON.stringify(elem));
+        cart_data.push(elem)
+        localStorage.setItem("cart",JSON.stringify(cart_data));
        // alert("Added to Cart")
       //  window.location.href="face.html";
        }
