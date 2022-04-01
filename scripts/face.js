@@ -363,7 +363,7 @@ const showdata=(data)=>{
         setTimeout(function () {
             $('.alert').removeClass("show");
             $('.alert').addClass("hide");
-        }, 1000);
+        }, 1500);
     });
     add.setAttribute("class","adda")
     
