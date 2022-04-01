@@ -119,7 +119,8 @@
     font-style: lato;
 }
 #m3>div>p:hover{
-      color:#00afef
+      color:#00afef;
+      cursor: pointer
 }
 #cart,#login{
     color: #8a8a8a;
