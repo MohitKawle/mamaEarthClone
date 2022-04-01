@@ -67,5 +67,19 @@
       bar.innerHTML = navbar();
       foot.innerHTML = footer();
 
+      const addeven = (idname, place) => {
+            idname.addEventListener("click", () => {
+                window.location.href = `${place}`
+            })
+
+        }
+        //   addeven(document.querySelector("#home), "")
+           addeven(document.querySelector("#baby"), "/baby.html")
+          addeven(document.querySelector("#beauty"), "/face.html")
+        //   addeven(document.querySelector("#hair), "")
+          addeven(document.querySelector("#face"),"/face.html")
+          addeven(document.querySelector("#body"),"/body.html")
+          addeven(document.querySelector("#allproduct"), "/all_products.html")
+
 
 </script>

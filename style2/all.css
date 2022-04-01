@@ -34,7 +34,7 @@ margin: auto;
 background-color: rgba(219, 232, 232, 0.72);
 }
 #sot{
-position: relative;
+/* position:fixed; */
 box-sizing: border-box;
 }
 #setsel{
@@ -43,9 +43,10 @@ height:100%;
 color: rgb(128, 128, 128);
 /* margin-left: 2px;
 margin-right: 2px;
-position: absolute;
+
 top: 50%;
 transform: translateY(-50%); */
+
 box-sizing: border-box;
 }
 .st{
