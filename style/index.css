@@ -21,6 +21,7 @@
    margin-top: -360px;
    margin-left: -10;
  }
+ /* ................................. */
  #parent{
      width:68%;
      height:auto;
@@ -85,11 +86,13 @@
       background-color:white;
       font-weight: 600;
      margin-bottom: 20px;
+     cursor: pointer;
  }
  #addcart:hover{
      background-color:#00afef;
      color:white;
       border: 0.5px solid #00afef;
+      cursor: pointer;
  }
  #priceone{
      color: #333333;
@@ -118,7 +121,7 @@
      height:auto;
      /* border: 0.5px solid rgb(182, 179, 179); */
      margin:auto;
-     margin-top: 270px;
+     margin-top: 250px;
      display: flex;
      box-sizing: border-box;
      padding-left: 50px;
@@ -135,7 +138,7 @@
       
       line-height:17px;
       font-style: lato;
-      padding-bottom: 30px;
+      padding-bottom: 0px;
       color: rgb(34, 34, 34);
  }
  #leftarrow1{
@@ -152,7 +155,7 @@
      height:420px;
      /* border: 0.5px solid rgb(182, 179, 179); */
      margin:auto;
-     margin-top: 270px;
+     margin-top: 200px;
      display: flex;
      box-sizing: border-box;
      padding-left: 50px;
@@ -188,7 +191,7 @@
      height:420px;
      /* border: 0.5px solid rgb(182, 179, 179); */
      margin:auto;
-     margin-top: 270px;
+     margin-top: 240px;
      display: flex;
      box-sizing: border-box;
      padding-left: 50px;
@@ -223,7 +226,7 @@
      height:420px;
      /* border: 0.5px solid rgb(182, 179, 179); */
      margin:auto;
-     margin-top: 270px;
+     margin-top: 250px;
      display: flex;
      box-sizing: border-box;
      padding-left: 50px;
@@ -268,7 +271,7 @@
      margin: auto;
      margin-top: 5px;
      height:450px;
-     padding-top: 90px;
+     padding-top: 150px;
       /* border: 0.5px solid rgb(182, 179, 179); */
       padding-bottom: 50px;
       margin-bottom: 60px;
@@ -431,139 +434,3 @@
 
 
 /* ****popup******* */
-
-
-
-.hero {
-  background-size: cover;
-  height: 420px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button {
-  background-color: #1686d9;
-  border: 2px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  padding: 10px 28px;
-  color: white;
-  margin-top: 10px;
-  display: inline-block;
-}
-.button:hover {
-  background-color: white;
-  color: #1686d9;
-  border: 2px solid #1686d9;
-
-  
-}
-
-
-
-.bg-modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  justify-content:end;
-  align-items: center;
-  margin-left: -30px;
-
-  
-}
-
-.modal-contents {
-  height: 100%;
-  width: 350px;
-  background-color: white;
-  text-align: center;
-  position:absolute;
-  /* border-radius: 4px; */
-  box-sizing: border-box;
-  margin-right: -18px;
-  
-}
-
-.modal-contents>input {
-  margin: 15px auto;
-  display:inline-block;
-  width: 50%;
-  padding: 12px;
-  border: 1px solid gray;
-}
-
-.close {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  font-size: 42px;
-  color: rgb(242, 236, 236);
-  transform: rotate(45deg);
-  cursor: pointer;
-}
-.close:hover {
-  color: rgb(71, 70, 70);
-}
-/* ******** */
-#fixedtop{
-    display: block;
-     /* position: fixed; */
-    height:50px;
-    width:100%;
-    background-color: #d4424c;
-    color:white;
-    /* align-items: center; */
-    /* text-align: center; */
-    font-size: 13px;
-    box-sizing: border-box;
-    padding-top:15px;
-   font-weight: 500;
-  
-}
-#abocenter{
-     width:100%;
-      box-sizing: border-box;
-      scroll-behavior: auto;
-      height:550px;
-      /* border:1px solid red; */
-      margin:auto;
-      margin-top: 5px;
-      overflow:scroll;
-      
-}
-/* width */
-#abocenter::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-#abocenter::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-#abocenter::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-/* Handle on hover */
-#abocenter::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-#fixedbottom{
- background-color: #00afef;    
- color:white;
- font-size: 22px;
- font-weight: bold;
- display: inline-block;
- height:50px;
- width:100%;
- box-sizing: border-box;
- padding-top: 12px;
-}

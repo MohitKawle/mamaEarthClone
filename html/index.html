@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/style/index.css">
     <link rel="stylesheet" href="/style/navbar.css">
     <!-- <a href="/samplepopup/popup.html"></a> -->
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
@@ -112,11 +113,9 @@
      <div id="sliderreview"></div>
 
 
-     <div id="footer">
-           </div>
+     <div id="footer"> </div>
            <!-- *******popupcart********** -->
-
-            <div class="bg-modal">
+     <div class="bg-modal">
                 <div class="modal-contents">
                     <div class="close">+</div>
 
@@ -125,24 +124,56 @@
                       <div id="abocenter">
                    
                       </div>
-                      <div id="fixedbottom">PROCEED TO PAY</div>
+                    <div id="fixedbottom">PROCEED TO PAY</div>
                 
             
                 </div>
                 <div id="clear"></div>
 
-            </div>
+    </div>
             <!-- ****************************** -->
             <!-- ***alert messeage**** -->
-            <div class="alert hide">
+    <div class="alert hide">
             
                 <span class="msg">product has been added to cart</span>
-            </div>
+    </div>
+
+
             <!-- end -->
+
+       <div id="loginpop">
+                    <div class="modal">
+                     
+                        <div class="contents">
+                    
+                       
+                            <div>Your Profile</div>
+                            <div>Your Order</div>
+                            <div>Contact Us</div>
+                            <div>
+                              <button id="loginone"> Login In</button>
+                    </div>
+       </div>     
+       <!-- ====== -->
+        <div class="mainlogin">
+            <div class="modalmain">
+        
+                <div class="closemain">+</div>
+        
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <br>
+                    <input type="email" placeholder="E-Mail">
+                    <br>
+                    <a href="#" class="button">Submit</a>
+                </form>
+        
+            </div>
+        </div>
        
 </body>
 </html>
-<script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+
 <script src="/scripts/index.js"></script>
 <script src="/scripts/data.js"></script>
 <script type="module">
@@ -200,25 +231,50 @@
             })
 
         }
-        //    addeven(document.querySelector("#cart"), "/samplepopup/popup.html")
+        //   addeven(document.querySelector("#home), "")
+        //   addeven(document.querySelector("#baby), "")
+        //   addeven(document.querySelector("#beauty), "")
+        //   addeven(document.querySelector("#hair), "")
+        //   addeven(document.querySelector("#face), "")
+        //   addeven(document.querySelector("#body), "")
+        //   addeven(document.querySelector("#allproduct), "")
+         
 
       //    ************ the end code addeventlisner *****************     
 
 
     //   ***************start code od the popup*******************
-        
-            document.querySelector("#cart").addEventListener("click", function () {
-                document.querySelector('.bg-modal').style.display = "flex";
-                document.querySelector("#but2").innerHTML=null
-            });
+      
+          document.getElementById('login').addEventListener("mouseup", function () {
+                document.querySelector('.modal').style.display = "flex";
 
-            document.querySelector('.close').addEventListener("click", function () {
-                document.querySelector('.bg-modal').style.display = "none";
             });
+           
+
+           document.querySelector('.modal').addEventListener("dblclick", function () {
+                document.querySelector('.modal').style.display = "none";
+            });
+    // dblclick
+
             //  end code *************
 
+
+           document.getElementById('cart').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "flex";
+              document.querySelector("#but2").innerHTML = null
+        });
+
+        document.querySelector('.close').addEventListener("click", function () {
+            document.querySelector('.bg-modal').style.display = "none";
+           
+        });
             // ************ start code for alert meassage***************
     
-          //*******************end code**************      
-    
+             document.getElementById('loginone').addEventListener("click", function () {
+                    document.querySelector('.mainlogin').style.display = "flex";
+                });
+
+                document.querySelector('.closemain').addEventListener("click", function () {
+                    document.querySelector('.mainlogin').style.display = "none";
+                });
 </script>

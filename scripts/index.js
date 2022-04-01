@@ -88,7 +88,15 @@ let i = 0;
    data.map(({title,imageurl,price,strikeprice,rating})=>{
        
        let div =  document.createElement("div");
-           div.setAttribute("class","carousel-cell")
+          div.addEventListener("click",()=>{
+                var obj1={
+                    title,
+                     imageurl,
+                    price,
+                    strikeprice,
+                    rating,
+                }
+          })
 
        let t =  document.createElement("p")
            t.innerText = title
@@ -155,6 +163,16 @@ let i = 0;
    });
 
 };
+ let objdata = JSON.parse(localStorage.getItem("item")) || []
+    function addData(obj1){
+        objdata.push(obj1);
+    
+       localStorage.setItem("item",JSON.stringify(objdata))
+    //    window.location.href="blog.html";
+    console.log(ob)
+    }
+
+    // ////////////
     let objarr = JSON.parse(localStorage.getItem("cart")) || []
     function addData(obj){
         objarr.push(obj);
@@ -331,4 +349,12 @@ let i = 0;
 
     //   appending data to cart;
 
-    
+      //*******************end code**************      
+        //   document.querySelector("#login").addEventListener("mouseover", function () {
+        //         document.querySelector('.loginmain').style.display = "flex";
+        //     });
+
+        //     document.querySelector('#slideimg').addEventListener("mouseout", function () {
+        //         document.querySelector('.loginmain').style.display = "none";
+        //     });
+  

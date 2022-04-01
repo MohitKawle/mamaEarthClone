@@ -33,14 +33,14 @@ const navbar = ()=>{
 
         <div id="m3">
            <div>
-                 <p>HOME</p>
-            <p>BABY</p>
-            <p>BEAUTY</p>
-            <p>HAIR</p>
-            <p>FACE</p>
-            <p>BODY</p>
+            <p id="home">HOME</p>
+            <p id="baby">BABY</p>
+            <p id=beauty>BEAUTY</p>
+            <p id=hair>HAIR</p>
+            <p id=face>FACE</p>
+            <p id=body>BODY</p>
             <p>GIFTY PACKS</p>
-            <p>ALL PRODUCTS</p>
+            <p id=allproduct>ALL PRODUCTS</p>
             <p>BLOG</p>
             <p>PLANT GOODNESS</p>
             <p>STORE LOCATOR</p>
