@@ -234,7 +234,7 @@ let best_products=[ {
 var a=1;
 let data=JSON.parse(localStorage.getItem("face_data"))||[];
 let data1=JSON.parse(localStorage.getItem("best"))||[];
-let container=document.getElementById("cont");
+let container=document.getElementById("cont1555");
 let container1=document.getElementById("bestes");
 const sortItems=()=>{
     let sorting=document.getElementById("sorter").value;
@@ -285,7 +285,7 @@ const sortItems=()=>{
     price.innerText="₹"+elem.price;
     
     let rating=document.createElement("h4");
-    rating.setAttribute("class","rating")
+    rating.setAttribute("class","ratin")
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
@@ -351,7 +351,7 @@ const showdata=(data)=>{
     price.innerText="₹"+elem.price;
     
     let rating=document.createElement("h4");
-    rating.setAttribute("class","rating")
+    rating.setAttribute("class","ratin")
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
