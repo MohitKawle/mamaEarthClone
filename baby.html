@@ -5,23 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Born Baby products- Toxin-free | MamaEarth</title>
+    <!-- popup link  start-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- popup link  end-->
+
+    <!-- navbar css link start -->
+    <link rel="stylesheet" href="/style/navbar.css">
+    <!-- navbar css link end -->
 
     <link
       rel="shortcut icon"
       href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
     />
-    <link rel="stylesheet" href="./styles/baby.css" />
+    <link rel="stylesheet" href="./styles1/baby.css" />
 
-    <script src="./data/baby_data.js"></script>
+    <script src="./data1/baby_data.js"></script>
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="B_slide"></div>
     <div id="B_heading"><h1>Baby Care Products</h1></div>
+    <div id="navigatin"><span ><a href="index.html" style="color: #21b9f1; text-decoration: none;">Home</a> </span><Span> > Baby product</Span></div>
     <div id="B_BS_div">
       <h2>BestSeller</h2>
       <div id="BS_slider"></div>
@@ -51,8 +59,20 @@
       <span class="msg">product has been added to cart</span>
   </div>
   <!-- end -->
+
+  <!-- foother html start -->
+  <div id="footer"></div>
+  <!-- foother html end -->
   </body>
 </html>
 
-<script src="./scripts/baby.js"></script>
-<script type="module"></script>
+<script src="./scripts1/baby.js"></script>
+<script type="module">
+  // navbar script start*************
+  import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     let bar = document.querySelector("#navbar");
+     let foot = document.querySelector("#footer");
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer()
+      // navbar script end*************
+</script>

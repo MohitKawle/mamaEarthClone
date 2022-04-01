@@ -11,6 +11,10 @@
   height: fit-content;
   text-align: center;
 }
+#navigatin{
+  display: flex;
+  margin: auto 5%;
+}
 #B_products {
   margin: 2% 5%;
   /* border: 1px solid red; */
@@ -86,7 +90,10 @@
   margin: 10px 3px;
 }
 #B_title {
-  height: 50px;
+  color: gray;
+  height: auto;
+  font-size: 12px;
+  margin: auto 5%;
 }
 
 #bnn {

@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Place order | MamaEarth</title>
+     <!-- navbar css link start -->
+     <link rel="stylesheet" href="/style/navbar.css">
+     <!-- navbar css link end -->
+
     <link
       rel="shortcut icon"
       href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
     />
-    <link rel="stylesheet" href="./styles/payment.css" />
+    <link rel="stylesheet" href="./styles1/payment.css" />
   </head>
   <body>
+    <div id="navbar"></div>
     <div id="parentdiv">
       <div id="adressDiv">
         <h2>New Delevery address</h2>
@@ -118,10 +123,20 @@
         <h3 id="total_price">0</h3>
       </div>
     </div>
+     <!-- foother html start -->
+  <div id="footer"></div>
+  <!-- foother html end -->
   </body>
 </html>
-<script src="./scripts/payment.js"></script>
+<script src="./scripts1/payment.js"></script>
 <script type="module">
+  // navbar script start*************
+  import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     let bar = document.querySelector("#navbar");
+     let foot = document.querySelector("#footer");
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer()
+      // navbar script end*************
 
   import {upi, card,netBanking,wallet,cod} from "./scripts/payment_method.js"
   let append_div = document.getElementById("payment_append_div");

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- navbar css link start -->
+     <link rel="stylesheet" href="/style/navbar.css">
+     <!-- navbar css link end -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -13,10 +16,13 @@
       rel="shortcut icon"
       href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
     />
-    <link rel="stylesheet" href="./styles/item_details.css" />
+    <link rel="stylesheet" href="./styles1/item_details.css" />
     <title></title>
   </head>
   <body>
+      <!-- navbar html start-->
+    <div id="navbar"></div>
+    <!-- navbar html end-->
     <div id="Main_div">
       <div id="productDetails">
         <div>
@@ -220,8 +226,20 @@
       </div>
       <div id="Price_details"></div>
     </div>
+     <!-- foother html start -->
+  <div id="footer"></div>
+  <!-- foother html end -->
 
   </body>
 </html>
 
-<script src="./scripts/item_details.js"></script>
+<script src="./scripts1/item_details.js"></script>
+<script type="module">
+     // navbar script start*************
+  import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     let bar = document.querySelector("#navbar");
+     let foot = document.querySelector("#footer");
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer()
+      // navbar script end*************
+</script>
