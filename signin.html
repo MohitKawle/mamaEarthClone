@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.create_main_div {
+
+    /* width: 380px;
+    margin: auto;
+    margin-top: 100px;
+    height: 560px;
+    background-color: green;
+    
+    
+    align-items: center; */
+    border-radius: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 19.4px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 485px;
+    z-index: 1001;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    /* overflow: hidden scroll; */
+    /* background-color: red; */
+}
+    .create_main_div input{color: rgb(214, 214, 214);
+        border-width: 2px;
+        border-radius: 3px;
+        height: 2.7rem;
+        width: 100%;
+        border-color: white;
+          } 
+         
+        
+     
+     .input_box{
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(230, 232, 231);
+         width: 100%;
+        padding: 10px;
+        
+    appearance: none;
+    border-radius: 0px;
+    outline: none;
+     color: rgb(214, 214, 214);
+        border-width: 2px;
+        border-radius: 3px;
+        height: 2.7rem; 
+     }
+     .arrow_back_arrow{
+        letter-spacing: 0.4px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(112, 112, 112);
+    opacity: 0.95;
+    display: flex;
+    padding: 20px;
+}
+.arrow_back_arrow img{margin-right: 30px;
+    height:"24px" ;width:"24px"}
+
+.Sign_in_logo{font-size: 1.6rem;
+    font-weight: bold;
+    color: rgb(0, 174, 239);
+    text-align: center;
+    margin-top: 1rem;}
+    
+    .gapdiv{
+    height: 1rem; display: block; width: 100%;
+}
+.gapdiv2{
+    height: 3rem; display: block; width: 100%;
+}
+.term_and_codn{
+    letter-spacing: 0.8px;
+    font-size: 14px;
+}
+.term_and_codn a{
+    color: rgb(0, 175, 239);
+    font-weight: 600;
+}
+.otp_button_signin_page{
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    font-size: 16px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(0, 174, 239);
+    border: 1px solid rgb(0, 175, 239);
+    border-radius: 3px;
+    padding: 0.6rem 0rem;
+}
+.continue_as_guest{
+    font-size: 12px;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: rgb(0, 174, 239);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 1rem 0px;
+}
+#phone{font-size: 25px;color: rgb(24, 21, 21);}
+
+</style>
+
+
+</head>
+<body>
+    
+<div class="create_main_div">
+    <div class="create_account_upper">
+        
+         
+       
+        <div class="create_account_upper">
+            <div    class="Sign_in_logo">Log in to get started</div>
+            <div class="gapdiv"></div>
+            <div class="gapdiv"></div>
+            <div class="arrow_back_arrow" >
+                <img  src="	https://mamaearth.in/static/mamaearth/login.svg" alt="no img found">
+              
+                <div >Get access to your orders, track
+                    previous order & Redeem Mama
+                    Cash</div>
+        </div>
+        <div class="gapdiv"></div>
+        
+            <div class="details">
+                    <form id="form">
+                        
+                      
+                            
+                            <input autocomplete="off" type="text" name="phone"  placeholder="Phone number" id="phone"
+                            value="">
+                       
+             </div>
+             <div class="gapdiv2"></div>
+             <div class="gapdiv"></div>
+            
+             <div class="term_and_codn">By Continuing, you agree to Mamaearth's <a href="https://mamaearth.in/terms-and-conditions">
+                 Terms and condation</a> and
+                    <a href="https://mamaearth.in/privacy-policy">Privacy policy</a> </div>
+                    <div class="gapdiv2"></div>
+                <button type="submit" class="otp_button_signin_page">LOGIN WITH OTP</button>
+        
+    </div>
+    <div class="gapdiv"></div>
+    <a><div class="continue_as_guest">CONTINUE AS GUEST</div></a>
+</div>
+
+
+
+    
+</body>
+</html>
+
+      
+<script>
+var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
+document.querySelector("#form").addEventListener("submit", formfumction)
+var Exist=0;
+
+//check
+// userDataBase.map(function (elem) {
+            
+//             if ( phone === elem.Phone) {
+//                 localStorage.setItem("User", JSON.stringify(elem))
+//                 currentUser.push(elem);
+//                 localStorage.setItem("currentUser", JSON.stringify(currentUser))
+//                 flag = 1;
+//                 location.href = "index.html";
+//             }
+            
+//         })
+
+//check
+
+function formfumction() {
+        event.preventDefault();
+        // taking info from user
+        var phone = document.querySelector("#phone").value;
+        if(phone===null){return;}
+        
+       
+        userDataBase.map(function (elem) {
+            console.log(elem)
+            if (phone == elem.Phone) {
+                //send for otp verification 
+                Exist=1;
+                localStorage.setItem("phone",JSON.stringify(phone))
+                location.href = "mamaearthotp.html";
+            }
+          
+               
+           
+        })
+        //send to create account
+   
+
+
+         if (Exist == 0) {
+                  localStorage.setItem("phone",JSON.stringify(phone))
+            location.href="mamaearthCreateaccount.html"
+         }
+            
+    }
+
+
+
+    
+   
+    
+
+</script>
