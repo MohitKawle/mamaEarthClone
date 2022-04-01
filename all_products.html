@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Mamaearth's Natural & Toxin Free Skin Care Products Online. Online Mamaearth.in</title>
+    <link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png">
+    <link rel="stylesheet" href="./style2/same.css">    
+    <link rel="stylesheet" href="./style2/all.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+  
+<body>
+      <!-- for Nav -->
+      <div id="navbar"></div>
+      <!-- for sliding -->
+      <div id="face_slider"></div>
+      <!-- for link -->
+      <div id="link">
+        <a href="/html/index.html" id="home">Home</a>
+          <a id="p">/</a>
+          <a href="" id="best">Shop</a>
+      </div>
+      <div id="chang">
+          <div id="bttn">
+              <button class="gPzJRJ" id="alli">ALL</button>
+              <button class="gPzJRJ" id="hairi">HAIR</button>
+              <button class="gPzJRJ" id="facei">FACE</button>
+              <button class="gPzJRJ" id="bodyi">BODY</button>
+              <button class="gPzJRJ" id="babyi">BABY</button>
+          </div>
+          <div id="sot">
+              <select name="" id="setsel" >
+                <option value="" class="st">Sort By</option>
+                  <option value="rating" class="st">Rating</option>
+                  <option value="h2l" class="st">Price-High to Low</option>
+                  <option value="l2h" class="st">Price-Low to High</option>
+
+              </select>
+          </div>
+      </div>
+
+      <div id="cont"></div>
+ <!-- for alert  -->
+      <div class="alert hide">
+            
+        <span class="msg">product has been added to cart</span>
+    </div>
+
+    <!-- for footer -->
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module" src="./scripts2/all.js"></script>
+<script src="./scripts2/data.js"></script>
+<script type="module">
+       import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     
+     let bar = document.querySelector("#navbar");
+
+     let foot = document.querySelector("#footer");
+
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer();
+
+
+
+
+</script>
