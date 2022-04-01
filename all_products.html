@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Mamaearth's Natural & Toxin Free Skin Care Products Online. Online Mamaearth.in</title>
     <link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png">
-    <link rel="stylesheet" href="./style/same.css">    
-    <link rel="stylesheet" href="./style/all.css">
+    <link rel="stylesheet" href="./style2/same.css">    
+    <link rel="stylesheet" href="./style2/all.css">
+    <link rel="stylesheet" href="/style/navbar.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
   
 <body>
       <!-- for Nav -->
-      <div id="nav"></div>
+      <div id="navbar"></div>
       <!-- for sliding -->
       <div id="face_slider"></div>
       <!-- for link -->
       <div id="link">
-          <a href="index.html" id="home">Home</a>
+        <a href="/html/index.html" id="home">Home</a>
           <a id="p">/</a>
           <a href="" id="best">Shop</a>
       </div>
@@ -47,36 +48,24 @@
             
         <span class="msg">product has been added to cart</span>
     </div>
+
+    <!-- for footer -->
+    <div id="footer"></div>
 </body>
 </html>
-<script type="module" src="./scripts/all.js"></script>
-<script src="./scripts/data.js"></script>
+<script type="module" src="./scripts2/all.js"></script>
+<script src="./scripts2/data.js"></script>
 <script type="module">
-    let slideshow=document.getElementById("face_slider");
-    let slidearr=[];
-    const img1="https://images.ctfassets.net/66mrrren2unf/5kaAcTPfa6WK3WrRtpZoQc/d7fbc3cdede555135dab5c1c0187bdaf/Desktop.jpg?q=40";
-    const img2="https://images.ctfassets.net/66mrrren2unf/2gTR8xcf8Rxp4zvfzcRZl3/9a24954ff7b7f2066d69535d3f3ca7bb/Desktop.jpg?q=40";
-    const img3="https://images.ctfassets.net/66mrrren2unf/7HvyA24fZoupMV6HeOZmBV/b8b1fe1de6b1f9a5f08273f0bf0d850a/Banner_Website.jpg?q=40";
-    const img4="https://images.ctfassets.net/66mrrren2unf/3PnUXonZQ0tDY8e7siuCA7/48451c727f3e60ee71b3a628eda928cd/Desktop_Without_CTA.jpg?q=40";
-    const img5="https://images.ctfassets.net/66mrrren2unf/6nc4ahNcZm8FqgU4vU3vKl/cdfcd3ba0f2db050759fc68ee82a4313/Desktop_Bye-Bye-Face-Creams-with-CTA.jpg?q=40";
-    slidearr.push(img1);
-    slidearr.push(img2);
-    slidearr.push(img3);
-    slidearr.push(img4);
-    slidearr.push(img5);
-    let i=1;
-    let img=document.createElement("img");
-    img.src=slidearr[0];
-    slideshow.append(img);
-    setInterval(()=>{
-        if(i==slidearr.length){
-            i=0;
-        }
-        slideshow.innerHTML=null;
-        let img=document.createElement("img");
-       
-        img.src=slidearr[i];
-        i++;
-        slideshow.append(img);
-    },5000);
+       import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     
+     let bar = document.querySelector("#navbar");
+
+     let foot = document.querySelector("#footer");
+
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer();
+
+
+
+
 </script>

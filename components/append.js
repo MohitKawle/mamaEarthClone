@@ -32,7 +32,7 @@ const append=(data,parent)=>{
       setTimeout(function () {
           $('.alert').removeClass("show");
           $('.alert').addClass("hide");
-      }, 1000);
+      }, 2000);
   });
     add.setAttribute("class","adda");
     

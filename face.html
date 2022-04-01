@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Skin Care Products,Face Care Products in India | Mamaearth</title>
     <link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png">
-    <link rel="stylesheet" href="./style/same.css">    
-    <link rel="stylesheet" href="./style/face.css">
+    <link rel="stylesheet" href="./style2/same.css">    
+    <link rel="stylesheet" href="./style2/face.css">
+    <link rel="stylesheet" href="/style/navbar.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
     <!-- for Nav -->
-    <div id="nav"></div>
+    <div id="navbar"></div>
     <!-- for sliding -->
     <div id="face_slider"></div>
     <!-- for link -->
@@ -61,33 +62,21 @@
     <div class="alert hide">    
         <span class="msg">product has been added to cart</span>
     </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
 </body>
 </html>
-<script src="./scripts/face.js"></script>
+<script src="./scripts2/face.js"></script>
 <script type="module">
-    let slideshow=document.getElementById("face_slider");
-    let slidearr=[];
-    const img1="https://images.ctfassets.net/66mrrren2unf/5kaAcTPfa6WK3WrRtpZoQc/d7fbc3cdede555135dab5c1c0187bdaf/Desktop.jpg?q=40";
-    const img2="https://images.ctfassets.net/66mrrren2unf/6nc4ahNcZm8FqgU4vU3vKl/cdfcd3ba0f2db050759fc68ee82a4313/Desktop_Bye-Bye-Face-Creams-with-CTA.jpg?q=40";
-    const img3="https://images.ctfassets.net/66mrrren2unf/47dAZlL0hYhngGsYIaTuYs/c872e33a379b82cd7be65cfd72cfbc93/Desktop.jpg?q=40";
-    const img4="https://images.ctfassets.net/66mrrren2unf/6DEjNSGw6MnbbdHPG2M6pc/fd41e9479ea1fc14264f80816110db3f/Desktop.jpg?q=40";
-    slidearr.push(img1);
-    slidearr.push(img2);
-    slidearr.push(img3);
-    slidearr.push(img4);
-    let i=1;
-    let img=document.createElement("img");
-    img.src=slidearr[0];
-    slideshow.append(img);
-    setInterval(()=>{
-        if(i==slidearr.length){
-            i=0;
-        }
-        slideshow.innerHTML=null;
-        let img=document.createElement("img");
-       
-        img.src=slidearr[i];
-        i++;
-        slideshow.append(img);
-    },5000);
+    import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
+     
+     let bar = document.querySelector("#navbar");
+
+     let foot = document.querySelector("#footer");
+
+      bar.innerHTML = navbar();
+      foot.innerHTML = footer();
+
+
 </script>

@@ -142,7 +142,36 @@ let sortItems=document.getElementById("setsel");
                     }
  })
 
+//sliding part
 
+
+let slideshow=document.getElementById("face_slider");
+let slidearr=[];
+const img1="https://images.ctfassets.net/66mrrren2unf/5kaAcTPfa6WK3WrRtpZoQc/d7fbc3cdede555135dab5c1c0187bdaf/Desktop.jpg?q=40";
+const img2="https://images.ctfassets.net/66mrrren2unf/2gTR8xcf8Rxp4zvfzcRZl3/9a24954ff7b7f2066d69535d3f3ca7bb/Desktop.jpg?q=40";
+const img3="https://images.ctfassets.net/66mrrren2unf/7HvyA24fZoupMV6HeOZmBV/b8b1fe1de6b1f9a5f08273f0bf0d850a/Banner_Website.jpg?q=40";
+const img4="https://images.ctfassets.net/66mrrren2unf/3PnUXonZQ0tDY8e7siuCA7/48451c727f3e60ee71b3a628eda928cd/Desktop_Without_CTA.jpg?q=40";
+const img5="https://images.ctfassets.net/66mrrren2unf/6nc4ahNcZm8FqgU4vU3vKl/cdfcd3ba0f2db050759fc68ee82a4313/Desktop_Bye-Bye-Face-Creams-with-CTA.jpg?q=40";
+slidearr.push(img1);
+slidearr.push(img2);
+slidearr.push(img3);
+slidearr.push(img4);
+slidearr.push(img5);
+let i=1;
+let img=document.createElement("img");
+img.src=slidearr[0];
+slideshow.append(img);
+setInterval(()=>{
+    if(i==slidearr.length){
+        i=0;
+    }
+    slideshow.innerHTML=null;
+    let img=document.createElement("img");
+   
+    img.src=slidearr[i];
+    i++;
+    slideshow.append(img);
+},5000);
 
 
 
