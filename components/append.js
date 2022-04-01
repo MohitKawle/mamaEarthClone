@@ -20,7 +20,7 @@ const append=(data,parent)=>{
     price.innerText="₹"+elem.price;
     
     let rating=document.createElement("h4");
-    rating.setAttribute("class","rating")
+    rating.setAttribute("class","ratin")
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
