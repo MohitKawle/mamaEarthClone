@@ -262,7 +262,7 @@ const sortItems=()=>{
  localStorage.setItem("best",JSON.stringify(best_products));
  const display=(data1)=>{
   container1.innerHTML=null;
-  data1.forEach((elem)=>{
+  data1.map((elem)=>{
     //  console.log("hel");
       let div=document.createElement("div");
     div.setAttribute("class","small");
@@ -289,7 +289,16 @@ const sortItems=()=>{
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
-    add.innerText="ADD TO CART";
+    add.innerText="ADD TO CART"
+    $(add).click(function () {
+        $('.alert').addClass("show");
+        $('.alert').removeClass("hide");
+        $('.alert').addClass("showAlert");
+        setTimeout(function () {
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+        }, 1000);
+    });
     add.setAttribute("class","adda")
     
     div.append(seller,image,title,rating,price,add);
@@ -299,7 +308,7 @@ const sortItems=()=>{
         a=3;
         //console.log("Hello")
         localStorage.setItem("cart",JSON.stringify(elem));
-        alert("added to cart");
+      //  alert("added to cart");
       //  window.location.href="face.html";
        }
 
@@ -346,7 +355,16 @@ const showdata=(data)=>{
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
-    add.innerText="ADD TO CART";
+    add.innerText="ADD TO CART"
+    $(add).click(function () {
+        $('.alert').addClass("show");
+        $('.alert').removeClass("hide");
+        $('.alert').addClass("showAlert");
+        setTimeout(function () {
+            $('.alert').removeClass("show");
+            $('.alert').addClass("hide");
+        }, 1000);
+    });
     add.setAttribute("class","adda")
     
     div.append(image,title,rating,price,add);
@@ -356,7 +374,7 @@ const showdata=(data)=>{
         //console.log("Hello")
         a=3;
         localStorage.setItem("cart",JSON.stringify(elem));
-        alert("Added to Cart")
+       // alert("Added to Cart")
       //  window.location.href="face.html";
        }
 

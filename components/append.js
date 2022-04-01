@@ -24,7 +24,16 @@ const append=(data,parent)=>{
     rating.innerText=elem.rating+"★";
 
     let add=document.createElement("button");
-    add.innerText="ADD TO CART";
+    add.innerText="ADD TO CART"
+    $(add).click(function () {
+      $('.alert').addClass("show");
+      $('.alert').removeClass("hide");
+      $('.alert').addClass("showAlert");
+      setTimeout(function () {
+          $('.alert').removeClass("show");
+          $('.alert').addClass("hide");
+      }, 1000);
+  });
     add.setAttribute("class","adda");
     
     div.append(image,title,rating,price,add);
@@ -39,7 +48,7 @@ const append=(data,parent)=>{
          //console.log("title");
        localStorage.setItem("item",JSON.stringify(elem));
        if(a==3){
-         alert("Added to Cart");
+       //  alert("Added to Cart");
          window.location.reload();
          return;
        }
