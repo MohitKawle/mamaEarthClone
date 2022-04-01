@@ -244,7 +244,7 @@ const appendBody= (data,where,value) =>{
         })
         div.append(Price,strike,offer);
 
-        if(value===2){
+        if(value===3){
           let tag = document.createElement("div");
           tag.setAttribute("id","tag")
           tag.innerHTML = "BESTSELLER"
@@ -315,22 +315,22 @@ const sortItems=()=>{
     let sorting=document.getElementById("B_sorter").value;
    
     if(sorting=="h2l"){
-      baby_data.sort((a,b)=>{
+      body_data.sort((a,b)=>{
             return b.price - a.price;
         });
         // console.log(baby_data)
-        appendBaby(baby_data,B_main,1);
+        appendBody(body_data,B_main,1);
     }
     else if(sorting=="l2h"){
-      baby_data.sort((a,b)=>{
+      body_data.sort((a,b)=>{
             return a.price-b.price;
         });
-        appendBaby(baby_data,B_main,1);
+        appendBody(body_data,B_main,1);
     }
     else if(sorting=="rating"){
-      baby_data.sort((a,b)=>{
+      body_data.sort((a,b)=>{
             return b.rating-a.rating;
         });
-        appendBaby(baby_data,B_main,1);
+        appendBody(body_data,B_main,1);
     }
    }
