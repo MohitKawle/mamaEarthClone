@@ -126,17 +126,17 @@
      <!-- foother html start -->
   <div id="footer"></div>
   <!-- foother html end -->
+  <div class="bg-modal"> </div>
+  <div id="loginpop"></div>
+  <div class="mainlogin"></div>
   </body>
 </html>
+
+
+
 <script src="./scripts1/payment.js"></script>
+<script type="module" src="module.js"></script>
 <script type="module">
-  // navbar script start*************
-  import {navbar,leftarrow,rightarrow,footer} from './html/components/navbar.js';
-     let bar = document.querySelector("#navbar");
-     let foot = document.querySelector("#footer");
-      bar.innerHTML = navbar();
-      foot.innerHTML = footer()
-      // navbar script end*************
 
   import {upi, card,netBanking,wallet,cod} from "./scripts/payment_method.js"
   let append_div = document.getElementById("payment_append_div");
