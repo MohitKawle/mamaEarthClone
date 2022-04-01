@@ -60,5 +60,16 @@ document.querySelector('.bg-modal').style.display = "none";
 
 }
             addeven(document.querySelector("#home"), "index.html")
+            addeven(document.querySelector("#allproduct"), "all_products.html")
+            addeven(document.querySelector("#baby"), "baby.html")
+            addeven(document.querySelector("#face"), "face.html")
+            addeven(document.querySelector("#body"), "body.html")
+            addeven(document.querySelector(".logo"), "index.html")
+            document.querySelector(".logo").style.cursor="pointer"
 
             // navbar script end*************
+
+            let cart_data = JSON.parse(localStorage.getItem("cart"));
+            var count = document.querySelector("#circle")
+            count.innerHTML = cart_data.length;
+            count.style.background ="#00afef"

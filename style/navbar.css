@@ -101,7 +101,8 @@
 #circle{
     /* border:1px solid red; */
     border-radius: 50%;
-    width:18px;
+    width:fit-content;
+    padding-right: 6px;
     height:18px;
     margin-left: -25px;
     margin-top: -12px;

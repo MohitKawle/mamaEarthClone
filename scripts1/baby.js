@@ -1,4 +1,4 @@
-let baby_data = JSON.parse(localStorage.getItem("baby_products"));
+let baby_data = JSON.parse(localStorage.getItem("babydata"));
 // console.log(baby_data)
 let B_main = document.getElementById("B_main");
 
@@ -73,6 +73,9 @@ const addTocart=(elem)=>{
     let Add_item = elem
     Cart.push(Add_item);
     localStorage.setItem("cart",JSON.stringify(Cart))
+    var count = document.querySelector("#circle")
+    count.innerHTML = Cart.length;
+    count.style.background ="#00afef"
 }
 
 // Sliding effect:----------------------------------------------

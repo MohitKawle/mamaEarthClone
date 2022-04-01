@@ -309,6 +309,9 @@ const sortItems=()=>{
         a=3;
         cart_data.push(elem)
         localStorage.setItem("cart",JSON.stringify(cart_data));
+        var count = document.querySelector("#circle")
+        count.innerHTML = cart_data.length;
+        count.style.background ="#00afef"
       //  alert("added to cart");
       //  window.location.href="face.html";
        }

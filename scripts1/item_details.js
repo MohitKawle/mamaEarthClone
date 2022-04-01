@@ -102,6 +102,9 @@ const addTocart=(elem,qtyNo)=>{
     let Add_item = elem
     Add_item["qtyNo"] = qtyNo;
     Cart.push(Add_item);
+    var count = document.querySelector("#circle")
+       count.innerHTML = Cart.length;
+       count.style.background ="#00afef"
     localStorage.setItem("cart",JSON.stringify(Cart))
 }
 priceFun(getDetails)

@@ -88,21 +88,22 @@ let i = 0;
    data.map(({title,imageurl,price,strikeprice,rating})=>{
        
        let div =  document.createElement("div");
-          div.addEventListener("click",()=>{
-                var obj1={
-                    title,
-                     imageurl,
-                    price,
-                    strikeprice,
-                    rating,
-                }
-          })
 
        let t =  document.createElement("p")
            t.innerText = title
             
        let img1 = document.createElement("img");
            img1.src =  imageurl
+           img1.addEventListener("click",()=>{
+            var obj1={
+                title,
+                 imageurl,
+                price,
+                strikeprice,
+                rating,
+            }
+            additem(obj1)
+      });
 
        let r = document.createElement("div");
            if(rating === 5.0){
@@ -163,16 +164,14 @@ let i = 0;
    });
 
 };
-//  let objdata = JSON.parse(localStorage.getItem("item")) || []
-//     function addData(obj1){
-//         objdata.push(obj1);
-    
-//        localStorage.setItem("item",JSON.stringify(objdata))
-//     //    window.location.href="blog.html";
-//     console.log(ob)
-//     }
 
-    // ////////////
+    function additem(obj1){
+        
+       localStorage.setItem("item",JSON.stringify(obj1))
+       window.location.href="item_details.html";
+    }
+
+    // //////////// adding to cart
     let objarr = JSON.parse(localStorage.getItem("cart")) || []
     function addData(obj){
         objarr.push(obj);

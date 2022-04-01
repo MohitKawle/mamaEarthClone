@@ -133,7 +133,8 @@
 }
 
 #tag {
-  position: absolute;
+  /* position: absolute; */
+  width: 120px;
   padding: 5px;
   background-color: #ff5b6f;
   color: white;

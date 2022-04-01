@@ -43,7 +43,10 @@ const append=(data,parent)=>{
     add.onclick=()=>{
     //  console.log("add")
     a=3;
-    cart_data.push(elem)
+    cart_data.push(elem);
+    var count = document.querySelector("#circle")
+       count.innerHTML = cart_data.length;
+       count.style.background ="#00afef"
       localStorage.setItem("cart",JSON.stringify(cart_data));
      }
 
