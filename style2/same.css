@@ -8,6 +8,7 @@
 } */
 #face_slider{
     width:100%;
+    /* margin-top: 1500px; */
     height:400px;
     margin-top:3px;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
@@ -33,7 +34,7 @@
  #cont1555>div>img{
    height:247px;
 }
-#link{
+#link1{
     display: flex;
     width:80%;
     height: 35px;
@@ -118,7 +119,9 @@ width:90%;
 padding: 0.7rem 1rem;
 background-color: transparent;
 }
- #cont1555 > div:hover >.adda {
+
+ #cont1555> div:hover >.adda {
+
   background-color: #21b9f1;
   color: white;
 }
