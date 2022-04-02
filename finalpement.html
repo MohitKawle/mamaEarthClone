@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
 <style>
     .main{
         width: 100%;
         height: auto;
-        border: 1px red solid;
+        /* border: 1px red solid; */
 
     }#pdiv1mid{margin: auto; width: 50%;}
         #pdiv1mid img{height: 80px; width: 80px; margin-left: 45%; }
@@ -20,20 +23,20 @@
     #pdiv2mid{width: 80%;margin: auto;   height: 150px; background-color: #d4edf7;display: flex;}
         #pdiv2mid div{ width: 20%;margin: auto;height: 100%; }
         #pdiv2mid h3{text-align: center; color: rgb(119, 113, 113);margin-top: 30px;}
-        #pdiv2mid  h2{font-size: 28px; text-align: center; color: rgb(5, 5, 5);}
+        #pdiv2mid  h2{font-size: 18px; text-align: center; color: rgb(5, 5, 5);}
 
-    #pdiv3mid{color: red;background-color: rgb(204, 196, 196);width: 80%;margin: auto;   height: 150px;}
+    #pdiv3mid{color: red;background-color: rgb(204, 196, 196);width: 80%;margin: auto;  padding:0.5%;box-sizing: border-box; height: 160px;}
         #pdiv3mid h3{ font-size: 264x;word-spacing: 8px; text-align: center;margin-top: 25px; }
 
 
     
         #pdiv4mid{width: 80%;height: 500px; margin: auto;display: flex;}
             #pdiv4mid >div{width: 30%;height: 100%; border: 1px solid grey;border-radius: 3%; margin: auto;}
-               #hi_name{width: 100%;height: 30%;font-size: 30px;display: flex;}
-               #address_details{font-size: 30px;margin-top: 10px;border: 1px solid grey;}
+               #hi_name{width: 100%;height: 30%;font-size: 18px;display: flex;padding:5%}
+               #address_details{font-size: 18px;margin-top: 10px;padding:5%}
                #Delivery_details_1{height: 42%;background-color: aqua; border-radius: 3%;}
                #Delivery_details_2{height: 215px;width: 97%;background-color:  rgb(221, 215, 215); }
-               #Real_Adress{margin: auto; width: 80%;height: 80%;margin-top: 0%;border: 5px solid black;}
+               #Real_Adress{margin: auto; width: 80%;height: 80%;margin-top: 0%;}
 
 
                #Price_details > div{font-size: 30px; margin-top: 8%; display: flex;border-bottom: 1px solid gray;}
@@ -50,7 +53,8 @@
 </head>
 <body>
     <div class="main">
-            <div id="navbar"><h1>navbar</h1> </div>
+            <div id="navbar"></div>
+            <div style="height: 130px;"></div>
        <div id="pdiv1mid">
             <img src="https://t4.ftcdn.net/jpg/02/02/78/81/500_F_202788149_9sndfcPPme9zRtstjROSmyLFma2UMYaM.jpg" alt="">
             <h2>Yeah! Order Sucdesfully Placed</h4>
@@ -59,11 +63,11 @@
         <div id="pdiv2mid">
             <div>
                 <h3>Order No</h3>
-                <h2 id="Order_no">2222</h2>
+                <h2 id="Order_no">9174584</h2>
             </div>
             <div>
                 <h3>Payment Method:</h3>
-                <h2 id="Payment_Method">cash on dil</h2>
+                <h2 id="Payment_Method">Cash On Delivery</h2>
             </div>
             <div> 
                 <h3>Grand Total:</h3>
@@ -117,7 +121,7 @@
                     </div>
             </div>
             <div id="Product_summery">
-                <h1>Product summery</h1>
+                <h1>Product summary</h1>
             </div id="all_details_with_total" >
             <div id="Price_details">
                 
@@ -150,18 +154,34 @@
                 <!-- <h1> <u>WE PLANT GOODNESS</u></h1> -->
 
          </div>
-
+    <div id="footer"></div>
+    <!-- foother html end -->
+    <div class="bg-modal"> </div>
+    <div id="loginpop"></div>
+    <div class="mainlogin"></div>
 
 
     </div>
 </body>
 </html>
-
+ <script type="module" src="/module.js"></script>
 
 <script>
- var User = JSON.parse(localStorage.getItem("User")) || [];
-console.log(User.Phone)
+//  var User = JSON.parse(localStorage.getItem("User")) || [];
 
+      
+        let super1 = JSON.parse(localStorage.getItem("address"));
 
+     
+
+       document.querySelector("#user_name").innerText = super1.first_name;
+       document.querySelector("#phone_num").innerText  = super1.mobile;
+         document.querySelector("#emai_id").innerText = super1.email;
+         document.querySelector("#Real_Adress").innerText = super1.Address;
+       
+         
+      console.log(super1)
+        
+      
 </script>
 

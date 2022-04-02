@@ -38,6 +38,7 @@ data.forEach((elem,index) => {
         elem.qtyNo=1;
     }
     Sub_total.innerText = `₹${(total+=(elem.price*elem.qtyNo))}`
+    
     copy_of_total_price=total;
 
     let quantity_div = document.createElement("div");
