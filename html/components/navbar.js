@@ -229,7 +229,12 @@ const cartpopup=()=>{
                       <div id="abocenter">
                    
                       </div>
-                    <div id="fixedbottom">PROCEED TO PAY</div>
+                      <div id="cart_bottom">
+                      <div id="total_price_div"><h3>Grand Total</h3>
+                        <h3 id="total_price">0</h3>
+                        </div>
+                    <div id="fixedbottom">CONTINUE</div></div>
+                      
                 
             
                 </div>

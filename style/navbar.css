@@ -486,7 +486,7 @@ font-size: larger;
 
 .modal-contents {
   height: 100%;
-  width: 350px;
+  width: 450px;
   background-color: white;
   text-align: center;
   position:absolute;
@@ -536,7 +536,7 @@ font-size: larger;
      width:100%;
       box-sizing: border-box;
       scroll-behavior: auto;
-      height:550px;
+      height:500px;
       /* border:1px solid red; */
       margin:auto;
       margin-top: 5px;
@@ -565,15 +565,94 @@ font-size: larger;
   background: #555; 
 }
 #fixedbottom{
+
  background-color: #00afef;    
  color:white;
  font-size: 20px;
  font-weight: bold;
  display: block;
  height:50px;
- width:100%;
+ width:30%;
  box-sizing: border-box;
  padding-top: 13px;
  margin-top:0px;
+ cursor: pointer;
 }
+/* ************************************************* */
+#cart_bottom{
+  display: flex;
+justify-content: space-between;
+}
+#orderDetailsDiv {
+  border: solid #e4e4e4 1px;
+  border-radius: 5px;
+  width: 45%;
+  height: fit-content;
+  padding: 2.5px;
+}
+
+#price_summary {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 3%;
+}
+#price_summary h3:first-child{
+color: #21b9f1;
+}
+#frame {
+  display: flex;
+  border-bottom: solid #e4e4e4 1px;
+  width: 95%;
+  margin: auto;
+}
+#total_price_div h3{
+  margin: 0;
+}
+#total_price_div{
+  display: flex;
+  flex-direction: column;
+  margin: auto 5%;
+}
+#frame > div:first-child {
+  width: 25%;
+  height: 120px;
+  padding: 5px;
+  margin-right: 10px;
+}
+#frame div:first-child img {
+  width: 100%;
+  height: 100%;
+  border: solid gray 1px;
+  border-radius: 5px;
+}
+
+#secondDiv {
+  width: 72%;
+  height: fit-content;
+}
+#secondDiv div {
+  display: flex;
+  justify-content: space-between;
+}
+#secondDiv > div:last-child > div:last-child {
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+#secondDiv div p {
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#secondDiv div button {
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  background-color: transparent;
+  width: 30px;
+}
+#secondDiv div button:hover {
+  background-color: #21b9f1;
+}
+/* ******************************************************** */
 /* ============ */

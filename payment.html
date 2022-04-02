@@ -7,6 +7,7 @@
     <title>Place order | MamaEarth</title>
      <!-- navbar css link start -->
      <link rel="stylesheet" href="/style/navbar.css">
+     <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
      <!-- navbar css link end -->
 
     <link
@@ -107,7 +108,7 @@
             <input type="submit" id="place_order"  value="PLACE ORDER" />
               <div>
                 <img
-                  src="./data/card logo.JPG"
+                  src="./data1/card logo.JPG"
                   style="width: 100%; height: 100px"
                   alt="paymentlogo"
                 />
@@ -124,12 +125,14 @@
         <h3 id="total_price">0</h3>
       </div>
     </div>
+    </div   >
      <!-- foother html start -->
   <div id="footer"></div>
   <!-- foother html end -->
   <div class="bg-modal"> </div>
   <div id="loginpop"></div>
   <div class="mainlogin"></div>
+  <div id="cart_bottom"></div>
   </body>
 </html>
 
@@ -139,7 +142,7 @@
 <script type="module" src="module.js"></script>
 <script type="module">
 
-  import {upi, card,netBanking,wallet,cod} from "./scripts/payment_method.js"
+  import {upi, card,netBanking,wallet,cod} from "./scripts1/payment_method.js"
   let append_div = document.getElementById("payment_append_div");
   
   let upi_method = document.getElementById("upi")
