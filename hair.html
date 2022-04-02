@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Body Care Products Online| body care</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="shortcut icon"
+      href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
+    />
+    <link rel="stylesheet" href="/Css/hair.css">
+</head>
+<body>
+
+    <!-- Sliding -->
+    <div id="hair_slider"></div>
+
+    <div id="margin">
+        <div id="Div1">
+            <p>Home</p>
+            <p>></p>
+            <p>hair care Products</p>
+        </div>
+        <h1 id="title">hair Care Products</h1>
+        <p id="bestseller">Bestseller</p>
+        <div id="best_prod">
+            <div id="best">
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/t/e/tea_tree_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Tea Tree Anti Dandruff Anti Hairfall Hair Mask, 200ml</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div id="best">
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Hair Regrowth Combo : Onion Shampoo, 250ml and Onion Conditioner, 250ml</p>
+                <p>4.8★</p>
+                <div>
+                    <p>₹698</p>
+                    <s>₹668</s>
+                    <p>(3%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div id="best">
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/o/n/onion_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Onion Hair Mask, For Hair Fall Control, With Onion Oil and Organic Bamboo Vinegar</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div id="best">
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/_/o/_onion-oil-150ml_.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Onion Hair Oil for Hair Regrowth and Hair Fall Control with Redensyl, 150ml</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+        <div id="tit">
+            <p class="tit">Our Products</p>
+            <select name="Sort" onchange="sortItems()" id="B_sorter">
+                <option value="">Sort By</option>
+                <option value="h2l">High To Low</option>
+                <option value="l2h">Low To High</option>
+                <option value="rating">Ratings</option>
+              </select>
+            <!-- <div id="sort">
+            </div> -->
+            <!-- <p class="sort">SortBy</p> -->
+        </div>
+        <div>
+            <button id="prod_buttonALL">ALL</button>
+            <button id="prod_button">HAIR OIL</button>
+            <button id="prod_button">HAIR MASK</button>
+            <button id="prod_button">SHAMPOO</button>
+            <button id="prod_button">CONDITIONER</button>
+        </div>
+        <div id="B_main" class=""></div>
+        <!-- ***alert messeage**** -->
+        <div class="alert hide">
+                
+            <span class="msg">product has been added to cart</span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/Data/hair.js"></script>
+
+<script type="module">
+    let slideshow=document.getElementById("hair_slider");
+    let sliderarr=[];
+
+    const img1="https://images.ctfassets.net/66mrrren2unf/5p5pVTewrOIcFmKeO0vbEP/a7ea8078f6d5711f6daa22173eaee478/Website_Banner.jpg?q=40";
+    const img2="https://images.ctfassets.net/66mrrren2unf/7FIW8yXsliQhjZIitZ5t8H/dfa440905e497c2cd86807a265b40076/_Body-Range-without-CTA_1920-512_.jpg?q=40";
+
+    sliderarr.push(img1);
+    sliderarr.push(img2);
+
+    let i=1;
+    let img=document.createElement("img");
+    img.src=sliderarr[0];
+    slideshow.append(img);
+
+    setInterval(()=>{
+        if(i==sliderarr.length){
+            i=0;
+        }
+        slideshow.innerHTML=null;
+        let img=document.createElement("img");
+
+        img.src=sliderarr[i];
+        i++;
+        slideshow.append(img);
+    },3000);
+</script>
