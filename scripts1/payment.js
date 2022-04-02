@@ -39,7 +39,7 @@ data.forEach((elem,index) => {
     }
     Sub_total.innerText = `₹${(total+=(elem.price*elem.qtyNo))}`
     
-    copy_of_total_price=total;
+    copy_of_total_price=(total+=(elem.price*elem.qtyNo));
 
     let quantity_div = document.createElement("div");
     quantity_div.setAttribute("id","quantity_div")
@@ -85,6 +85,7 @@ const Incbtn=(elem,index)=>{
 };
 
 displayCart(cart_data);
+localStorage.setItem("total_price",copy_of_total_price)
 
 // payment method validation function***********
 let method_value=null;
@@ -136,6 +137,7 @@ mobile==""||Address==""  || state==""){
         }
         // console.log(object)
         localStorage.setItem("address",JSON.stringify(object));
+        window.location.href="finalpement.html"
         //(----order sucessfull page will link here-------)
     }
     else{

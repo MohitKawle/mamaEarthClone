@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mamaearth | Order Sucessfull</title>
+    <link
+    rel="shortcut icon"
+    href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
+  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/style/navbar.css">
     <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
@@ -30,7 +34,7 @@
 
 
     
-        #pdiv4mid{width: 80%;height: 500px; margin: auto;display: flex;}
+        #pdiv4mid{width: 80%;height: 500px; margin: auto;margin-top: 10px; display: flex;}
             #pdiv4mid >div{width: 30%;height: 100%; border: 1px solid grey;border-radius: 3%; margin: auto;}
                #hi_name{width: 100%;height: 30%;font-size: 18px;display: flex;padding:5%}
                #address_details{font-size: 18px;margin-top: 10px;padding:5%}
@@ -39,12 +43,16 @@
                #Real_Adress{margin: auto; width: 80%;height: 80%;margin-top: 0%;}
 
 
-               #Price_details > div{font-size: 30px; margin-top: 8%; display: flex;border-bottom: 1px solid gray;}
+               #Price_details > div{font-size: 20px; margin-top: 8%; display: flex; justify-content: space-between ;border-bottom: 1px solid gray;}
 
 
         #pdiv5mid{background-image: url("https://mamaearthp.imgix.net/wysiwyg/desktop_home_img.jpg?auto=format");
             height: 450px;width: auto; margin: auto;}
-            #pdiv5mid H1{color: lightgreen;margin-left:50%;}
+            #pdiv5mid H1{color: lightgreen;margin-left:50%;};
+            #Product_summery{
+                height: fit-content;
+            }
+
     
 </style>
 
@@ -75,7 +83,7 @@
             </div>
             <div>
                 <h3>Date of Arrival</h3>
-                <h2 id="Date_of_arrival">6 april</h2>
+                <h2 id="Date_of_arrival">10 april</h2>
             </div>
          </div>      
 
@@ -93,17 +101,17 @@
             <div id="Delivary_details" style="border: 1px solid white;">
                    <div id="Delivery_details_1">
                     <div id="hi_name">
-                        <div>hii,</div>
+                        <div>Hi,</div>
                         <div id="user_name">name</div>
                     </div>
                     <div id="address_details">
-                        <div>your account details:
+                        <div>Your account details:
                             <div style="display: flex;">
-                                <div>phonenumber:</div>
+                                <div>Phonenumber:</div>
                                 <div id="phone_num">123</div>
                             </div>
                             <div  style="display: flex;">
-                                <div>email id:</div>
+                                <div>Email id:</div>
                                 <div id="emai_id">email</div>
 
                             </div>
@@ -122,65 +130,77 @@
             </div>
             <div id="Product_summery">
                 <h1>Product summary</h1>
+                <div id="purchased"></div>
             </div id="all_details_with_total" >
             <div id="Price_details">
                 
                 <h1>Price Details</h1>
-                <div><div>sub total:</div>
-                    <div>1</div>
+                <div><div>Sub total:</div>
+                    <div id="total_price00">1</div>
                 </div>
-                <div><div> shipping handling:</div>
-                    <div>2</div>
+                <div><div> Shipping handling:</div>
+                    <div>₹55</div>
                     </div>
-                <div><div>mama cash :<div>
-                        </div>333</div>
+                <div><div>Mama cash :</div>
+                        <div>₹0.00</div>
                 </div>
-                <div><div> Payment toatl:</div>
-                    <div>4444</div>
+                <div><div> Payment total:</div>
+                    <div id="payment_total_p">4444</div>
                 </div>
                 <div><div>Grand total:</div>
-                    <div>4</div>
+                    <div id="grand_p">4</div>
                 </div>
-                
             </div>
-
-
-
-
          </div>
-
-
          <div id="pdiv5mid">
                 <!-- <h1> <u>WE PLANT GOODNESS</u></h1> -->
-
          </div>
     <div id="footer"></div>
     <!-- foother html end -->
     <div class="bg-modal"> </div>
     <div id="loginpop"></div>
     <div class="mainlogin"></div>
-
-
     </div>
 </body>
 </html>
  <script type="module" src="/module.js"></script>
 
 <script>
-//  var User = JSON.parse(localStorage.getItem("User")) || [];
+         let total_price = JSON.parse(localStorage.getItem("total_price"))
+        document.getElementById("total_price00").innerHTML= "₹"+(total_price-55)
+        document.getElementById("grand_p").innerHTML= "₹"+(total_price+20)+".00"
+        document.getElementById("payment_total_p").innerHTML= "₹"+total_price+".00"
+        document.getElementById("Grand_total").innerHTML= "₹"+total_price+".00"
+        
 
-      
         let super1 = JSON.parse(localStorage.getItem("address"));
-
-     
-
        document.querySelector("#user_name").innerText = super1.first_name;
        document.querySelector("#phone_num").innerText  = super1.mobile;
          document.querySelector("#emai_id").innerText = super1.email;
          document.querySelector("#Real_Adress").innerText = super1.Address;
-       
          
-      console.log(super1)
+
+
+    let cart_data = JSON.parse(localStorage.getItem("cart"));
+    let order_summary = document.querySelector("#purchased")
+
+    cart_data.forEach((elem,index) => {
+    let frame = document.createElement("div");
+    frame.setAttribute("id","frame")
+   
+    let Title = document.createElement("p")
+    Title.innerText = elem.title
+    Title.style.margin="15px","10px"
+
+    let Price = document.createElement("p")
+    Price.innerText="₹"+elem.price
+    Price.style.fontSize="25px"
+
+    frame.append(Title,Price)
+    order_summary.append(frame)
+});
+
+
         
       
 </script>
