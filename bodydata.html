@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Body Care Products Online| body care</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="shortcut icon"
+      href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
+    />
+    <link rel="stylesheet" href="/Css/bodydata.css">
+</head>
+<body>
+
+    <!-- Sliding -->
+    <div id="body_slider"></div>
+
+    <div id="margin">
+        <div id="Div1">
+            <p>Home</p>
+            <p>></p>
+            <p>Body care Products</p>
+        </div>
+        <h1 id="title">Body Care Products</h1>
+        <p id="bestseller">Bestseller</p>
+        <div id="best_prod">
+            <div>
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/v/i/vitamin_c_and_ubtan.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Skin Radiance Body Care Kit - Ubtan Body Lotion & Vitamin C Body Lotion - (400 ml each)</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div>
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/c/h/charcoal-soap_1.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Charcoal Nourishing Bathing Soap With Charcoal and Mint for Deep Cleansing - 5x75g</p>
+                <p>4.8★</p>
+                <div>
+                    <p>₹299</p>
+                    <s>₹375</s>
+                    <p>(20%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div>
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/v/i/vitamin_c_and_ubtan.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Skin Radiance Body Care Kit - Ubtan Body Lotion & Vitamin C Body Lotion - (400 ml each)</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+
+            <div>
+                <div class="tag">BESTSELLER</div>
+                <img src="https://honasa-mamaearth-production.imgix.net/r/o/rose_body_lotion_7.jpg?auto=compress&fit=scale&w=400&h=400">
+                <p>Rose Body Lotion with Rose Water & Milk for Deep Hydration (400 ml) - Pack of 2"</p>
+                <p>4.9★</p>
+                <div>
+                    <p>₹518</p>
+                    <s>₹799</s>
+                    <p>(35%off)</p>
+                </div>
+                <button>ADD TO CART</button>
+            </div>
+        </div>
+        <div id="tit">
+            <p class="tit">Our Products</p>
+            <select name="Sort" onchange="sortItems()" id="B_sorter">
+                <option value="">Sort By</option>
+                <option value="h2l">High To Low</option>
+                <option value="l2h">Low To High</option>
+                <option value="rating">Ratings</option>
+              </select>
+            <!-- <div id="sort">
+            </div> -->
+            <!-- <p class="sort">SortBy</p> -->
+        </div>
+        <div>
+            <button id="prod_buttonALL">ALL</button>
+            <button id="prod_button">BODY LOTION</button>
+            <button id="prod_button">BODY WASH</button>
+            <button id="prod_button">BODY SCRUB</button>
+            <button id="prod_button">HAND CREAM</button>
+        </div>
+        <div id="B_main" class=""></div>
+        <!-- ***alert messeage**** -->
+        <div class="alert hide">
+                
+            <span class="msg">product has been added to cart</span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/Data/bodyData.js"></script>
+
+<script type="module">
+    let slideshow=document.getElementById("body_slider");
+    let sliderarr=[];
+
+    const img1="https://images.ctfassets.net/66mrrren2unf/2nFAFSa68RorsrU94U5pO9/90708e3f5bd6f312d9911b63e4977a3e/desktop-body-wash.jpg?q=40";
+    const img2="https://images.ctfassets.net/66mrrren2unf/7FIW8yXsliQhjZIitZ5t8H/dfa440905e497c2cd86807a265b40076/_Body-Range-without-CTA_1920-512_.jpg?q=40";
+
+    sliderarr.push(img1);
+    sliderarr.push(img2);
+
+    let i=1;
+    let img=document.createElement("img");
+    img.src=sliderarr[0];
+    slideshow.append(img);
+
+    setInterval(()=>{
+        if(i==sliderarr.length){
+            i=0;
+        }
+        slideshow.innerHTML=null;
+        let img=document.createElement("img");
+
+        img.src=sliderarr[i];
+        i++;
+        slideshow.append(img);
+    },3000);
+</script>

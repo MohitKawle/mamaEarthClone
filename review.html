@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#review_rating{
+    width: 60%;
+    margin-left: 10%;
+}
+/* Div=line1 */
+#line1{
+    display: flex;
+    justify-content: space-between;
+}
+/* title of review */
+#Tit{
+    display: flex;
+}
+#Tit>p:nth-child(1){
+    color: rgb(29, 29, 29);
+    font-size: 24px;
+    letter-spacing: 0.18px;
+    font-weight: 600;
+}
+#Tit>img{
+    margin-left:10px ;
+}
+/* only verified user */
+#Tit>p:nth-child(3){
+    color: #7777;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-left: 4px;
+}
+/* Rate Button */
+#rate_btn{
+    border: 2px solid rgb(0, 174, 239);
+    border-radius: 4px;
+    color: rgb(0, 174, 239);
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 28px;
+    cursor: pointer;
+}
+/* full rating block */
+#full_rating_block{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* left_block */
+#left_block{
+    margin-top: -40px;
+}
+#left_block>p:nth-child(1){
+    font-size: 40px;
+    color: rgb(29, 29, 29);
+}
+#left_block>p:nth-child(2){
+    font-size: 18px;
+    font-family: Lato;
+    color: #777777;
+    margin-top: -30px;
+}
+#left_block>p:nth-child(3){
+    font-size: 18px;
+    font-family: Lato;
+    color: #777777;
+    margin-top: -15px;
+}
+/* right block */
+#right_block{
+    display:block;
+    column-gap: 0px;
+}
+#star5{
+    display: flex;
+    margin-top:-25px;
+}
+
+#star5>p{
+    color:#777777;
+}
+#review_bar{
+    width: 160px;
+    height: 10px;
+    border-radius: 4px;
+    /* background-color: rgb(215, 215, 215); */
+    margin: 0 10px;
+}
+.bar{
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    margin-top: 22px;
+}
+.bar[value]::-webkit-progress-bar{
+    background-color: rgb(215, 215, 215);
+    border-radius: 10px;
+}
+.bar[value]::-webkit-progress-value{
+    border-radius: 4px;
+    filter: drop-shadow(0px 3px 3px rgb(129, 195, 65));
+    /* height: 6px;
+    border-radius: 2px; */
+    background-color: rgb(129, 195, 65);
+}
+/* cust_review */
+#cust_review{
+    border-bottom: 1px solid #a19f9f;
+}
+#cust_review>p{
+    margin-top:-25px;
+}
+#cust_1{
+    display: flex;
+    gap: 10px;
+}
+#cust_1>p{
+    font-size: 40px;
+    color: white;
+    background-color: rgb(206, 55, 93);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+#cust_1>div>p{
+    font-weight: 500;
+    padding-right: 4px;
+    margin: 0px 0.2rem;
+    color: #777777;
+    margin-top: 40px;
+}
+#rati{
+    display: flex;
+    margin-top: -13px;
+}
+#rati>p:nth-child(1){
+    color: white;
+    background-color: rgb(129, 195, 65);
+    width: 40px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="review_rating">
+
+        <div id="line1">
+            <div id="Tit">
+                <p>Rating & Reviews</p>
+                <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                <p>Only verified Users</p>
+            </div>
+            <div>
+                <button id="rate_btn">RATE PRODUCT</button>
+            </div>
+        </div>
+        <div id="full_rating_block">
+            <div id="left_block">
+                <p>4.9 ★</p>
+                <p>340 Rating & </p>
+                <p>100 Reviews</p>
+            </div>
+            <div id="right_block">
+                <div id="star5">
+                    <p>5 ★</p>
+                    <div id="review_bar">
+                        <progress class="bar"
+                        max="340"
+                        value="210">
+                        </progress>
+    
+                    </div>
+                    <p>210</p>
+                </div>
+    
+                <div id="star5">
+                    <p>4 ★</p>
+                    <div id="review_bar">
+                        <progress class="bar"
+                        max="340"
+                        value="67">
+                        </progress>
+    
+                    </div>
+                    <p>67</p>
+                </div>
+    
+                <div id="star5">
+                    <p>3 ★</p>
+                    <div id="review_bar">
+                        <progress class="bar"
+                        max="340"
+                        value="10">
+                        </progress>
+    
+                    </div>
+                    <p>10</p>
+                </div>
+    
+                <div id="star5">
+                    <p>2 ★</p>
+                    <div id="review_bar">
+                        <progress class="bar"
+                        max="340"
+                        value="17">
+                        </progress>
+    
+                    </div>
+                    <p>17</p>
+                </div>
+    
+                <div id="star5">
+                    <p>1 ★</p>
+                    <div id="review_bar">
+                        <progress class="bar"
+                        max="340"
+                        value="36">
+                        </progress>
+    
+                    </div>
+                    <p>36</p>
+                </div>
+            </div>
+    
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p class="guddu">G</p>
+                <div>
+                    <p>Guddu Ali | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>I was going through the products online that were naturally and without any harmful chemicals and ordered this lovely Mamaearth lotion for myself. Must say this is a wonderful product and I recommend people to add some rose water and milk for skin to their daily routine. You can check the review and rose body lotion price from the website and place your order.</p>
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p style="background-color:rgb(4, 126, 14)">A</p>
+                <div>
+                    <p>Arfeen Mushtaque | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>Hectic working schedules made my skin oily and dull, especially with changing season. But switching over to this rose body cream for oily skin helped me overcome my skin problems. Highly recommended. Well worth the price too.</p>
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p style="background-color: rgb(13, 70, 226);">AG</p>
+                <div>
+                    <p>Akkaladevi Goutham | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>This product really works wonders for me! Worth trying. This milk body lotion changed my life completely and gave me the natural glow I was always looking for! Thanks, Mamaearth for this wonderful milk-based lotion with no toxins and harmful chemicals.</p>
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p style="background-color: rgb(230, 10, 10);">AT</p>
+                <div>
+                    <p>Amol Thakare | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>Mamaearth Onion Hair Oil ingredients like almond oil and Redensyl are safe, gentle, and natural. This is one reason I always buy this brand’s product. Using this oil has reduced hair fall, added strength and shine, and improved the quality of my hair. Mamaearth Onion Hair Oil price is pocket-friendly and well worth it.</p>
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p style="background-color: rgb(103, 248, 6);">P</p>
+                <div>
+                    <p>Prachi Tiwari | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>Let me take a moment to tell you how oily my skin is. No Kajal ever worked on my skin and smudged like plain butter after 2-3 hours of application. But this Kajal did not! I stopped putting Kajal just because of this issue and a friend recommended this to me. Ever since, I have never thought of blunting another Kajal or an eye liner because it does the job of both. I love the application and Color and it is very light weight.</p>
+        </div>
+        <div id="cust_review">
+            <div id="cust_1">
+                <p style="background-color: rgb(247, 9, 235);">M</p>
+                <div>
+                    <p>Mohit Kawale | Mar 31,2022</p>
+                    <div id="rati">
+                        <p>★ 5.0</p>
+                        <img src="https://mamaearth.in/static/mamaearth/verified.svg" alt="">
+                        <p style="color:#777777">verified Purchase</p>
+                    </div>
+                </div>
+            </div>
+            <p>Never used anything on face and didnt know how to use ubtan face mask...but git the direction on the box and used it...best experience ever....and it felt good on my skin...gave instant glow to skin!"</p>
+        </div>
+    </div>
+</body>
+</html>
