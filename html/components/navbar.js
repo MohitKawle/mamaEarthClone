@@ -42,7 +42,7 @@ const navbar = ()=>{
             <p>GIFTY PACKS</p>
             <p id=allproduct>ALL PRODUCTS</p>
             <p>BLOG</p>
-            <p>PLANT GOODNESS</p>
+            <p id="plantgood">PLANT GOODNESS</p>
             <p>STORE LOCATOR</p>
            </div>
         </div>
