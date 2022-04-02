@@ -309,7 +309,7 @@ appendhair(hair_data,B_main,1)
 const item=(elem)=>{
     let Item = elem;
     localStorage.setItem("item",JSON.stringify(Item));
-    window.location.href="product_details.html"
+    window.location.href="item_details.html"
 }
 
 // product adding to cart function----------------------------
