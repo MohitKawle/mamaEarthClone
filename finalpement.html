@@ -29,15 +29,18 @@
     
         #pdiv4mid{width: 80%;height: 500px; margin: auto;display: flex;}
             #pdiv4mid >div{width: 30%;height: 100%; border: 1px solid grey;border-radius: 3%; margin: auto;}
-               #hi_name{width: 100%;height: 30%;font-size: 30px;}
+               #hi_name{width: 100%;height: 30%;font-size: 30px;display: flex;}
                #address_details{font-size: 30px;margin-top: 10px;border: 1px solid grey;}
                #Delivery_details_1{height: 42%;background-color: aqua; border-radius: 3%;}
                #Delivery_details_2{height: 215px;width: 97%;background-color:  rgb(221, 215, 215); }
                #Real_Adress{margin: auto; width: 80%;height: 80%;margin-top: 0%;border: 5px solid black;}
 
 
-        #pdiv5mid{background-image: url("https://www.senecafoods.com/sites/default/files/banners/farmfields_e.jpg");
-            height: 400px;width: 80%; margin: auto;}
+               #Price_details > div{font-size: 30px; margin-top: 8%; display: flex;border-bottom: 1px solid gray;}
+
+
+        #pdiv5mid{background-image: url("https://mamaearthp.imgix.net/wysiwyg/desktop_home_img.jpg?auto=format");
+            height: 450px;width: auto; margin: auto;}
             #pdiv5mid H1{color: lightgreen;margin-left:50%;}
     
 </style>
@@ -78,7 +81,7 @@
              </h3>
              <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita illo non dignissimos fugiat 
                  veritatis minus debitis officiis quae, dicta vitae modi voluptas, voluptate, quam et voluptatibus ad.
-                  Architecto, similique aliquam!</h3>
+                  Architecto, similique aliquam! abds</h3>
          </div>
 
          <div id="pdiv4mid">
@@ -86,12 +89,21 @@
             <div id="Delivary_details" style="border: 1px solid white;">
                    <div id="Delivery_details_1">
                     <div id="hi_name">
-                        hi,name
+                        <div>hii,</div>
+                        <div id="user_name">name</div>
                     </div>
                     <div id="address_details">
                         <div>your account details:
-                            <div>phonenumber:</div>
-                            <div>email id:</div>
+                            <div style="display: flex;">
+                                <div>phonenumber:</div>
+                                <div id="phone_num">123</div>
+                            </div>
+                            <div  style="display: flex;">
+                                <div>email id:</div>
+                                <div id="emai_id">email</div>
+
+                            </div>
+                            
 
                         </div>
                     </div>
@@ -106,9 +118,26 @@
             </div>
             <div id="Product_summery">
                 <h1>Product summery</h1>
-            </div>
+            </div id="all_details_with_total" >
             <div id="Price_details">
+                
                 <h1>Price Details</h1>
+                <div><div>sub total:</div>
+                    <div>1</div>
+                </div>
+                <div><div> shipping handling:</div>
+                    <div>2</div>
+                    </div>
+                <div><div>mama cash :<div>
+                        </div>333</div>
+                </div>
+                <div><div> Payment toatl:</div>
+                    <div>4444</div>
+                </div>
+                <div><div>Grand total:</div>
+                    <div>4</div>
+                </div>
+                
             </div>
 
 
@@ -118,7 +147,7 @@
 
 
          <div id="pdiv5mid">
-                <h1> <u>WE PLANT GOODNESS</u></h1>
+                <!-- <h1> <u>WE PLANT GOODNESS</u></h1> -->
 
          </div>
 
@@ -128,4 +157,11 @@
 </body>
 </html>
 
+
+<script>
+ var User = JSON.parse(localStorage.getItem("User")) || [];
+console.log(User.Phone)
+
+
+</script>
 
