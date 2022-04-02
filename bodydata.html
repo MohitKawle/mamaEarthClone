@@ -17,10 +17,14 @@
       href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
     />
     <link rel="stylesheet" href="/Css/bodydata.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
-
+    <div id="navbar"> </div>
     <!-- Sliding -->
+    <div style="height:130px"></div>
     <div id="body_slider"></div>
 
     <div id="margin">
@@ -110,10 +114,16 @@
             <span class="msg">product has been added to cart</span>
         </div>
     </div>
+
+    <div id="footer"></div>
+    <!-- foother html end -->
+    <div class="bg-modal"> </div>
+    <div id="loginpop"></div>
+    <div class="mainlogin"></div>
 </body>
 </html>
 <script src="/Data/bodyData.js"></script>
-
+<script type="module" src="/module.js"></script>
 <script type="module">
     let slideshow=document.getElementById("body_slider");
     let sliderarr=[];
@@ -126,7 +136,9 @@
 
     let i=1;
     let img=document.createElement("img");
+     img.id = "slideimg1100"
     img.src=sliderarr[0];
+   
     slideshow.append(img);
 
     setInterval(()=>{

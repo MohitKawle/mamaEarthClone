@@ -44,13 +44,14 @@ document.querySelector('.bg-modal').style.display = "none";
 });
 // ************ start code for alert meassage***************
 
- document.getElementById('loginone').addEventListener("click", function () {
-        document.querySelector('.mainlogin').style.display = "flex";
-    });
+   document.getElementById('loginone').addEventListener("click", function () {
+                    // document.querySelector('.mainlogin').style.display = "flex";
+                    window.location.href="signin.html"
+                });
 
-    document.querySelector('.closemain').addEventListener("click", function () {
-        document.querySelector('.mainlogin').style.display = "none";
-    })
+                document.querySelector('.closemain').addEventListener("click", function () {
+                    document.querySelector('.mainlogin').style.display = "none";
+                });
 
     // *********append the pages ethe pages
             const addeven = (idname, place) => {
@@ -64,7 +65,7 @@ document.querySelector('.bg-modal').style.display = "none";
             addeven(document.querySelector("#baby"), "baby.html")
             addeven(document.querySelector("#face"), "face.html")
             addeven(document.querySelector("#beauty"), "face.html")
-            // addeven(document.querySelector("#body"), "body.html")
+            addeven(document.querySelector("#body"), "/bodydata.html")
             addeven(document.querySelector(".logo"), "index.html")
             document.querySelector(".logo").style.cursor="pointer"
 

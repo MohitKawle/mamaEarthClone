@@ -252,7 +252,7 @@ const loginpop = ()=>{
                             <div>Your Profile</div>
                             <div>Your Order</div>
                             <div>Contact Us</div>
-                            <div>
+                            <div id="stop">
                               <button id="loginone"> Login In</button>
                     </div>`
 }

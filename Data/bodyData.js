@@ -218,6 +218,7 @@ const appendBody= (data,where,value) =>{
 
         let image = document.createElement("img")
         image.src = elem.imageurl
+        image.id="img1000"
 
         let Rating = document.createElement("p")
         Rating.setAttribute("class", "B_rating")
@@ -249,7 +250,9 @@ const appendBody= (data,where,value) =>{
       });
         btn.setAttribute("id","addTocart")
         btn.addEventListener("click",()=>{
+
             addTocart(elem)
+            window.location.reload()
         })
         div.append(Price,strike,offer);
 
@@ -308,7 +311,7 @@ appendBody(body_data,B_main,1)
 const item=(elem)=>{
     let Item = elem;
     localStorage.setItem("item",JSON.stringify(Item));
-    window.location.href="product_details.html"
+    window.location.href="item_details.html"
 }
 
 // product adding to cart function----------------------------
