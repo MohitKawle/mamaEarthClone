@@ -4,6 +4,7 @@ let data=JSON.parse(localStorage.getItem("face_data"))||[];
 let baby_data = JSON.parse(localStorage.getItem("babydata"))||[];
 let body_data=JSON.parse(localStorage.getItem("bodyProducts"))||[];
 let main_data=JSON.parse(localStorage.getItem("all_data"))||[];
+let hair_data = JSON.parse(localStorage.getItem("hairProducts"))||[];
 let container=document.getElementById("cont1555");
 append(main_data,container);
 var f=1;
@@ -26,7 +27,8 @@ let baby=document.getElementById("babyi").addEventListener("click",()=>{
 });
 let hair=document.getElementById("hairi").addEventListener("click",()=>{
     f=5;
-   append(baby_data,container);
+   //append(baby_data,container);
+   append(hair_data,container);
 });
 
 
@@ -122,22 +124,41 @@ let sortItems=document.getElementById("setsel");
        //hair         
                 if(f==5){
                     if(sorting=="h2l"){
-                     baby_data.sort((a,b)=>{
-                         return b.price-a.price;
+                   //  baby_data.sort((a,b)=>{
+                     
+                    hair_data.sort((a,b)=>{
+                    
+                        return b.price-a.price;
                      })
-                         append(baby_data,container);
-                     }
+                         //append(baby_data,container);
+
+                         append(hair_data,container);
+                        }
                      else if(sorting=="l2h"){
-                         baby_data.sort((a,b)=>{
-                             return a.price-b.price;
+                     
+                     //   hair_data.sort((a,b)=>{
+                       
+                     hair_data.sort((a,b)=>{
+                     
+                            return a.price-b.price;
                          })
-                         append(baby_data,container);
+                         //append(baby_data,container);
+                         
+                         append(hair_data,container);
+
                      }
                      else if(sorting=="rating"){
-                         baby_data.sort((a,b)=>{
-                             return b.rating-a.rating;
-                         })
-                         append(baby_data,container);
+                     //    baby_data.sort((a,b)=>{
+                       
+                     hair_data.sort((a,b)=>{
+                     
+                        return b.rating-a.rating;
+                     
+                     })
+                         //append(baby_data,container);
+                         
+                         append(hair_data,container);
+
                      }
                     }
  })
@@ -169,7 +190,9 @@ setInterval(()=>{
     let img=document.createElement("img");
    
     img.src=slidearr[i];
+
     i++;
+
     slideshow.append(img);
 },5000);
 
