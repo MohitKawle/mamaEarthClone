@@ -241,7 +241,8 @@
             // ************ start code for alert meassage***************
     
              document.getElementById('loginone').addEventListener("click", function () {
-                    document.querySelector('.mainlogin').style.display = "flex";
+                    // document.querySelector('.mainlogin').style.display = "flex";
+                    window.location.href="signin.html"
                 });
 
                 document.querySelector('.closemain').addEventListener("click", function () {
@@ -249,8 +250,4 @@
                 });
 
 
-                let cart_data = JSON.parse(localStorage.getItem("cart"));
-            var count = document.querySelector("#circle")
-            count.innerHTML = cart_data.length;
-            count.style.background ="#00afef"
 </script>

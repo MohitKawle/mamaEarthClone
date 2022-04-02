@@ -7,17 +7,14 @@
     <title>Document</title>
 
 <style>
+ body{
+      background-image:url("./photo/mainhome.png");width:100%
+     
+ }
 
 .create_main_div {
 
-    /* width: 380px;
-    margin: auto;
-    margin-top: 100px;
-    height: 560px;
-    background-color: green;
-    
-    
-    align-items: center; */
+   
     border-radius: 3%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 19.4px;
@@ -26,10 +23,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 380px;
-    height: 485px;
+    height: 550px;
     z-index: 1001;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
+    padding:2%;
+    margin-top:50px;
+    line-height: 20px;
     /* overflow: hidden scroll; */
     /* background-color: red; */
 }
@@ -39,6 +39,7 @@
         height: 2.7rem;
         width: 100%;
         border-color: white;
+        
           } 
          
         
@@ -120,13 +121,27 @@
     font-weight: 600;
     margin: 1rem 0px;
 }
-#phone{font-size: 25px;color: rgb(24, 21, 21);}
+#phone{font-size: 25px;color: rgb(24, 21, 21);
+   width:300px;
+   height:45px;
+   border:1px solid gray;
+   outline:none;
+   margin:auto;
+}
+.last{
+    height:600px;
+    width:30%;
+    /* border:1px solid red; */
+    margin-left:30px
+}
+
 
 </style>
 
 
 </head>
 <body>
+    <div class="last"></div>
     
 <div class="create_main_div">
     <div class="create_account_upper">
@@ -136,7 +151,7 @@
         <div class="create_account_upper">
             <div    class="Sign_in_logo">Log in to get started</div>
             <div class="gapdiv"></div>
-            <div class="gapdiv"></div>
+            <!-- <div class="gapdiv"></div> -->
             <div class="arrow_back_arrow" >
                 <img  src="	https://mamaearth.in/static/mamaearth/login.svg" alt="no img found">
               
@@ -144,7 +159,7 @@
                     previous order & Redeem Mama
                     Cash</div>
         </div>
-        <div class="gapdiv"></div>
+        <!-- <div class="gapdiv"></div> -->
         
             <div class="details">
                     <form id="form">
@@ -229,7 +244,9 @@ function formfumction() {
 
 
     
-   
+     document.querySelector(".last").addEventListener("click",()=>{
+         window.location.href="/index.html"
+     })
     
 
 </script>

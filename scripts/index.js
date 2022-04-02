@@ -356,4 +356,9 @@ let i = 0;
         //     document.querySelector('#slideimg').addEventListener("mouseout", function () {
         //         document.querySelector('.loginmain').style.display = "none";
         //     });
-  
+   
+                let cart_data = JSON.parse(localStorage.getItem("cart"));
+                console.log(cart_data)
+            var count = document.querySelector("#circle")
+            count.innerHTML = cart_data.length;
+            count.style.background ="#00afef"
