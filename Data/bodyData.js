@@ -133,7 +133,7 @@ window.addEventListener("load",()=>{
             title:"CoCo Nourishing Cold Cream With Coffee and Vitamin E For Rich Moisturization - 200 g",
             imageurl:"https://honasa-mamaearth-production.imgix.net/c/o/coco-cold-cream-1.jpg?auto=compress&fit=scale&w=400&h=400",
             strike_price:"",
-            price:299,
+            price:199,
             rating:4.9,
             offer:"",
         },
