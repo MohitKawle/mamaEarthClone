@@ -239,10 +239,32 @@
            
         });
             // ************ start code for alert meassage***************
-    
+
+   var user = JSON.parse(localStorage.getItem("User"))
+
+    if (user === null) {
+        document.querySelector("#login").innerText = "Login In"
+    }
+    else {
+        document.querySelector("#login").innerText = user.FirstName;
+        document.querySelector("#loginone").innerText = "log out"
+    }
+
+                var logtext = document.querySelector("#loginone")
              document.getElementById('loginone').addEventListener("click", function () {
                     // document.querySelector('.mainlogin').style.display = "flex";
-                    window.location.href="signin.html"
+                   if(logtext.innerText != "Login In"){
+                       
+                         user = null;
+                       localStorage.setItem("User", user) 
+                       console.log("login")
+                       window.location.reload()
+                   }
+                   else{
+                        // localStorage.removeItem("User")
+                         window.location.href = "signin.html";
+                         console.log("stop")
+                   }
                 });
 
                 document.querySelector('.closemain').addEventListener("click", function () {
@@ -346,25 +368,35 @@ window.location.href="payment.html"
 
 // **************** login name replace
 
-    let user = JSON.parse(localStorage.getItem("User"));
+//     let user = JSON.parse(localStorage.getItem("User"));
 
-    console.log(user.FirstName)
-  if(user === null){
-      document.querySelector("#login").innerText = "login"
-  }
-  else {
-      document.querySelector("#login").innerText = user.FirstName;
-      let signout =    document.querySelector("#stop")
-          signout.innerHTML = "sign out"
+//     console.log(user.FirstName)
+//   if(user === null){
+//       document.querySelector("#login").innerText = "login"
+//   }
+//   else {
+//        document.querySelector("#login").innerText = user.FirstName
+//         let div = createElement("div")
+//              div.id = "signout100"
+//              document.querySelector("#stop").innerHTML = "sign out"
+           
+//     //   let signout =    document.querySelector("#stop")
+//     //       signout.innerHTML = "sign out"
        
          
-    //    window.location.reload()
-  }
-    // loginone
-     document.querySelector("#stop").addEventListener("click", () => {
-            let userout = []
-            localStorage.setItem("User", userout)
-        })
+//     //    window.location.reload()
+//   }
+//     // loginone
+//       document.querySelector("#signout100").addEventListener("click", () => {
+//             let userout = []
+//             localStorage.setItem("User", userout)
+//         })
+
+    
+
+
+         
+
      
 
 </script>

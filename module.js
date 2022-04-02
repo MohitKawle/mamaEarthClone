@@ -44,10 +44,33 @@ document.querySelector('.bg-modal').style.display = "none";
 });
 // ************ start code for alert meassage***************
 
-   document.getElementById('loginone').addEventListener("click", function () {
+   var user = JSON.parse(localStorage.getItem("User"))
+
+    if (user === null) {
+        document.querySelector("#login").innerText = "Login In"
+    }
+    else {
+        document.querySelector("#login").innerText = user.FirstName;
+        document.querySelector("#loginone").innerText = "log out"
+    }
+
+                var logtext = document.querySelector("#loginone")
+             document.getElementById('loginone').addEventListener("click", function () {
                     // document.querySelector('.mainlogin').style.display = "flex";
-                    window.location.href="signin.html"
+                   if(logtext.innerText != "Login In"){
+                       
+                         user = null;
+                       localStorage.setItem("User", user) 
+                       console.log("login")
+                       window.location.reload()
+                   }
+                   else{
+                        // localStorage.removeItem("User")
+                         window.location.href = "signin.html";
+                         console.log("stop")
+                   }
                 });
+
 
                 document.querySelector('.closemain').addEventListener("click", function () {
                     document.querySelector('.mainlogin').style.display = "none";
@@ -162,3 +185,16 @@ displayCart(cart_data);
 document.getElementById("fixedbottom").addEventListener("click",()=>{
 window.location.href="payment.html"
 })
+
+
+//   var user =  JSON.parse(localStorage.getItem("User"))
+
+//                    if(user === null){
+//                             document.querySelector("#login").innerText="login in"
+//                    }
+//                    else{
+//                        document.querySelector("#login").innerText = user.FirstName;
+//                         document.querySelector("#loginone").innerText ="log out";
+//                         console.log(user.FirstName)
+//                    }
+               

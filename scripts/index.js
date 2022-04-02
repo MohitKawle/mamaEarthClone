@@ -358,6 +358,23 @@ let i = 0;
         //     });
    
             // *********************************************************************
+ 
+                 
+          
+                //    var user =  JSON.parse(localStorage.getItem("User"))
 
-            // User
-             
+                //    if(user === null){
+                //             document.querySelector("#login").innerText="login in"
+                //    }
+                //    else{
+                //        document.querySelector("#login").innerText = user.FirstName;
+                //         document.querySelector("#loginone").innerText ="log out"
+                //    }
+               
+              
+                
+              
+                //   document.querySelector("#login").inner
+
+
+         

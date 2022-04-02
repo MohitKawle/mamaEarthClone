@@ -133,7 +133,7 @@
      sent_to
      console.log(phone)
     document.querySelector("#form").addEventListener("submit", formfumction)
-    var User = [];
+
     let flag = 0;
    
    
@@ -147,8 +147,8 @@
             userDataBase.map(function (elem) {
              if (phone  === elem.Phone) {
                 localStorage.setItem("User", JSON.stringify(elem))
-                User.push(elem);
-                localStorage.setItem("User", JSON.stringify(User))
+        
+                // localStorage.setItem("User", JSON.stringify(User))
                    location.href = "index.html";
                 }
             
