@@ -37,13 +37,13 @@ const navbar = ()=>{
             <p id="baby">BABY</p>
             <p id=beauty>BEAUTY</p>
             <p id=hair>HAIR</p>
-            <p id=face>FACE</p>
+            <p id=face>FACE</p> 
             <p id=body>BODY</p>
             <p>GIFTY PACKS</p>
             <p id=allproduct>ALL PRODUCTS</p>
             <p>BLOG</p>
             <p id="plantgood">PLANT GOODNESS</p>
-            <p>STORE LOCATOR</p>
+            <p id="store">STORE LOCATOR</p>
            </div>
         </div>
     `

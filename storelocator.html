@@ -51,16 +51,16 @@
         text-align: center;
         
     }
-    button{
+     .getdirection{
         margin-top: 0%;
         width: 94px;
         height: 25;
         background-color: transparent;
     }
-    h3{
+    /* .hh33>h3{
         color: black;
-    }
-    p{
+    } */
+     .hh33>h3>p{
         color: #4f4e4e;
         font-size: 18px;
     }
@@ -90,19 +90,25 @@
        margin-right: 5px;
 
    }
-   button>i{
+   /* button>i{
        color:#FFFFFF;
        margin-left: 10px;
        margin-right: 12px;
        font-size: large;
    }
-   
+    */
    
     
    
  </style>
+<link rel="stylesheet" href="/style/navbar.css">
+<script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+<!-- navbar css link end -->
+
+<link rel="shortcut icon" href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png" />
 <body>
-    
+        <div id="navbar"></div>
+        <div style="height: 130px;"></div>
     
     <div id="maindiv">
         <div id="location">
@@ -111,19 +117,19 @@
             <button class="city"  id="noida">Noida</button>
             <button class="city"  id="chandigarh">Chandigarh</button>
             <div>
-                <h3>Kamla Nagar</h3>
+                <h3 class="hh33">Kamla Nagar</h3>
                 <p><i class="fa-solid fa-location-dot"></i>Shop No -3, 15, U.B Bunglow Road, Jawahar Nagar, New Delhi, Delhi, 110007</p>
                 <p><i class="fa-solid fa-phone"></i>011-4106-3565</p>
                 <p><i class="fa-solid fa-envelope"></i>del.kamlanagar1@mamaearth.in</p>
                 <button class="getdirection" id="newdelhi1" value="Shop No -3, 15, U.B Bunglow Road, Jawahar Nagar, New Delhi, Delhi, 110007"><i class="fa-solid fa-diamond-turn-right"></i>Get Directions</button>
                 <hr/>
-                <h3>DLF Avenue</h3>
+                <h3 class="hh33">DLF Avenue</h3>
                 <p><i class="fa-solid fa-location-dot"></i>129-B,Ground Floor, District Center, New Delhi, Delhi, 110017</p>
                 <p><i class="fa-solid fa-phone"></i>011-4106-4902</p>
                 <p><i class="fa-solid fa-envelope"></i>del.dlfavenue@mamaearth.in</p>
                 <button class="getdirection" id="newdelhi2" value="New Delhi" ><i class="fa-solid fa-diamond-turn-right"></i>Get Directions</button>
                 <hr/>
-                <h3>Paschim Vihar</h3>
+                <h3 class="hh33">Paschim Vihar</h3>
                 <p><i class="fa-solid fa-location-dot"></i>DDA Build UP Free Hold, Shop Bearing No-02, Ground Floor Block B-2, Local Shopping Center, New Delhi, Delhi, 110063</p>
                 <p><i class="fa-solid fa-phone"></i>011-4106-3565</p>
                 <p><i class="fa-solid fa-envelope"></i>del.paschimvihar1@mamaearth.in</p>
@@ -137,11 +143,20 @@
             <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
     </div>
-    
+      
+
+    <!-- foother html start -->
+    <div id="footer"></div>
+    <!-- foother html end -->
+    <div class="bg-modal"> </div>
+    <div id="loginpop"></div>
+    <div class="mainlogin"></div>
     
 </body>
 </html>
 <script src="https://kit.fontawesome.com/cb83d10ce2.js" crossorigin="anonymous"></script>
+<script type="module" src="module.js"></script>
+
 <script>
 
     let gurgaon = document.getElementById("gurgaon");
