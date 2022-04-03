@@ -35,6 +35,7 @@ document.querySelector('.modal').addEventListener("dblclick", function () {
 
 document.getElementById('cart').addEventListener("click", function () {
 document.querySelector('.bg-modal').style.display = "flex";
+
 //   document.querySelector("#but2").innerHTML = null
 });
 
@@ -51,7 +52,8 @@ document.querySelector('.bg-modal').style.display = "none";
     }
     else {
         document.querySelector("#login").innerText = user.FirstName;
-        document.querySelector("#loginone").innerText = "log out"
+        document.querySelector("#loginone").innerText = "log out";
+
     }
 
                 var logtext = document.querySelector("#loginone")
@@ -60,7 +62,9 @@ document.querySelector('.bg-modal').style.display = "none";
                    if(logtext.innerText != "Login In"){
                        
                          user = null;
+                        //  let cart = null
                        localStorage.setItem("User", user) 
+                        // localStorage.setItem("cart",cart)
                        console.log("login")
                        window.location.reload()
                    }
@@ -85,12 +89,14 @@ document.querySelector('.bg-modal').style.display = "none";
 }
             addeven(document.querySelector("#home"), "index.html")
             addeven(document.querySelector("#allproduct"), "all_products.html")
-            addeven(document.querySelector("#baby"), "baby.html")
+            // addeven(document.querySelector("#baby"), "baby.html")
             addeven(document.querySelector("#face"), "face.html")
             addeven(document.querySelector("#beauty"), "face.html")
             addeven(document.querySelector("#body"), "/bodydata.html")
             addeven(document.querySelector(".logo"), "index.html")
                addeven(document.querySelector("#plantgood"), "/plantgoodness.html")
+          addeven(document.querySelector("#hair"),"hair.html")
+
             document.querySelector(".logo").style.cursor="pointer"
 
             // navbar script end*************
