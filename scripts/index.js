@@ -179,7 +179,7 @@ let i = 0;
        count.innerHTML = objarr.length;
        count.style.background ="#00afef"
        localStorage.setItem("cart",JSON.stringify(objarr))
-    //    window.location.href="blog.html"
+       window.location.reload();
     }
        let parent = document.querySelector("#append1");
        let parent1 = document.querySelector("#append2");

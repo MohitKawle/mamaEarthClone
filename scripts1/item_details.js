@@ -106,6 +106,7 @@ const addTocart=(elem,qtyNo)=>{
        count.innerHTML = Cart.length;
        count.style.background ="#00afef"
     localStorage.setItem("cart",JSON.stringify(Cart))
+    window.location.reload();
 }
 priceFun(getDetails)
 get_item(getDetails)

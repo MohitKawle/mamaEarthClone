@@ -52,7 +52,7 @@
 }
 #best_prod>div{
     list-style-type: none;
-    position: relative;
+    /* position: relative; */
     background: white;
     text-align: center;
     margin: 0.5rem;
@@ -71,7 +71,8 @@
     border-radius: 5px; */
 }
 .tag {
-    position: absolute;
+    /* position: absolute; */
+    width: 120px;
     padding: 5px;
     background-color: #ff5b6f;
     color: white;
@@ -205,7 +206,7 @@
 }
 #B_main>div{
     list-style-type: none;
-    position: relative;
+    /* position: relative; */
     background: white;
     text-align: center;
     margin: 0.5rem;

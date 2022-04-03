@@ -312,6 +312,7 @@ const sortItems=()=>{
         var count = document.querySelector("#circle")
         count.innerHTML = cart_data.length;
         count.style.background ="#00afef"
+        window.location.reload();
       //  alert("added to cart");
       //  window.location.href="face.html";
        }
@@ -379,6 +380,7 @@ const showdata=(data)=>{
         a=3;
         cart_data.push(elem)
         localStorage.setItem("cart",JSON.stringify(cart_data));
+        window.location.reload();
        // alert("Added to Cart")
       //  window.location.href="face.html";
        }
