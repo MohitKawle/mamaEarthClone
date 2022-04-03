@@ -2,6 +2,10 @@
 
 Project:Make a clone of https://mamaearth.in/ site
 
+Blog link:https://medium.com/@arfeen_fp01_048/mamaearth-cloning-team-mama-clone-73d06a100536
+
+Netlify link:https://calm-sawine-27b8ed.netlify.app/
+
 Mamaearth is an Indian company of Health, Wellness & Fitness. It is one of the leading company or a brand which intends to make lives of mums & expectant mums better and beautiful. A brand which welcomes all babies to a healthy and a safe world.
 Mamaearth products will take care of every parents & baby’s well-being from head to toe with safe, toxin-free, international standard products which you can choose without having to think twice.
 
