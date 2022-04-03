@@ -76,6 +76,7 @@ const addTocart=(elem)=>{
     var count = document.querySelector("#circle")
     count.innerHTML = Cart.length;
     count.style.background ="#00afef"
+    window.location.reload();
 }
 
 // Sliding effect:----------------------------------------------

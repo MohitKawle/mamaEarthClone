@@ -17,8 +17,22 @@
       href="https://mamaearthp.imgix.net/wysiwyg/cropped-Favicon-2-150x150.png"
     />
     <link rel="stylesheet" href="/Css/hair.css">
+    <link rel="stylesheet" href="/style/navbar.css">
+    <script src="https://kit.fontawesome.com/0df89e17ad.js" crossorigin="anonymous"></script>
+    <style>
+        #hair_slider{
+            height:400px;
+            width:100%;
+        }
+        #hair_slider>img{
+            height:100%;
+            width:100%
+        }
+    </style>
 </head>
-<body>
+<body> 
+    <div id="navbar"></div>
+    <div style="height: 130px;"></div>
 
     <!-- Sliding -->
     <div id="hair_slider"></div>
@@ -29,11 +43,11 @@
             <p>></p>
             <p>hair care Products</p>
         </div>
-        <h1 id="title">hair Care Products</h1>
+        <h1 id="title">Hair Care Products</h1>
         <p id="bestseller">Bestseller</p>
         <div id="best_prod">
             <div id="best">
-                <div class="tag">BESTSELLER</div>
+                <div class="tag" style="margin-top: -3px;">BESTSELLER</div>
                 <img src="https://honasa-mamaearth-production.imgix.net/t/e/tea_tree_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400">
                 <p>Tea Tree Anti Dandruff Anti Hairfall Hair Mask, 200ml</p>
                 <p>4.9★</p>
@@ -46,7 +60,7 @@
             </div>
 
             <div id="best">
-                <div class="tag">BESTSELLER</div>
+                <div class="tag" style="margin-top: -3px;">BESTSELLER</div>
                 <img src="https://honasa-mamaearth-production.imgix.net/o/n/onion-shampooconditoner1200x1200_8kx6kfmkik30g8fq.jpg?auto=compress&fit=scale&w=400&h=400">
                 <p>Hair Regrowth Combo : Onion Shampoo, 250ml and Onion Conditioner, 250ml</p>
                 <p>4.8★</p>
@@ -59,7 +73,7 @@
             </div>
 
             <div id="best">
-                <div class="tag">BESTSELLER</div>
+                <div class="tag" style="margin-top: -3px;">BESTSELLER</div>
                 <img src="https://honasa-mamaearth-production.imgix.net/o/n/onion_hair_mask_1.jpg?auto=compress&fit=scale&w=400&h=400">
                 <p>Onion Hair Mask, For Hair Fall Control, With Onion Oil and Organic Bamboo Vinegar</p>
                 <p>4.9★</p>
@@ -72,7 +86,7 @@
             </div>
 
             <div id="best">
-                <div class="tag">BESTSELLER</div>
+                <div class="tag" style="margin-top: -3px;">BESTSELLER</div>
                 <img src="https://honasa-mamaearth-production.imgix.net/_/o/_onion-oil-150ml_.jpg?auto=compress&fit=scale&w=400&h=400">
                 <p>Onion Hair Oil for Hair Regrowth and Hair Fall Control with Redensyl, 150ml</p>
                 <p>4.9★</p>
@@ -110,8 +124,17 @@
             <span class="msg">product has been added to cart</span>
         </div>
     </div>
+
+        <!-- foother html start -->
+        <div id="footer"></div>
+        <!-- foother html end -->
+        <div class="bg-modal"> </div>
+        <div id="loginpop"></div>
+        <div class="mainlogin"></div>
+
 </body>
 </html>
+<script type="module" src="module.js"></script>
 <script src="/Data/hair.js"></script>
 
 <script type="module">
