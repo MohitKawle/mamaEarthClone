@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+    iframe{
+        height: 400px;
+        width: 790px;
+    }
+    #mapdiv{
+      border : 1px solid transparent;
+      text-align: right;
+    }
+    #container{
+    
+      height: 400px;
+        width: 790px;
+        border: 1px solid #FFFFFF;
+    }
+    #location{
+        width:420px;
+         
+         overflow: scroll; 
+        font-size: 14px;
+    line-height: 1.62;
+    color: rgb(119, 119, 119);
+    font-family: Lato;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    box-sizing: inherit;
+    }
+    #maindiv{
+        height: 400px;
+        width: 1200px;
+        display: flex;
+        margin-left: 200px;
+   
+    }
+    .city{
+        border: none;
+        width: 94px;
+        height: 25;
+        color: #9A9A9A;
+        cursor: pointer;
+        padding: 1px 6px;
+        
+        text-align: center;
+        
+    }
+    button{
+        margin-top: 0%;
+        width: 94px;
+        height: 25;
+        background-color: transparent;
+    }
+    h3{
+        color: black;
+    }
+    p{
+        color: #4f4e4e;
+        font-size: 18px;
+    }
+    .getdirection{
+        width:150px;
+        height: 40px;
+        text-align: left;
+        border-radius: 5px;
+        color: #FFFFFF;
+        background-color: #00AEEF;
+        border:none;
+        font-size: 15px;
+    }
+    .newdelhi{
+        color: #00AEEF;
+        border: transparent;
+        border-bottom: 2px solid rgb(0, 174, 239);
+   
+  
+    }
+    hr{
+     
+        border:0.1px solid #dcdcdc;
+    }
+   i{
+       color:#00AEEF;
+       margin-right: 5px;
+
+   }
+   button>i{
+       color:#FFFFFF;
+       margin-left: 10px;
+       margin-right: 12px;
+       font-size: large;
+   }
+   
+   
+    
+   
+ </style>
+<body>
+    
+    
+    <div id="maindiv">
+        <div id="location">
+            <button class="city" id="gurgaon" >Gurgaon</button>
+            <button class="city newdelhi" id="newdelhi">New Delhi</button>
+            <button class="city"  id="noida">Noida</button>
+            <button class="city"  id="chandigarh">Chandigarh</button>
+            <div>
+                <h3>Kamla Nagar</h3>
+                <p><i class="fa-solid fa-location-dot"></i>Shop No -3, 15, U.B Bunglow Road, Jawahar Nagar, New Delhi, Delhi, 110007</p>
+                <p><i class="fa-solid fa-phone"></i>011-4106-3565</p>
+                <p><i class="fa-solid fa-envelope"></i>del.kamlanagar1@mamaearth.in</p>
+                <button class="getdirection" id="newdelhi1" value="Shop No -3, 15, U.B Bunglow Road, Jawahar Nagar, New Delhi, Delhi, 110007"><i class="fa-solid fa-diamond-turn-right"></i>Get Directions</button>
+                <hr/>
+                <h3>DLF Avenue</h3>
+                <p><i class="fa-solid fa-location-dot"></i>129-B,Ground Floor, District Center, New Delhi, Delhi, 110017</p>
+                <p><i class="fa-solid fa-phone"></i>011-4106-4902</p>
+                <p><i class="fa-solid fa-envelope"></i>del.dlfavenue@mamaearth.in</p>
+                <button class="getdirection" id="newdelhi2" value="New Delhi" ><i class="fa-solid fa-diamond-turn-right"></i>Get Directions</button>
+                <hr/>
+                <h3>Paschim Vihar</h3>
+                <p><i class="fa-solid fa-location-dot"></i>DDA Build UP Free Hold, Shop Bearing No-02, Ground Floor Block B-2, Local Shopping Center, New Delhi, Delhi, 110063</p>
+                <p><i class="fa-solid fa-phone"></i>011-4106-3565</p>
+                <p><i class="fa-solid fa-envelope"></i>del.paschimvihar1@mamaearth.in</p>
+                <button class="getdirection" id="newdelhi3" value="New Delhi"><i class="fa-solid fa-diamond-turn-right"></i>Get Directions</button>
+
+            </div>
+            
+        </div>
+        
+        <div id="container">
+            <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+<script src="https://kit.fontawesome.com/cb83d10ce2.js" crossorigin="anonymous"></script>
+<script>
+
+    let gurgaon = document.getElementById("gurgaon");
+    gurgaon.addEventListener("click",function(){
+                    let id = gurgaon.innerText;
+                    exactLocation(id);
+                    
+    })
+
+    let newdelhi = document.getElementById("newdelhi");
+    newdelhi.addEventListener("click",function(){
+                    let id = newdelhi.innerText;
+                    exactLocation(id);
+                    
+    })
+    let newdelhi1 = document.getElementById("newdelhi1");
+    newdelhi1.addEventListener("click",function(){
+                    let id = newdelhi1.value;
+                    exactLocation(id);
+                    
+    })
+    let newdelhi2 = document.getElementById("newdelhi2");
+    newdelhi2.addEventListener("click",function(){
+                    let id = newdelhi2.value;
+                    exactLocation(id);
+                    
+    })
+    let newdelhi3 = document.getElementById("newdelhi3");
+    newdelhi3.addEventListener("click",function(){
+                    let id = newdelhi3.value;
+                    exactLocation(id);
+                    
+    })
+
+    let noida = document.getElementById("noida");
+    noida.addEventListener("click",function(){
+                    let id = noida.innerText;
+                    exactLocation(id);
+                    
+    })
+
+    let chandigarh = document.getElementById("chandigarh");
+    chandigarh.addEventListener("click",function(){
+                    let id = chandigarh.innerText;
+                    exactLocation(id);
+                    
+    })
+
+//fetch
+//url
+
+let container = document.getElementById("container");
+
+
+async function exactLocation(city){
+    try {
+        // let city = document.getElementsById("city").value;
+    let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=71138b85b132643a6b22f3e21a29194a&units=metric`);
+
+  let data = await res.json();
+  appendData(data);
+  console.log("data;",data);
+  } catch (err){
+    console.log("err:",err);
+ }
+
+}
+
+
+
+
+
+
+
+function appendData(data){
+   
+    container.innerHTML = null;
+   
+
+  var mapdiv = document.createElement("div");
+  mapdiv.id = "mapdiv";
+
+  var iframe = document.createElement("iframe");
+  iframe.src = `https://maps.google.com/maps?q=${data.name}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+
+
+
+  container.append(mapdiv);
+  mapdiv.append(iframe);
+  document.querySelector("#container").append(mapdiv);
+
+}
+
+
+
+</script>
