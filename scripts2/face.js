@@ -330,7 +330,7 @@ const sortItems=()=>{
  
  }
  
- display(data1);
+ display(best_products);
 
 const showdata=(data)=>{
     container.innerHTML=null;
@@ -394,7 +394,7 @@ const showdata=(data)=>{
      });
 }
 
-showdata(data);
+showdata(face_products);
 
 localStorage.setItem("face_data",JSON.stringify(face_products));
 

@@ -1,5 +1,4 @@
-window.addEventListener("load",()=>{
-    let slider_image = ["https://images.ctfassets.net/66mrrren2unf/1LH7b5JOWtuTiarFdJ2QNA/07434c4bf1d6e104ada7e8c7f13f57d3/desktop-bathing-.jpg?q=40",
+let slider_image = ["https://images.ctfassets.net/66mrrren2unf/1LH7b5JOWtuTiarFdJ2QNA/07434c4bf1d6e104ada7e8c7f13f57d3/desktop-bathing-.jpg?q=40",
                         "https://images.ctfassets.net/66mrrren2unf/5gFRTMpp5Y2ABnftnUsbp4/a1ccf6de76610c0b874372f8d66c91d2/Desktop.jpg?q=40"
                        ];
 
@@ -35,4 +34,3 @@ window.addEventListener("load",()=>{
     ];
     localStorage.setItem("best_selling_baby",JSON.stringify(best_seller))
     localStorage.setItem("slider_image",JSON.stringify(slider_image));
-});
