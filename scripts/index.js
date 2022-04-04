@@ -1,11 +1,4 @@
-let slide = [
-        "https://images.ctfassets.net/66mrrren2unf/2gTR8xcf8Rxp4zvfzcRZl3/9a24954ff7b7f2066d69535d3f3ca7bb/Desktop.jpg?q=40",
-        "https://images.ctfassets.net/66mrrren2unf/jvnVpA7ItjHuqkoeGFOi9/c24266e7809b06ca3f0796b95d07be65/Desktop.jpg?q=40",
-        "https://images.ctfassets.net/66mrrren2unf/6nc4ahNcZm8FqgU4vU3vKl/cdfcd3ba0f2db050759fc68ee82a4313/Desktop_Bye-Bye-Face-Creams-with-CTA.jpg?q=40",
-        "https://images.ctfassets.net/66mrrren2unf/3PnUXonZQ0tDY8e7siuCA7/48451c727f3e60ee71b3a628eda928cd/Desktop_Without_CTA.jpg?q=40",
-        "https://images.ctfassets.net/66mrrren2unf/7HvyA24fZoupMV6HeOZmBV/b8b1fe1de6b1f9a5f08273f0bf0d850a/Banner_Website.jpg?q=40",
 
-]
 
 
 let i = 0;

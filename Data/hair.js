@@ -1,5 +1,3 @@
-window.addEventListener("load",()=>{
-
     var hairProducts=[
         {
             title:"Henna Shampoo with Henna and Deep Roast Coffee for Premature Greying - 250 ml",
@@ -195,11 +193,7 @@ window.addEventListener("load",()=>{
         },
     
     ];
-    localStorage.setItem("hairProducts",JSON.stringify(hairProducts));
-});
 
-let hair_data = JSON.parse(localStorage.getItem("hairProducts"));
-// console.log(hair_data)
 let B_main = document.getElementById("B_main");
 
 const appendhair= (data,where,value) =>{
@@ -269,43 +263,8 @@ const appendhair= (data,where,value) =>{
     });
 };
 
-appendhair(hair_data,B_main,1)
+appendhair(hairProducts,B_main,1)
 
-    // bodyProducts.map(function (elem,index,array){
-        
-    //     var mainDiv=document.createElement("div");
-    
-    //     var img=document.createElement("img");
-    //     img.setAttribute("src",elem.imageurl);
-
-    //     var title=document.createElement("p");
-    //     title.innerText=elem.title;
-
-    //     var rating=document.createElement("p");
-    //     rating.innerText=elem.rating+"★";
-
-    //     var div=document.createElement("div");
-
-    //     var price=document.createElement("p");
-    //     price.innerText="₹"+elem.price;
-
-    //     var strike=document.createElement("s");
-    //     strike.innerText=elem.strike_price;
-
-    //     var offer=document.createElement("p");
-    //     offer.innerText=elem.offer;
-
-    //     var btn=document.createElement("button");
-    //     btn.innerText="ADD TO CART";
-        
-    //     div.append(price,strike,offer);
-    //     mainDiv.append(img,title,rating,div,btn);
-    //     document.querySelector("#products").append(mainDiv);
-    // });
-
-
-
-//To see the detailes of the product function----------------
 const item=(elem)=>{
     let Item = elem;
     localStorage.setItem("item",JSON.stringify(Item));

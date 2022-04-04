@@ -330,10 +330,6 @@ const sortItems=()=>{
  
  }
  
-
-
-
-
  display(data1);
 
 const showdata=(data)=>{
@@ -402,11 +398,7 @@ showdata(data);
 
 localStorage.setItem("face_data",JSON.stringify(face_products));
 
-
 //sliding part
-
-
-
 let slideshow=document.getElementById("face_slider");
 let slidearr=[];
 const img1="https://images.ctfassets.net/66mrrren2unf/5kaAcTPfa6WK3WrRtpZoQc/d7fbc3cdede555135dab5c1c0187bdaf/Desktop.jpg?q=40";

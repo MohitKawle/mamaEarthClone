@@ -227,24 +227,14 @@ async function exactLocation(city){
 
 }
 
-
-
-
-
-
-
 function appendData(data){
    
     container.innerHTML = null;
-   
-
   var mapdiv = document.createElement("div");
   mapdiv.id = "mapdiv";
 
   var iframe = document.createElement("iframe");
   iframe.src = `https://maps.google.com/maps?q=${data.name}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
-
-
 
   container.append(mapdiv);
   mapdiv.append(iframe);

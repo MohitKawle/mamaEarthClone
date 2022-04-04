@@ -196,28 +196,12 @@ var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
 document.querySelector("#form").addEventListener("submit", formfumction)
 var Exist=0;
 
-//check
-// userDataBase.map(function (elem) {
-            
-//             if ( phone === elem.Phone) {
-//                 localStorage.setItem("User", JSON.stringify(elem))
-//                 currentUser.push(elem);
-//                 localStorage.setItem("currentUser", JSON.stringify(currentUser))
-//                 flag = 1;
-//                 location.href = "index.html";
-//             }
-            
-//         })
-
-//check
-
 function formfumction() {
         event.preventDefault();
         // taking info from user
         var phone = document.querySelector("#phone").value;
         if(phone===null){return;}
         
-       
         userDataBase.map(function (elem) {
             console.log(elem)
             if (phone == elem.Phone) {
@@ -226,27 +210,16 @@ function formfumction() {
                 localStorage.setItem("phone",JSON.stringify(phone))
                 location.href = "mamaearthotp.html";
             }
-          
-               
-           
         })
+
         //send to create account
-   
-
-
          if (Exist == 0) {
                   localStorage.setItem("phone",JSON.stringify(phone))
             location.href="mamaearthCreateaccount.html"
          }
             
-    }
-
-
-
-    
+    }    
      document.querySelector(".last").addEventListener("click",()=>{
          window.location.href="/index.html"
      })
-    
-
 </script>
